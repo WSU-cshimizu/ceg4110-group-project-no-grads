@@ -8,14 +8,19 @@ Matthew's Journey will be a 2D pixel art Zelda-like adventure game featuring a t
 
 #### Components of Complexity
 
-1. 
+1. Graphical User Interface  
+The gui will include the title screen, menus, and dialog boxes. It also includes any other on-screen game state representations needed such as health bars or item tooltips.
 
-* _N_ "things of complexity", where _N_ is number of students in the group.
-  * Describe each component, briefly. -- 4 things of complexity
-     * Real Time combat mixed with turn-based mechanics
-     * Pixellated art
-     * Storyline
-     * Map and GUI design
+2. Map  
+The map component includes the tileset for all pixel art assests in the game. It will create the gamemap the character explores including implementing walls and boundries and handling screen transitions. It will also define character interation within the map such as doors, etc.
+
+3. Items  
+This component will create the inventory system and the logic of all equipment and items in the game including the cards and other potential pickups such as potions, relics, etc. 
+
+4. Combat  
+Implements the combat system to include hit detection, player movement, enemy behavior, equiping of chosen cards before fight phase, etc.  
+  
+
 * How do the components fit together (i.e., predicted architecture)?
     * Prompt: "We think, based on not touching it yet, we'll do..."
     * A Legend of Zelda like game, 2D pixel art with combat throughout the journey and a boss at the end.
