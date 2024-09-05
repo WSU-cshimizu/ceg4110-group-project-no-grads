@@ -28,9 +28,7 @@ Implements the combat system to include hit detection, player movement, enemy be
 
 #### Framework
 
-* What language or technology stack or framework will be used?
-    * Include a response to: "why are you picking the tech stack that you are?"
-       * We will be picking libGDX, a Java-based game engine, along with Java GUI libraries  
+We will be using the <a href="https://libgdx.com/">libGDX</a> framework to develop this project. We decided we would write our game in Java because that is the one language everyone in the group is familiar with. Through some research libGDX stood out as a very mature and stable Java game development framework. It includes a lot of modules that support 2D game development as well as plenty of 3rd party libraries to extend it even further. Some of the libraries include 2D physics, lighting, and pathfinding which will be very useful in our project. 
 
 #### Development Life-Cycle
 
