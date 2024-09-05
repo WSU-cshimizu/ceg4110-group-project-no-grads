@@ -1,9 +1,15 @@
 # Project Overview Proposal
 
-## Requirements
-* Name of the proposed project: Matthew's Journey
-* Elevator pitch, which should at least answer
-  * "Why are you building your _thing_?" For FUN
+## Matthew's Journey
+
+#### Elevator Pitch
+
+Matthew's Journey will be a 2D pixel art Zelda-like adventure game featuring a two phased combat system with deck building mechanics. Combat will be split between a preperation phase and a fight phase.  In the preperation phase players will draw and select cards that determine the items, abilites, and bonuses Matthew is able to use in the Fight phase real time combat round. Combat will cycle between the prep and fight phases until the enemies are defeated. New cards to expand Matthew's abilities may be awarded from combat our found through exploration of the game world. None of the team has made a game of this scope before. The goal is that by the end of the semester we will have created an engaging and complex game that demonstrates our abilities and that we hope you will have fun playing. 
+
+#### Components of Complexity
+
+1. 
+
 * _N_ "things of complexity", where _N_ is number of students in the group.
   * Describe each component, briefly. -- 4 things of complexity
      * Real Time combat mixed with turn-based mechanics
