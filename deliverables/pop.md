@@ -1,16 +1,21 @@
 # Project Overview Proposal
 
 ## Requirements
-* Name of the proposed project
+* Name of the proposed project: Matthew's Journey
 * Elevator pitch, which should at least answer
-  * "Why are you building your _thing_?"
+  * "Why are you building your _thing_?" For FUN
 * _N_ "things of complexity", where _N_ is number of students in the group.
-  * Describe each component, briefly.
+  * Describe each component, briefly. -- 4 things of complexity
+     * Real Time combat mixed with turn-based mechanics
+     * Pixellated art
+     * Storyline
+     * Map design
 * How do the components fit together (i.e., predicted architecture)?
     * Prompt: "We think, based on not touching it yet, we'll do..."
 * What language or technology stack or framework will be used?
     * Include a response to: "why are you picking the tech stack that you are?"
-* What is the predicted life cycle/methodology that you will follow?
+       * We will be picking libGDX, a Java-based game engine.
+* What is the predicted life cycle/methodology that you will follow?: We will be following the Agile life cycle.
 
 ## Submission Details
 This will be submitted via your GitHub repository in your `deliverables` directory, after groups have been formed and approved.
