@@ -20,7 +20,7 @@ This component will create the inventory system and the logic of all equipment a
 4. Combat  
 Implements the combat system to include hit detection, player movement, enemy behavior, equiping of chosen cards before fight phase, etc.  
   
-#### Predicted Architecure
+#### Predicted Architecture
 
 We want to create a Legend of Zelda like game, 2D pixel art with combat throughout the journey and a boss at the end. We expect that we’ll need to have architecture for pausing, saving, and loading the game, as well as architecture for rendering, collision, the multiple UIs, and audio/visual components. These will be the first things to work on. After that, we’ll create items and cards for the player to utilize and set each one with a function. Then, we’ll create multiple enemies that will wander the game world and spawn in specific locations. There will be an AI element to control their movement and strategies. Then there’s the 2-phase combat we plan to implement where phase 1 consists of managing inventory and equipment and phase 2 consists of dealing damage to enemies. 
 
