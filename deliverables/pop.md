@@ -31,16 +31,3 @@ We will be using the <a href="https://libgdx.com/">libGDX</a> framework to devel
 #### Development Life-Cycle
 
 We will be following the Agile life cycle. Once we understand and set up our shared java workspace, we will begin by making a list of features and sort them by importance. The most important features, such as collision, will be given high priority and developed first while less important features, such as a song for the title screen, will be developed as late as possible to give time for developing the most meaningful features. We may come up with a new idea for a feature and consult the other group members before deciding it’s place on our feature priority list. We will routinely test the game to ensure that our systems work and to check for bugs that make the game unplayable. Minor bugs may be ignored if not too dangerous. We will document our work with notes for the other team members. Prior to our presentation at the end of the semester, we will gather gameplay footage for our presentation.
-
-## Rubric
-| Points | Metric                                            |
-| ------ | ------------------------------------------------- |
-| 1      | Does it look nice?                                |
-| 1      | Does it contain the information that's solicited? |
-| 1      | &#9; Predicted methodology present?               |
-|        | Is your justification convincing?                 |
-| 3      | &#9; Are the components well-described?           |
-| 2      | &#9; Is the architecture well-described?          |
-| 1      | How will it be implemented?                       |
-| 1      | Justify your choice.                              |
-| **10** | **Total**                                         |
