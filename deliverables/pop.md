@@ -22,9 +22,7 @@ Implements the combat system to include hit detection, player movement, enemy be
   
 #### Predicted Architecure
 
-* How do the components fit together (i.e., predicted architecture)?
-    * Prompt: "We think, based on not touching it yet, we'll do..."
-    * A Legend of Zelda like game, 2D pixel art with combat throughout the journey and a boss at the end.  
+We want to create a Legend of Zelda like game, 2D pixel art with combat throughout the journey and a boss at the end. We expect that we’ll need to have architecture for pausing, saving, and loading the game, as well as architecture for rendering, collision, the multiple UIs, and audio/visual components. These will be the first things to work on. After that, we’ll create items and cards for the player to utilize and set each one with a function. Then, we’ll create multiple enemies that will wander the game world and spawn in specific locations. There will be an AI element to control their movement and strategies. Then there’s the 2-phase combat we plan to implement where phase 1 consists of managing inventory and equipment and phase 2 consists of dealing damage to enemies. 
 
 #### Framework
 
@@ -32,7 +30,7 @@ We will be using the <a href="https://libgdx.com/">libGDX</a> framework to devel
 
 #### Development Life-Cycle
 
-* What is the predicted life cycle/methodology that you will follow?: We will be following the Agile life cycle. 
+We will be following the Agile life cycle. Once we understand and set up our shared java workspace, we will begin by making a list of features and sort them by importance. The most important features, such as collision, will be given high priority and developed first while less important features, such as a song for the title screen, will be developed as late as possible to give time for developing the most meaningful features. We may come up with a new idea for a feature and consult the other group members before deciding it’s place on our feature priority list. We will routinely test the game to ensure that our systems work and to check for bugs that make the game unplayable. Minor bugs may be ignored if not too dangerous. We will document our work with notes for the other team members. Prior to our presentation at the end of the semester, we will gather gameplay footage for our presentation.
 
 ## Rubric
 | Points | Metric                                            |
