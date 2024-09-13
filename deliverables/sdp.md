@@ -14,7 +14,11 @@ responding by the end of said days.  Other meetings may be scheduled as necessar
 either in-person or in Discord.  
   
 ### Project Development
-* 
+* We are implementing Agile game development in the form of sprints
+* Each sprint, specific features of the game will be assigned to each member
+* Sprints will generally be two weeks long
+* After each sprint the team shall discuss the progress of the project and decide on the nexts sprints goals/features
+ 
 
 ## Timeline
 Click the Google Sheets link below for full gantt chart  
