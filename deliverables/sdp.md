@@ -1,13 +1,13 @@
 # Software Development Plan
 
 ### Communication Plan
-* Meeting Location(s)
-* Meeting Time(s)
-* Meeting Cadence
+* As of now, only in discord voice chat.
+* Tuesday nights, sometime after 9.
+* Once a week for sure, more if we deem necessary.
 
-* Communication mechanism(s) for outside of meetings
+* We will be communicating completely through discord if not in person.
 
-We anticipate communicating via _x_ outside of meetings. We have commited to responding within _y_ timeframe. ETC.
+We anticipate communicating via discord outside of meetings. We have committed to responding by the end of the day of any day that we agree to get work done. We will also do updates twice a week, once at the beginning and once at the end.
 
 ## Timeline
 ![gantt](../assets/gantt-chart.png)
