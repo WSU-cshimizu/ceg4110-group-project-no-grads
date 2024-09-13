@@ -7,7 +7,7 @@
 
 * We will be communicating completely through discord if not in person.
 
-We anticipate communicating via discord outside of meetings. We have committed to responding by the end of the day of any day that we agree to get work done. We will also do updates twice a week, once at the beginning and once at the end.
+We anticipate communicating via discord outside of meetings. We shall have asynchronous meetings to support member work and class schedules. We shall post updates and questions Tuesdays and Fridays on Discord. Each member commits to posting their updates and responding to questions by the end of the day on these meeting days.
 
 ## Timeline
 ![gantt](../assets/gantt-chart.png)
