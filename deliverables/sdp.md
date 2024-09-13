@@ -3,7 +3,7 @@
 ## Administrative
 
 
-## Communication
+### Communication
 * Meeting Location: Discord
 * Meeting Times:    Tuesdays & Fridays asynchronously
 * Communication Plan:  
