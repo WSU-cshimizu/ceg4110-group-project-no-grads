@@ -11,7 +11,7 @@ We anticipate communicating via discord outside of meetings. We shall have async
 
 ## Timeline
 ![gantt](../assets/gantt-chart.png)
-
+<a href='https://docs.google.com/spreadsheets/d/1T9mDlycQ7FxXoMDIorNKHfpIKWc-6so3mbPJ-0FIVwY/edit?usp=sharing'>Google Sheet Link</a>
 
   * MVSs
   * Milestones (i.e., "Checkins")
