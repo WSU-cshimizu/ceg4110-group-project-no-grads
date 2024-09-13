@@ -10,10 +10,8 @@
 We anticipate communicating via discord outside of meetings. We shall have asynchronous meetings to support member work and class schedules. We shall post updates and questions Tuesdays and Fridays on Discord. Each member commits to posting their updates and responding to questions by the end of the day on these meeting days.
 
 ## Timeline
-![gantt](../assets/gantt-chart.png)
-<a href='https://docs.google.com/spreadsheets/d/1T9mDlycQ7FxXoMDIorNKHfpIKWc-6so3mbPJ-0FIVwY/edit?usp=sharing'>Google Sheet Link</a>
+Click the Google Sheets link below for full gantt chart  
 
-  * MVSs
-  * Milestones (i.e., "Checkins")
-  * Requirement Specification
-  * Design Specification
+![gantt](../assets/gantt-chart.png)  
+
+<a href='https://docs.google.com/spreadsheets/d/1T9mDlycQ7FxXoMDIorNKHfpIKWc-6so3mbPJ-0FIVwY/edit?usp=sharing'>Google Sheet Link</a>
