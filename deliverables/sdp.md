@@ -2,7 +2,7 @@
 
 ### Communication Plan
 * As of now, we've only agreed to meet in discord voice chat.
-* We will meet Tuesday nights, sometime after 9.
+* We will meet on Thursday at 4pm.
 * This will be once a week for sure, more if we deem necessary.
 
 * We will be communicating completely through discord if not in person.
