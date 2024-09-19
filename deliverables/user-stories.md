@@ -9,3 +9,5 @@ Josiah:
 - As a story and sound designer, I want an engaging world to house unique characters in.
 
 Cara:
+- As a player, I want to have a UI that shows a hud so that I can keep track of important details such as my health.
+- As a UI designer, I want to have different aspects and functions of the game that my UI can keep track of for the user.
