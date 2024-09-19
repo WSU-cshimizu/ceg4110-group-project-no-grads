@@ -12,7 +12,7 @@
 
 ### Josiah Yount
 - Undergrad
-- Story Writer and Balance Tester
+- Story Writer, Sound Designer and Balance Tester
 
 ### Cara Zozokos
 - Undergrad 
