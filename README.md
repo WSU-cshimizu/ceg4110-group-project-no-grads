@@ -1,17 +1,19 @@
 # Matthew's Journey 
 
-###Robert Dallessandris
+## Team Members 
+
+### Robert Dallessandris
 - Undergrad
 - Game Engine Designer
 
-###Virginia Rich
+### Virginia Rich
 - Undergrad
 - Art and Level Designer
 
-###Josiah Yount
+### Josiah Yount
 - Undergrad
 - Story Writer and Balance Tester
 
-###Cara Zozokos
+### Cara Zozokos
 - Undergrad 
 - UI Designer
