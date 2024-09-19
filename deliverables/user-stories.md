@@ -1,3 +1,3 @@
-As an art director, I want to create art that is simple and understandable so that the player can easily understand how to interact with the game. 
-
-As a level designer, I want to create a clear and fun to navigate game space that will keep players interested and engaged. 
+Virginia: 
+As a player, I want to navigate an enviornment that's easy to explore with collision that supports my movement and keeps me within bounds. 
+As a level designer, I want a varietey of enemies to make gameplay engaging and difficult.
