@@ -15,5 +15,5 @@
 - Team Role: Story Writer, Sound Designer and Balance Tester
 
 ### Cara Zozokos
-- Undergrad 
+- BA Computer Science, Cybersecurity Certificate
 - Team Role: UI Designer
