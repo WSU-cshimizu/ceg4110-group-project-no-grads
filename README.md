@@ -11,7 +11,7 @@
 - Team Role: Art and Level Designer
 
 ### Josiah Yount
-- BS Computer Science Major
+- BS Computer Science Major, Cybersecurity Certificate
 - Team Role: Story Writer, Sound Designer and Balance Tester
 
 ### Cara Zozokos
