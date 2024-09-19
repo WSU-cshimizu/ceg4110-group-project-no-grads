@@ -3,8 +3,8 @@
 ## Team Members 
 
 ### Robert Dallessandris
-- Undergrad
-- Game Engine Designer
+- BS Computer Science Senior
+- Team Role: Game Engine Designer
 
 ### Virginia Rich
 - Undergrad
