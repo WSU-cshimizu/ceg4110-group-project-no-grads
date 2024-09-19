@@ -7,7 +7,7 @@
 - Team Role: Game Engine Designer
 
 ### Virginia Rich
-- Undergrad
+-  BS Computer Science Major & Math minor
 - Art and Level Designer
 
 ### Josiah Yount
