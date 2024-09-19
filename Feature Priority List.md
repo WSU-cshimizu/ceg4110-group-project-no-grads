@@ -4,6 +4,7 @@
   - health displayed over head
 - map
   - collision on map
+  - containers containing items on map
 - player walking around on map
 - enemies walking on map
 - animations for fighting
