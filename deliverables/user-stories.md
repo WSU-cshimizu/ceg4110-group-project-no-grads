@@ -1,4 +1,6 @@
 Robert:
+- As a player, I want to be able move my character and swing my sword to fight enemies.
+- As a player developer, I want elements in the environment for the player to interact with.
 
 Virginia:
 - As a player, I want to navigate an enviornment that's easy to explore with collision that supports my movement and keeps me within bounds. 
