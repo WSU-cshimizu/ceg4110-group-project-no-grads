@@ -4,11 +4,11 @@
 * **Date:** 9/26/2024
 
 ## Pertinent Questions
-* Question 1
+* How much programming knowledge does DFL require a business analyst to have?
 * Question 2
 
 ## Lessons Learned
-Text paragraph.
+Development in RPG, C#, Node.js, React.js, SQL
 
 Text paragraph.
 
