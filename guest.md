@@ -10,6 +10,4 @@
 ## Lessons Learned
 Development in RPG, C#, Node.js, React.js, SQL  
 
-Busniess analyst determines needs and facilitates solutions
-
-Text paragraph.
+Business analyst determines needs and facilitates solutions
