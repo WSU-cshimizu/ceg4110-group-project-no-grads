@@ -16,4 +16,6 @@ Types of work: Large projects, smaller prioritized items, help desk tickets/bugs
 
 DFL uses Agile, but switched from Scrum to Kanban  
 
-DFL has teams and each team has a Software Architect who makes large scale decisions based on scalability, flexibility current DFL business conditions, current transportation market/economic conditions, and cost/other resources
+DFL has teams and each team has a Software Architect who makes large scale decisions based on scalability, flexibility current DFL business conditions, current transportation market/economic conditions, and cost/other resources  
+
+It's very important for developers to know *why* they do what they are doing
