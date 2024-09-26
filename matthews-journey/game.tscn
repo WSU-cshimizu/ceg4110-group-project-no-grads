@@ -201,9 +201,6 @@ sources/7 = SubResource("TileSetAtlasSource_itqk8")
 [node name="Player" parent="." instance=ExtResource("1_43ojw")]
 position = Vector2(238, 135)
 
-[node name="Player2" parent="." instance=ExtResource("1_43ojw")]
-position = Vector2(143, 131)
-
 [node name="Borders" type="Node2D" parent="."]
 position = Vector2(0, -2)
 
