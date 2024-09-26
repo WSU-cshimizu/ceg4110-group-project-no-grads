@@ -3,14 +3,14 @@
 - health system
   - health displayed over head
 - map
-  - collision on map
+  - collision on map (V started 9/26)
   - containers containing items on map
-- player walking around on map
+- player walking around on map (R completed 9/25)
 - enemies walking on map
 - animations for fighting
   - do damage instantly on touch
   - add chance for damage to fail
-- enemy figts back in combat
+- enemy figts back
 - dialogue with an npc
 - main menu
 - game menu
