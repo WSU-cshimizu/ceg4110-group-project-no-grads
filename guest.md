@@ -18,4 +18,6 @@ DFL uses Agile, but switched from Scrum to Kanban
 
 DFL has teams and each team has a Software Architect who makes large scale decisions based on scalability, flexibility current DFL business conditions, current transportation market/economic conditions, and cost/other resources  
 
-It's very important for developers to know *why* they do what they are doing
+It's very important for developers to know *why* they do what they are doing  
+
+To get a job: do networking and make connections, put a lot of work into your resume, do research on the company before the interview, answer questions honestly
