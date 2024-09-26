@@ -10,4 +10,6 @@
 ## Lessons Learned
 Development in RPG, C#, Node.js, React.js, SQL  
 
-Business analyst determines needs and facilitates solutions
+Business analyst determines needs and facilitates solutions  
+
+Types of work: Large projects, smaller prioritized items, help desk tickets/bugs
