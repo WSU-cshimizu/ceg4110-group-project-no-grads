@@ -8,8 +8,8 @@
 * Question 2
 
 ## Lessons Learned
-Development in RPG, C#, Node.js, React.js, SQL
+Development in RPG, C#, Node.js, React.js, SQL  
 
-Text paragraph.
+Busniess analyst determines needs and facilitates solutions
 
 Text paragraph.
