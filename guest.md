@@ -12,4 +12,6 @@ Development in RPG, C#, Node.js, React.js, SQL
 
 Business analyst determines needs and facilitates solutions  
 
-Types of work: Large projects, smaller prioritized items, help desk tickets/bugs
+Types of work: Large projects, smaller prioritized items, help desk tickets/bugs  
+
+DFL uses Agile, but switched from Scrum to Kanban  
