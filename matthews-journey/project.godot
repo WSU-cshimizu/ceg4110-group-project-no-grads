@@ -22,10 +22,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"Talking Guy": "res://addons/characters/Talking Guy.dch"
+"Random Guy": "res://addons/characters/Random Guy.dch",
+"Talking Guy": "res://addons/characters/Talking Guy.dch",
+"Telonis": "res://addons/characters/Telonis.dch"
 }
 directories/dtl_directory={
-"TalkingGuyTalking": "res://addons/timelines/TalkingGuyTalking.dtl"
+"RandomChat1": "res://addons/timelines/RandomChat1.dtl",
+"RandomChat2": "res://addons/timelines/RandomChat2.dtl",
+"RandomChat3": "res://addons/timelines/RandomChat3.dtl",
+"TalkingGuyTalking": "res://addons/timelines/TalkingGuyTalking.dtl",
+"Tragoudi": "res://addons/timelines/Tragoudi.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -47,7 +53,7 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 variables={}
-layout/style_list=["res://addons/styles/Basic.tres"]
+layout/style_list=["res://addons/styles/Basic.tres", "res://addons/styles/Telonis.tres"]
 layout/default_style="res://addons/styles/Basic.tres"
 glossary/default_case_sensitive=true
 
