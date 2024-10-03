@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=19 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_wxgtg"]
@@ -6,12 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bcylv2e3y774v" path="res://assets/Tiles/Grass/Path_Middle.png" id="4_ahu12"]
 [ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="5_enysm"]
 [ext_resource type="Texture2D" uid="uid://cwauj365wm342" path="res://assets/Tiles/Picnic_Blankets.png" id="6_oe8xa"]
-[ext_resource type="Script" path="res://player_chat_icon.gd" id="7_h8cy8"]
 [ext_resource type="Texture2D" uid="uid://dbu823ef36c01" path="res://addons/DialogAssets/PlayerChatIcon.png" id="8_uoqv5"]
-[ext_resource type="Texture2D" uid="uid://cpfop7dxq1d24" path="res://addons/DialogAssets/RandomChatIcon.png" id="9_bkx6u"]
-[ext_resource type="Script" path="res://random_chat_icon.gd" id="10_kgrc8"]
-[ext_resource type="Texture2D" uid="uid://m6u5cu6ecewb" path="res://addons/DialogAssets/Telonis.png" id="11_7wd5r"]
-[ext_resource type="Script" path="res://telonis.gd" id="12_wocdj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74dcv"]
 size = Vector2(1099, 16)
@@ -343,7 +338,6 @@ tile_set = SubResource("TileSet_44y6g")
 position = Vector2(264, 168)
 scale = Vector2(0.999999, 1.025)
 texture = ExtResource("8_uoqv5")
-script = ExtResource("7_h8cy8")
 
 [node name="ChatDetect" type="Area2D" parent="PlayerChatIcon"]
 scale = Vector2(0.962962, 0.952381)
@@ -354,8 +348,6 @@ shape = SubResource("RectangleShape2D_pjyct")
 
 [node name="RandomChatIcon" type="Sprite2D" parent="."]
 position = Vector2(312, 200)
-texture = ExtResource("9_bkx6u")
-script = ExtResource("10_kgrc8")
 
 [node name="RandomDetect" type="Area2D" parent="RandomChatIcon"]
 
@@ -365,8 +357,6 @@ shape = SubResource("RectangleShape2D_ri746")
 
 [node name="Telonis" type="Sprite2D" parent="RandomChatIcon"]
 position = Vector2(172, -302)
-texture = ExtResource("11_7wd5r")
-script = ExtResource("12_wocdj")
 
 [node name="TelonisDetect" type="Area2D" parent="RandomChatIcon/Telonis"]
 
