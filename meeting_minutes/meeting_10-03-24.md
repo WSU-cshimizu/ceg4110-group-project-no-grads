@@ -18,13 +18,13 @@
 * Virginia
  * Level transitions
 * Cara
- * 
+ * Create UI for character's screen, maybe make controls screen
 * Josiah
  * Add characters & dialogue 
 
 ## Signatures
 After the notes and action items have been pushed, each person should take a time to review them. If everything is agreeable, push a single commit with your name as a signature. 
 * Virginia RIchards
+* Cara Zozokos
 * 
 * 
-* Cara add to Action Items pls
