@@ -1,0 +1,40 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(0, 0.539063, 0.0842285, 1),
+"custom_info": {
+"sound_mood_default": "Proclaim",
+"sound_moods": {
+"Proclaim": {
+"mode": 0,
+"name": "Proclaim",
+"pitch_base": 4.0,
+"pitch_variance": 100.0,
+"skip_characters": 0.0,
+"sound_path": "res://addons/dialogic/Example Assets/sound-effects",
+"volume_base": 0.0,
+"volume_variance": 0.0
+}
+},
+"style": ""
+},
+"default_portrait": "Telonis",
+"description": "",
+"display_name": "Telonis",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"Telonis": {
+"export_overrides": {
+"image": "\"res://addons/DialogAssets/Telonis.png\""
+},
+"mirror": true,
+"offset": Vector2(0, -200),
+"scale": 0.2,
+"scene": ""
+}
+},
+"scale": 1.0
+}
