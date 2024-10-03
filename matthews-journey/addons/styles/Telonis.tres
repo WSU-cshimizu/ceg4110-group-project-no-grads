@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=7 format=3 uid="uid://bq8tqe28rcgwb"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_ikp01"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="2_pe55j"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_shkio"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_rrkem"]
+
+[sub_resource type="Resource" id="Resource_h3fe7"]
+script = ExtResource("1_ikp01")
+scene = ExtResource("2_pe55j")
+overrides = {
+"box_animation_new_text": "1",
+"name_label_font": "\"res://addons/dialogic/Example Assets/Fonts/Roboto-Bold.ttf\"",
+"next_indicator_animation": "1",
+"text_alignment": "1",
+"text_custom_color": "Color(0, 1, 0.0859375, 1)",
+"text_use_global_color": "false"
+}
+
+[sub_resource type="Resource" id="Resource_jrqx4"]
+script = ExtResource("1_ikp01")
+scene = ExtResource("3_rrkem")
+overrides = {}
+
+[resource]
+script = ExtResource("2_shkio")
+name = "Telonis"
+base_overrides = {}
+layers = Array[ExtResource("1_ikp01")]([SubResource("Resource_h3fe7"), SubResource("Resource_jrqx4")])
+metadata/_latest_layer = 0
