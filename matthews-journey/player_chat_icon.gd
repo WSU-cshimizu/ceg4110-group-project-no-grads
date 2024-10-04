@@ -1,7 +1,7 @@
 extends Sprite2D
 
 var player_in_area = false
-var is_chatting = false
+@export var is_chatting = false
 var we_talked = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
