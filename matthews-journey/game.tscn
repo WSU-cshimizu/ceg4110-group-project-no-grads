@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=35 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_wxgtg"]
@@ -7,8 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bcylv2e3y774v" path="res://assets/Tiles/Grass/Path_Middle.png" id="4_ahu12"]
 [ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="5_enysm"]
 [ext_resource type="Texture2D" uid="uid://cwauj365wm342" path="res://assets/Tiles/Picnic_Blankets.png" id="6_oe8xa"]
-[ext_resource type="Script" path="res://tent_entrance.gd" id="8_a6lt0"]
+[ext_resource type="Script" path="res://tent/tent_entrance.gd" id="8_a6lt0"]
 [ext_resource type="Texture2D" uid="uid://dbu823ef36c01" path="res://addons/DialogAssets/PlayerChatIcon.png" id="8_uoqv5"]
+[ext_resource type="PackedScene" uid="uid://dnhc45edffpua" path="res://tent/tent.tscn" id="9_h4y6u"]
 [ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="10_7xuxi"]
 [ext_resource type="Script" path="res://player_chat_icon.gd" id="10_ibhwy"]
 [ext_resource type="PackedScene" uid="uid://pqrg648f5bc8" path="res://Enemies/Slime/slime.tscn" id="11_6t204"]
@@ -518,6 +519,9 @@ position = Vector2(159, 354)
 
 [node name="Skeleton2" parent="Enemies" instance=ExtResource("12_c6uob")]
 position = Vector2(314, -12)
+
+[node name="TentExterior" parent="." instance=ExtResource("9_h4y6u")]
+position = Vector2(502, 275)
 
 [connection signal="body_entered" from="Map/TentEntrance" to="Map/TentEntrance" method="_on_body_entered"]
 [connection signal="body_exited" from="Map/TentEntrance" to="Map/TentEntrance" method="_on_body_exited"]

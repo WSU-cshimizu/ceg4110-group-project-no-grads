@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnhc45edffpua"]
+
+[ext_resource type="Script" path="res://tent/tent_entrance.gd" id="1_yik8e"]
+[ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="2_2s8ew"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evsxh"]
+size = Vector2(51, 41)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lau53"]
+
+[node name="TentExterior" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -48.5)
+scale = Vector2(1, 1.01042)
+texture = ExtResource("2_2s8ew")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -34)
+shape = SubResource("RectangleShape2D_evsxh")
+
+[node name="Entrance" type="Area2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -1)
+script = ExtResource("1_yik8e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entrance"]
+light_mask = 3
+position = Vector2(-1, -17)
+shape = SubResource("CircleShape2D_lau53")
