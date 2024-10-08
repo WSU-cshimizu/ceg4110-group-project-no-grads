@@ -3,9 +3,8 @@
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_pttgt"]
 [ext_resource type="Texture2D" uid="uid://blfxrwpiysnxq" path="res://assets/Player/Player.png" id="2_sdbpx"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fdt1e"]
-radius = 2.5
-height = 7.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vwq2"]
+size = Vector2(5.99999, 9.00001)
 
 [sub_resource type="Animation" id="Animation_yds30"]
 length = 0.001
@@ -149,9 +148,9 @@ vframes = 26
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visibility_layer = 17
-position = Vector2(-0.5, -1)
+position = Vector2(-0.500003, -3)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_fdt1e")
+shape = SubResource("RectangleShape2D_8vwq2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://craqp6dyl18a3"]
+
+[ext_resource type="Texture2D" uid="uid://cxu888wiot3un" path="res://assets/Enemies/Skeleton/Skeleton.png" id="1_ga2jr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1rb2b"]
+radius = 3.0
+height = 8.0
+
+[sub_resource type="Animation" id="Animation_0o1k0"]
+resource_name = "idle_down"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_vvnw0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vcq7m"]
+_data = {
+"RESET": SubResource("Animation_vvnw0"),
+"idle_down": SubResource("Animation_0o1k0")
+}
+
+[node name="Skeleton" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+texture = ExtResource("1_ga2jr")
+hframes = 6
+vframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 16
+y_sort_enabled = true
+position = Vector2(0, -4)
+shape = SubResource("CapsuleShape2D_1rb2b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vcq7m")
+}
+autoplay = "idle_down"
