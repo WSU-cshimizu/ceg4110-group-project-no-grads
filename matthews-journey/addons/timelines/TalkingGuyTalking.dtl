@@ -16,4 +16,4 @@ join "Talking Guy" center [animation="Slide In Left" length="1.0" wait="true"]
 	[signal arg="end_chat"]
 - Do I know you?
 	"Talking Guy": Absolutely not! But who cares?
-	jump 
+	[signal arg="end_chat"]
