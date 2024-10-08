@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=34 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_wxgtg"]
@@ -10,8 +10,11 @@
 [ext_resource type="Script" path="res://tent_entrance.gd" id="8_a6lt0"]
 [ext_resource type="Texture2D" uid="uid://dbu823ef36c01" path="res://addons/DialogAssets/PlayerChatIcon.png" id="8_uoqv5"]
 [ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="10_7xuxi"]
+[ext_resource type="Script" path="res://player_chat_icon.gd" id="10_ibhwy"]
 [ext_resource type="PackedScene" uid="uid://pqrg648f5bc8" path="res://Enemies/Slime/slime.tscn" id="11_6t204"]
+[ext_resource type="Script" path="res://random_chat_icon.gd" id="11_pvffc"]
 [ext_resource type="PackedScene" uid="uid://craqp6dyl18a3" path="res://Enemies/Skeleton/skeleton.tscn" id="12_c6uob"]
+[ext_resource type="Script" path="res://telonis.gd" id="12_ylaav"]
 [ext_resource type="PackedScene" uid="uid://dj85ch73skqo1" path="res://clutter/trees/oak_tree.tscn" id="13_s5qvc"]
 [ext_resource type="PackedScene" uid="uid://c5tth2p3uql8l" path="res://clutter/well.tscn" id="13_tkp8l"]
 [ext_resource type="PackedScene" uid="uid://qrjg8tje8wa" path="res://clutter/trees/spruce_tree.tscn" id="14_45jsg"]
@@ -408,6 +411,7 @@ script = SubResource("GDScript_wsdk1")
 position = Vector2(264, 168)
 scale = Vector2(0.999999, 1.025)
 texture = ExtResource("8_uoqv5")
+script = ExtResource("10_ibhwy")
 
 [node name="ChatDetect" type="Area2D" parent="PlayerChatIcon"]
 scale = Vector2(0.962962, 0.952381)
@@ -418,6 +422,7 @@ shape = SubResource("RectangleShape2D_pjyct")
 
 [node name="RandomChatIcon" type="Sprite2D" parent="."]
 position = Vector2(312, 200)
+script = ExtResource("11_pvffc")
 
 [node name="RandomDetect" type="Area2D" parent="RandomChatIcon"]
 
@@ -427,6 +432,7 @@ shape = SubResource("RectangleShape2D_ri746")
 
 [node name="Telonis" type="Sprite2D" parent="RandomChatIcon"]
 position = Vector2(172, -302)
+script = ExtResource("12_ylaav")
 
 [node name="TelonisDetect" type="Area2D" parent="RandomChatIcon/Telonis"]
 
