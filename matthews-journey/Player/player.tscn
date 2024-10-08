@@ -134,7 +134,7 @@ _data = {
 "walk_up": SubResource("Animation_fgada")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Players" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_mask = 5
 script = ExtResource("1_pttgt")

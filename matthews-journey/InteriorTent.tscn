@@ -1,17 +1,17 @@
 [gd_scene load_steps=19 format=3 uid="uid://dmnw5amfm6oc"]
 
-[ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_fm00h"]
-[ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_rf5t2"]
-[ext_resource type="Texture2D" uid="uid://2f0dnkvn74dp" path="res://assets/House/Buildings/Tent/Tent_Interior.png" id="3_wl2h5"]
-[ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="4_dhelv"]
-[ext_resource type="Texture2D" uid="uid://dqlcq86g6gxav" path="res://assets/Tiles/Grass/Grass_1_Middle.png" id="5_6yf57"]
-[ext_resource type="Texture2D" uid="uid://bcylv2e3y774v" path="res://assets/Tiles/Grass/Path_Middle.png" id="6_kmcre"]
-[ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="7_h1103"]
-[ext_resource type="Texture2D" uid="uid://cwauj365wm342" path="res://assets/Tiles/Picnic_Blankets.png" id="8_jgl31"]
-[ext_resource type="Script" path="res://tent/tent_exit.gd" id="9_76wbf"]
+[ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_fdgju"]
+[ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_fabeq"]
+[ext_resource type="Texture2D" uid="uid://2f0dnkvn74dp" path="res://assets/House/Buildings/Tent/Tent_Interior.png" id="3_esi3l"]
+[ext_resource type="Texture2D" uid="uid://dqlcq86g6gxav" path="res://assets/Tiles/Grass/Grass_1_Middle.png" id="3_peddk"]
+[ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="4_he0nt"]
+[ext_resource type="Texture2D" uid="uid://bcylv2e3y774v" path="res://assets/Tiles/Grass/Path_Middle.png" id="4_m7115"]
+[ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="5_ibwpc"]
+[ext_resource type="Texture2D" uid="uid://cwauj365wm342" path="res://assets/Tiles/Picnic_Blankets.png" id="6_w7g8l"]
+[ext_resource type="Script" path="res://tent_exit.gd" id="9_kblfv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2iewi"]
-texture = ExtResource("2_rf5t2")
+texture = ExtResource("2_fabeq")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -4, 8, 4, 4, 8, -4, 8, -4, 4, 4, -4)
@@ -194,7 +194,7 @@ texture = ExtResource("2_rf5t2")
 4:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t3ckv"]
-texture = ExtResource("3_wl2h5")
+texture = ExtResource("3_esi3l")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -226,7 +226,7 @@ texture = ExtResource("3_wl2h5")
 2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, 8, -6, 6, 6, 6, 6, -8, 8, -8, 8, 8, 0, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hhwgn"]
-texture = ExtResource("4_dhelv")
+texture = ExtResource("4_he0nt")
 0:2/0 = 0
 0:3/0 = 0
 0:4/0 = 0
@@ -262,7 +262,7 @@ texture = ExtResource("4_dhelv")
 4:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnpgq"]
-texture = ExtResource("5_6yf57")
+texture = ExtResource("3_peddk")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -276,17 +276,17 @@ texture = ExtResource("5_6yf57")
 0:0/0/terrains_peering_bit/top_right_corner = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ugweo"]
-texture = ExtResource("6_kmcre")
+texture = ExtResource("4_m7115")
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ice8j"]
-texture = ExtResource("7_h1103")
+texture = ExtResource("5_ibwpc")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itqk8"]
-texture = ExtResource("8_jgl31")
+texture = ExtResource("6_w7g8l")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -344,7 +344,7 @@ radius = 12.0416
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_fm00h")]
+[node name="Player" parent="." instance=ExtResource("1_fdgju")]
 position = Vector2(18, 60)
 
 [node name="WorldTileMap" type="Node2D" parent="."]
@@ -357,7 +357,7 @@ layer_0/z_index = -1
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 2, 196608, 1, 3, 262144, 1, 2, 327680, 1, 5, 327681, 65537, 5, 327682, 131073, 5, 262146, 131073, 3, 196610, 131073, 3, 131074, 131073, 2, 65538, 131073, 1, 262145, 65537, 4, 196609, 65537, 3, 131073, 65537, 2, 65537, 65537, 1, 2, 131073, 0, 1, 65537, 0)
 
 [node name="TentExit" type="Area2D" parent="WorldTileMap"]
-script = ExtResource("9_76wbf")
+script = ExtResource("9_kblfv")
 
 [node name="CollisionTentExit" type="CollisionShape2D" parent="WorldTileMap/TentExit"]
 position = Vector2(24, 94)
