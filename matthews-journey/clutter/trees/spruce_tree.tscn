@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://qrjg8tje8wa"]
+
+[ext_resource type="Texture2D" uid="uid://bnfnm6pugf1xi" path="res://assets/Trees/Spruce_tree.png" id="1_pjp8o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_figbi"]
+size = Vector2(8.5, 7)
+
+[node name="SpruceTree" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -24)
+texture = ExtResource("1_pjp8o")
+hframes = 3
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_figbi")
