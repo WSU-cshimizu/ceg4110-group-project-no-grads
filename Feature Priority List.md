@@ -18,4 +18,4 @@
   - using an item from invory
   - items do something
 - settings menu -turn off sound
-- aquiring items -> into inventory
+- acquiring items -> into inventory
