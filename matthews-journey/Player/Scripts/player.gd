@@ -14,8 +14,8 @@ func _process(delta: float) -> void:
 		Input.get_axis("up", "down")
 	# normalize the vector to magnitude 1. Prevents faster movement in diagonal.
 	).normalized() 
-	if($"../PlayerChatIcon".is_chatting):
-		direction = Vector2.ZERO
+	#if($"../PlayerChatIcon".is_chatting):
+		#direction = Vector2.ZERO
 	velocity.x = direction.x * SPEED
 	velocity.y = direction.y * SPEED
 	

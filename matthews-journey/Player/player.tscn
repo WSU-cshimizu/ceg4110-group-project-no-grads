@@ -148,6 +148,7 @@ hframes = 8
 vframes = 26
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 17
 position = Vector2(-0.5, -1)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_fdt1e")
