@@ -11,3 +11,5 @@ design thinking - empathize, define, ideate
 rapid prototyping - measure, build, learn  
 agile development - product backlog, sprint planning, sprint execution, shippable increment, sprint review     
 sustainment - deliver, security and integration test, deploy, sustain  
+
+Agile is an adjective (not a Noun) meant to empower software devs to have and control the how things are done
