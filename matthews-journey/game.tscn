@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="10_7xuxi"]
 [ext_resource type="Script" path="res://player_chat_icon.gd" id="10_ibhwy"]
 [ext_resource type="Texture2D" uid="uid://m6u5cu6ecewb" path="res://addons/DialogAssets/Telonis.png" id="11_4kw14"]
-[ext_resource type="PackedScene" uid="uid://pqrg648f5bc8" path="res://Enemies/Slime/slime.tscn" id="11_6t204"]
+[ext_resource type="PackedScene" uid="uid://dn3mwfqslkc7m" path="res://Enemies/Slime/slime.tscn" id="11_6t204"]
 [ext_resource type="Script" path="res://random_chat_icon.gd" id="11_pvffc"]
 [ext_resource type="PackedScene" uid="uid://craqp6dyl18a3" path="res://Enemies/Skeleton/skeleton.tscn" id="12_c6uob"]
 [ext_resource type="Script" path="res://telonis.gd" id="12_ylaav"]
@@ -347,7 +347,7 @@ radius = 12.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri746"]
 size = Vector2(28, 25)
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" groups=["ui"]]
 y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_43ojw")]
@@ -508,14 +508,14 @@ position = Vector2(351, 94)
 [node name="SpruceTree8" parent="Trees" instance=ExtResource("14_45jsg")]
 position = Vector2(397, 134)
 
-[node name="Slime" parent="Trees" instance=ExtResource("11_6t204")]
-position = Vector2(418, 98)
-
 [node name="Enemies" type="Node2D" parent="."]
 y_sort_enabled = true
 
 [node name="Slime" parent="Enemies" instance=ExtResource("11_6t204")]
 position = Vector2(78, 204)
+
+[node name="Slime2" parent="Enemies" instance=ExtResource("11_6t204")]
+position = Vector2(418, 98)
 
 [node name="Skeleton" parent="Enemies" instance=ExtResource("12_c6uob")]
 position = Vector2(159, 354)
@@ -523,6 +523,7 @@ position = Vector2(159, 354)
 [node name="Skeleton2" parent="Enemies" instance=ExtResource("12_c6uob")]
 position = Vector2(314, -12)
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="body_entered" from="Map/TentEntrance" to="Map/TentEntrance" method="_on_body_entered"]
 [connection signal="body_exited" from="Map/TentEntrance" to="Map/TentEntrance" method="_on_body_exited"]
 [connection signal="body_entered" from="PlayerChatIcon/ChatDetect" to="PlayerChatIcon" method="_on_chat_detect_body_entered"]
@@ -531,3 +532,4 @@ position = Vector2(314, -12)
 [connection signal="body_exited" from="Telonis/TelonisDetect" to="Telonis" method="_on_telonis_detect_body_exited"]
 [connection signal="body_entered" from="RandomChatIcon/RandomDetect" to="RandomChatIcon" method="_on_random_detect_body_entered"]
 [connection signal="body_exited" from="RandomChatIcon/RandomDetect" to="RandomChatIcon" method="_on_random_detect_body_exited"]
+[connection signal="child_entered_tree" from="Enemies" to="." method="_on_enemies_child_entered_tree"]

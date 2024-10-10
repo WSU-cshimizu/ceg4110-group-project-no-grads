@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://craqp6dyl18a3"]
+[gd_scene load_steps=7 format=3 uid="uid://craqp6dyl18a3"]
 
 [ext_resource type="Texture2D" uid="uid://cxu888wiot3un" path="res://assets/Enemies/Skeleton/Skeleton.png" id="1_ga2jr"]
 
@@ -44,7 +44,13 @@ _data = {
 "idle_down": SubResource("Animation_0o1k0")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32py4"]
+radius = 6.0
+height = 20.0
+
 [node name="Skeleton" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -7)
@@ -63,3 +69,10 @@ libraries = {
 "": SubResource("AnimationLibrary_vcq7m")
 }
 autoplay = "idle_down"
+
+[node name="hitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox"]
+position = Vector2(0, -9)
+rotation = 3.14155
+shape = SubResource("CapsuleShape2D_32py4")

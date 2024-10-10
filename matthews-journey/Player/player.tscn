@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bluo47r4gdfuw"]
+[gd_scene load_steps=13 format=3 uid="uid://bluo47r4gdfuw"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_pttgt"]
 [ext_resource type="Texture2D" uid="uid://blfxrwpiysnxq" path="res://assets/Player/Player.png" id="2_sdbpx"]
@@ -134,9 +134,12 @@ _data = {
 "walk_up": SubResource("Animation_fgada")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_djrt5"]
+size = Vector2(11, 18)
+
 [node name="Players" type="CharacterBody2D"]
 y_sort_enabled = true
-collision_mask = 5
+collision_mask = 7
 script = ExtResource("1_pttgt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -158,3 +161,12 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="hurtBox" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox"]
+position = Vector2(-0.5, -9)
+shape = SubResource("RectangleShape2D_djrt5")
+
+[connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]

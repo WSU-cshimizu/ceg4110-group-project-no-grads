@@ -6,11 +6,9 @@ class_name Player extends CharacterBody2D
 const SPEED = 175.0
 var direction : Vector2 = Vector2.DOWN
 var cardinal_direction : Vector2 = Vector2.DOWN
-var health: int = 3
 
-func _ready(): 
-	#set up health
-	get_tree().call_group('ui', 'set_health', health)
+@export var maxHealth = 5 #VR
+@onready var currentHealth: int = maxHealth #VR
 
 func _process(delta: float) -> void:
 	# Get the direction the player is pressing
@@ -48,11 +46,24 @@ func _process(delta: float) -> void:
 		animation_player.play("walk_side")
 		cardinal_direction = Vector2.LEFT
 		
-	
-	
+func handleCollision(): #VR
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision. get_collider()
+		#print_debug(collider.name)
+
+func _on_hurt_box_area_entered(area): #VR
+	if area.name == "hitBox": 
+		print_debug(area.get_parent().name)
+		currentHealth -= 1
+		if currentHealth < 0:
+			currentHealth = maxHealth
+		print_debug(currentHealth)
+
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
+	handleCollision() #VR
 	
 func player():
 	pass
