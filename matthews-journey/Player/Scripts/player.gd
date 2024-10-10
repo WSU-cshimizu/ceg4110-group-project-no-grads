@@ -6,6 +6,11 @@ class_name Player extends CharacterBody2D
 const SPEED = 175.0
 var direction : Vector2 = Vector2.DOWN
 var cardinal_direction : Vector2 = Vector2.DOWN
+var health: int = 3
+
+func _ready(): 
+	#set up health
+	get_tree().call_group('ui', 'set_health', health)
 
 func _process(delta: float) -> void:
 	# Get the direction the player is pressing
