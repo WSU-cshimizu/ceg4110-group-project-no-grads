@@ -17,3 +17,6 @@
 ### Cara Zozokos
 - BA Computer Science, Cybersecurity Certificate
 - Team Role: UI Designer
+
+## Gant Chart
+<a href="https://docs.google.com/spreadsheets/d/1T9mDlycQ7FxXoMDIorNKHfpIKWc-6so3mbPJ-0FIVwY/edit?usp=sharing">Gantt Chart<\a>
