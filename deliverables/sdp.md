@@ -23,6 +23,4 @@ This project development plan will enable the team to adjust to the many issues 
 ## Timeline
 Click the Google Sheets link below for full gantt chart  
 
-![gantt](../assets/gantt-chart.png)  
-
 <a href='https://docs.google.com/spreadsheets/d/1T9mDlycQ7FxXoMDIorNKHfpIKWc-6so3mbPJ-0FIVwY/edit?usp=sharing'>Google Sheet Link</a>
