@@ -1,14 +1,15 @@
 class_name Player extends CharacterBody2D
 
+signal healthChanged #VR
+@export var maxHealth = 5 #VR
+@onready var currentHealth: int = maxHealth #VR
+
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 
 const SPEED = 175.0
 var direction : Vector2 = Vector2.DOWN
 var cardinal_direction : Vector2 = Vector2.DOWN
-
-@export var maxHealth = 5 #VR
-@onready var currentHealth: int = maxHealth #VR
 
 func _process(delta: float) -> void:
 	# Get the direction the player is pressing
@@ -58,7 +59,7 @@ func _on_hurt_box_area_entered(area): #VR
 		currentHealth -= 1
 		if currentHealth < 0:
 			currentHealth = maxHealth
-		print_debug(currentHealth)
+		healthChanged.emit(currentHealth)
 
 
 func _physics_process(delta: float) -> void:
