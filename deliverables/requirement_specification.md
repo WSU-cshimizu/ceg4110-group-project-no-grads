@@ -5,6 +5,7 @@ These are provided as _minima_ for the document. It is likely that in order to b
 * Two _top-level_ requirements per user story.
 * One _top-level_ requirement per graduate student that pertains to testing.
 * Our stories: 
+### R1 : The Player shall be able to engage in combat
 * As a player, I want to be able move my character and swing my sword to fight enemies.
    - Character must move
    - There must be enemies
