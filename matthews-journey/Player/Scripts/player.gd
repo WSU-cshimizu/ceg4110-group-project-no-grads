@@ -97,8 +97,8 @@ func _on_hurt_box_area_entered(area): #VR
 	if area.name == "hitBox": 
 		print_debug(area.get_parent().name)
 		currentHealth -= 1
-		if currentHealth < 0:
-			currentHealth = maxHealth
+		if currentHealth <= 0:
+			get_tree().change_scene_to_file("res://UI/game_over.tscn")
 		healthChanged.emit(currentHealth)
 		
 func update_state(delta: float) -> void:
