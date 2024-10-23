@@ -2,9 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://bhlrgd4arc11n" path="res://assets/Outdoor decoration/Campfire_Anim.png" id="1_rypea"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_2w8yl"]
-radius = 5.0
-
 [sub_resource type="Animation" id="Animation_t60bs"]
 length = 0.001
 tracks/0/type = "value"
@@ -43,6 +40,9 @@ _data = {
 "burn": SubResource("Animation_q1jtv")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2w8yl"]
+radius = 5.0
+
 [node name="Campfire" type="StaticBody2D"]
 y_sort_enabled = true
 position = Vector2(0, -16)
@@ -51,12 +51,19 @@ position = Vector2(0, -16)
 texture = ExtResource("1_rypea")
 hframes = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 9)
-shape = SubResource("CircleShape2D_2w8yl")
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_qy7p4")
 }
 autoplay = "burn"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 18)
+shape = SubResource("CircleShape2D_2w8yl")
+disabled = true
+
+[node name="hitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="hitBox"]
+position = Vector2(-1, 9)
+shape = SubResource("CircleShape2D_2w8yl")
