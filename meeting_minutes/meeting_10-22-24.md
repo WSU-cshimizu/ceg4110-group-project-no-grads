@@ -14,6 +14,8 @@
 * Attack animation and rudimentary state machine implemented
 * Health bar decreases when player walks into slimes
 * Focus on hitting the minimum viable specification!
+* Software Design Pattern for State Machine:
+  ![State Pattern](State Pattern.jpg)
 
 ## Action Items
 * Robert
