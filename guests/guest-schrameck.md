@@ -13,6 +13,9 @@ Development team consists of UI/UX, software developers (front end, back end), a
 
 Popular Agile Frameworks: Kanban, Scrum, SAFe, Lean, eXtreme Programming (XP), Dynamic Systems Development Method (DSDM)  
 * (Winsupply uses Kanban and Scrum)
+*  "Any framework can succeed. Every team has to figure out how to mold a framework into something that works for them." 
+
+Lack of communication is often the biggest pitfall he sees. Lack of planning being the next biggest. 
 
 Measuring success at Winsupply: amount of users of the product, performance of the team
 
