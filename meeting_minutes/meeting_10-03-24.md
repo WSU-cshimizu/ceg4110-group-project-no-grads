@@ -27,4 +27,4 @@ After the notes and action items have been pushed, each person should take a tim
 * Virginia RIchards
 * Cara Zozokos
 * Robert Dallessandris
-* 
+* Josiah Yount
