@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://csc7yvvc5b2sd"]
+
+[ext_resource type="Texture2D" uid="uid://d2x3dna2tikxo" path="res://assets/UI/health-heart.png" id="1_7hbsn"]
+[ext_resource type="Texture2D" uid="uid://doytnh5qykdh0" path="res://assets/UI/magic-bar.png" id="2_sh073"]
+[ext_resource type="Texture2D" uid="uid://dd06a50fyb11x" path="res://assets/UI/menu-button.png" id="3_wev6a"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Heart 1" type="TextureRect" parent="."]
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 29.0
+offset_bottom = 27.0
+texture = ExtResource("1_7hbsn")
+
+[node name="Heart 2" type="TextureRect" parent="."]
+offset_left = 32.0
+offset_top = 9.0
+offset_right = 52.0
+offset_bottom = 27.0
+texture = ExtResource("1_7hbsn")
+
+[node name="Heart 3" type="TextureRect" parent="."]
+offset_left = 55.0
+offset_top = 8.0
+offset_right = 75.0
+offset_bottom = 26.0
+texture = ExtResource("1_7hbsn")
+
+[node name="Magic bar" type="TextureRect" parent="."]
+offset_left = 7.0
+offset_top = 30.0
+offset_right = 97.0
+offset_bottom = 42.0
+texture = ExtResource("2_sh073")
+
+[node name="MenuButton" type="MenuButton" parent="."]
+offset_left = 449.0
+offset_top = 2.0
+offset_right = 477.0
+offset_bottom = 30.0
+icon = ExtResource("3_wev6a")

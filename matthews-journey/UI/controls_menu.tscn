@@ -1,18 +1,49 @@
-[gd_scene load_steps=2 format=3 uid="uid://brmcqbljir3d0"]
+[gd_scene load_steps=5 format=3 uid="uid://brmcqbljir3d0"]
 
 [ext_resource type="Texture2D" uid="uid://csm7dwxhe7e3o" path="res://assets/Main Menu/Background.jpg" id="1_wd4xp"]
+[ext_resource type="FontFile" uid="uid://p0c4ckavkfs" path="res://assets/Fonts/dpcomic.ttf" id="2_m28vb"]
+[ext_resource type="Theme" uid="uid://csry20lwrt5ui" path="res://UI/Buttons.tres" id="3_40wkj"]
+[ext_resource type="Script" path="res://UI/back_button.gd" id="4_00413"]
 
 [node name="ControlsMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.35
+anchor_bottom = 1.337
+offset_bottom = 0.0100098
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.439049, 0.439049, 0.439049, 1)
 layout_mode = 0
-offset_left = 2.0
-offset_right = 647.0
-offset_bottom = 360.0
+offset_left = 1.0
+offset_right = 480.0
+offset_bottom = 270.0
 texture = ExtResource("1_wd4xp")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+top_level = true
+layout_mode = 0
+offset_left = 192.0
+offset_top = 106.0
+offset_right = 281.0
+offset_bottom = 173.0
+theme_override_fonts/normal_font = ExtResource("2_m28vb")
+theme_override_font_sizes/normal_font_size = 16
+text = "W: Move Up
+A: Move Left
+S: Move Down
+D: Move Right"
+fit_content = true
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 7.0
+offset_right = 474.0
+offset_bottom = 35.0
+theme = ExtResource("3_40wkj")
+script = ExtResource("4_00413")
+
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]
