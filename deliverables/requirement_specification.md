@@ -1,11 +1,6 @@
 # Requirements Specification
 
-## Requirements
-These are provided as _minima_ for the document. It is likely that in order to be comprehensive, you will want more requirements.
-* Two _top-level_ requirements per user story.
-* One _top-level_ requirement per graduate student that pertains to testing.
-* Our stories: 
-### R1 : The Player shall be able to engage in combat
+## User Stories:
 * As a player, I want to be able move my character and swing my sword to fight enemies.
    - The character shall move.
         - They shall use the arrow keys to move up, down, left, and right.
@@ -59,15 +54,3 @@ These are provided as _minima_ for the document. It is likely that in order to b
         - There shall be a UI Controls element which is an option on the main menu that displays the controls for the player.
         - The UI Controls element shall allow the player to return to the main menu by pressing the spacebar. 
    
-
-## Submission Details
-* This assignment should be placed in the team repository in the `deliverables` directory.
-
-## Rubric
-| Points | Metric                                            |
-| ------ | ------------------------------------------------- |
-| 2      | Does it look nice?                                |
-| 2      | Follows the appropriate language.                 |
-| 3      | Minimum number of requirements present.           |
-| 3      | Appropriate mid/low level requirements coverage.  |
-| **10** | **Total**                                         |
