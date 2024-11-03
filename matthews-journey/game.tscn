@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=36 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="3_cq82d"]
 [ext_resource type="Texture2D" uid="uid://dqlcq86g6gxav" path="res://assets/Tiles/Grass/Grass_1_Middle.png" id="3_wfy1b"]
 [ext_resource type="Texture2D" uid="uid://bcylv2e3y774v" path="res://assets/Tiles/Grass/Path_Middle.png" id="4_ahu12"]
+[ext_resource type="PackedScene" uid="uid://bvs1b5q0worqx" path="res://Collectables/apple.tscn" id="5_e5nac"]
 [ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="5_enysm"]
 [ext_resource type="Texture2D" uid="uid://cwauj365wm342" path="res://assets/Tiles/Picnic_Blankets.png" id="6_oe8xa"]
 [ext_resource type="Texture2D" uid="uid://dbu823ef36c01" path="res://addons/DialogAssets/PlayerChatIcon.png" id="8_uoqv5"]
@@ -244,6 +245,10 @@ texture = ExtResource("3_cq82d")
 4:0/0 = 0
 4:1/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_0j61l"]
+resource_name = "Collectables"
+scenes/1/scene = ExtResource("5_e5nac")
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnpgq"]
 texture = ExtResource("3_wfy1b")
 0:0/0 = 0
@@ -320,6 +325,7 @@ sources/5 = SubResource("TileSetAtlasSource_ugweo")
 sources/6 = SubResource("TileSetAtlasSource_ice8j")
 sources/7 = SubResource("TileSetAtlasSource_itqk8")
 sources/1 = SubResource("TileSetAtlasSource_rtvto")
+sources/2 = SubResource("TileSetScenesCollectionSource_0j61l")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjyct"]
 size = Vector2(28, 25)
@@ -364,6 +370,8 @@ shape = SubResource("RectangleShape2D_74dcv")
 [node name="TileMap" type="TileMap" parent="Map"]
 tile_set = SubResource("TileSet_44y6g")
 format = 2
+layer_0/name = "Collectables"
+layer_0/tile_data = PackedInt32Array(589836, 2, 65536, 393220, 2, 65536, 262166, 2, 65536, 851996, 2, 65536)
 
 [node name="Ground" type="TileMapLayer" parent="Map/TileMap"]
 z_index = -2

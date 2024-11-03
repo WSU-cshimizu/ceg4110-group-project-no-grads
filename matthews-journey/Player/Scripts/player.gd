@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 # Health Variables
 signal healthChanged #VR
 @export var maxHealth = 5 #VR
-@onready var currentHealth: int = maxHealth #VR
+@onready var currentHealth: int = 3 #maxHealth #VR
 
 # Sprite variables
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -21,8 +21,8 @@ const ATTACK_DELAY: float = 0.35   # delay between player attacks
 var attack_cooldown: float = 0.0  # current time delay until player can attack
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
+func _ready():
+	add_to_group("player")
 
 func _process(delta: float) -> void:
 	# Get the direction the player is pressing
@@ -94,12 +94,27 @@ func handleCollision(): #VR
 		#print_debug(collider.name)
 
 func _on_hurt_box_area_entered(area): #VR
+	if area.has_method("collect"):
+		area.collect()
 	if area.name == "hitBox": 
 		print_debug(area.get_parent().name)
 		currentHealth -= 1
 		if currentHealth <= 0:
 			get_tree().change_scene_to_file("res://UI/game_over.tscn")
 		healthChanged.emit(currentHealth)
+		
+func _heal(area):
+	print_debug("_heal called with area: ", area.name)
+	if area.has_method("collect"):
+		print_debug("Area has collect method")
+		area.collect()
+		print_debug("Current health: ", currentHealth)
+		if currentHealth < maxHealth:
+			currentHealth += 1
+			healthChanged.emit(currentHealth)
+			print_debug("Health after healing: ", currentHealth)
+
+
 		
 func update_state(delta: float) -> void:
 	var state: String = current_state
