@@ -9,6 +9,8 @@
 * Weekly Tasks
 
 ## Notes
+Enemies Chasing player implemented by Robert
+
 * System Usability Scale grading
 1.     I think that I would like to use this system frequently. - 4
 2.     I found the system unnecessarily complex. - 1
@@ -25,7 +27,8 @@
 
 ## Action Items
 * Robert
- * 
+ * Work on player knockback on recieving damage
+ * continute working on enemy attacks beyond just walking into player
 * Virginia
  * 
 * Cara
@@ -37,6 +40,6 @@
 ## Signatures
 After the notes and action items have been pushed, each person should take a time to review them. If everything is agreeable, push a single commit with your name as a signature. 
 * Cara Zozokos
-* 
+* Robert D'Allessandris
 * 
 * 
