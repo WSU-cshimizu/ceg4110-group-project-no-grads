@@ -93,8 +93,8 @@ func handleCollision(): #VR
 		var collider = collision. get_collider()
 		#print_debug(collider.name)
 
-func _on_hurt_box_area_entered(area): #VR
-	if area.has_method("collect"):
+func _on_hurt_box_area_entered(area: Area2D) -> void: #VR
+	if area is Collectable:
 		area.collect()
 	if area.name == "hitBox": 
 		print_debug(area.get_parent().name)

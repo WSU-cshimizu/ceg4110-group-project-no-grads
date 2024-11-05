@@ -1,4 +1,5 @@
-extends "res://Collectables/collectable.gd" #inheirits from collectable.gd
+class_name Apple
+extends Collectable #inheirits from collectable.gd
 
 @onready var animations = $AnimationPlayer
 @onready var heartsContainer = $MarginContainer/heartsContainer 
