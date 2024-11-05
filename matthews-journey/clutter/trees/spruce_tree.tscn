@@ -6,6 +6,7 @@
 size = Vector2(8.5, 7)
 
 [node name="SpruceTree" type="StaticBody2D"]
+collision_layer = 9
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 y_sort_enabled = true

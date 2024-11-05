@@ -11,6 +11,7 @@ size = Vector2(19, 9.75)
 [node name="Well" type="StaticBody2D"]
 y_sort_enabled = true
 position = Vector2(0, -26)
+collision_layer = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_6s6kh")

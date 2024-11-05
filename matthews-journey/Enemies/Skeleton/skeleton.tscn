@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://craqp6dyl18a3"]
+[gd_scene load_steps=8 format=3 uid="uid://craqp6dyl18a3"]
 
 [ext_resource type="Texture2D" uid="uid://cxu888wiot3un" path="res://assets/Enemies/Skeleton/Skeleton.png" id="1_ga2jr"]
+[ext_resource type="Script" path="res://Enemies/Skeleton/skeleton_damage_box.gd" id="2_im8fy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1rb2b"]
 radius = 3.0
@@ -44,13 +45,12 @@ _data = {
 "idle_down": SubResource("Animation_0o1k0")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_32py4"]
-radius = 6.0
-height = 20.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3d6yw"]
+size = Vector2(8.99996, 17)
 
 [node name="Skeleton" type="CharacterBody2D"]
-collision_layer = 2
-collision_mask = 5
+collision_layer = 4
+collision_mask = 11
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -7)
@@ -70,9 +70,11 @@ libraries = {
 }
 autoplay = "idle_down"
 
-[node name="hitBox" type="Area2D" parent="."]
+[node name="DamageBox" type="Area2D" parent="."]
+script = ExtResource("2_im8fy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitBox"]
-position = Vector2(0, -9)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageBox"]
+position = Vector2(0.500043, -8.50002)
 rotation = 3.14155
-shape = SubResource("CapsuleShape2D_32py4")
+shape = SubResource("RectangleShape2D_3d6yw")
+debug_color = Color(0.775595, 0.414182, 0.410904, 0.42)
