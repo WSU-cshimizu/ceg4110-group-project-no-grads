@@ -190,7 +190,7 @@ size = Vector2(9, 16)
 
 [node name="Players" type="CharacterBody2D"]
 y_sort_enabled = true
-collision_mask = 30
+collision_mask = 62
 script = ExtResource("1_pttgt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
