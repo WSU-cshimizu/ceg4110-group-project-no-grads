@@ -53,6 +53,8 @@ _data = {
 [node name="Skeleton" type="CharacterBody2D"]
 collision_layer = 4
 collision_mask = 11
+platform_on_leave = 2
+platform_floor_layers = 4294967042
 script = ExtResource("1_kvtcv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

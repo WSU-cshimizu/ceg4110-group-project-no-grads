@@ -191,6 +191,8 @@ _data = {
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_mask = 62
+platform_on_leave = 2
+platform_floor_layers = 4294967042
 script = ExtResource("1_pttgt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

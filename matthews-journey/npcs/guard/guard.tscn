@@ -48,6 +48,8 @@ size = Vector2(11, 8)
 
 [node name="Guard" type="CharacterBody2D"]
 collision_layer = 32
+platform_on_leave = 2
+platform_floor_layers = 4294967042
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -15)
