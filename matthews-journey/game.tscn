@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=40 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://dtgc2x7x1r410" path="res://clutter/campfire.tscn" id="14_pa2sc"]
 [ext_resource type="PackedScene" uid="uid://yufh4cadm83p" path="res://npcs/guard/guard.tscn" id="24_jmqju"]
 [ext_resource type="PackedScene" uid="uid://bcf5hqn04g1dm" path="res://npcs/cow/cow.tscn" id="25_llkrr"]
+[ext_resource type="PackedScene" uid="uid://c0xueonklg3om" path="res://clutter/hay_Bale.tscn" id="26_7xph4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74dcv"]
 size = Vector2(1099, 16)
@@ -519,6 +520,12 @@ position = Vector2(447, 138)
 
 [node name="Cow" parent="." instance=ExtResource("25_llkrr")]
 position = Vector2(259, 77)
+
+[node name="HayBale" parent="." instance=ExtResource("26_7xph4")]
+position = Vector2(240, 79)
+
+[node name="HayBale2" parent="." instance=ExtResource("26_7xph4")]
+position = Vector2(300, 80)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="body_entered" from="PlayerChatIcon/ChatDetect" to="PlayerChatIcon" method="_on_chat_detect_body_entered"]
