@@ -17,8 +17,6 @@ const DIRECTIONS = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
 # State Variables
 var current_state : String = "idle"
-const ATTACK_DELAY: float = 0.35   # delay between player attacks
-var attack_cooldown: float = 0.0  # current time delay until player can attack
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -117,22 +115,23 @@ func _heal(area):
 
 		
 func update_state(delta: float) -> void:
-	var state: String = current_state
+	var new_state: String = current_state
+	var prev_state: String = current_state
 	
-	if attack_cooldown > 0:
-		attack_cooldown -= delta
-		
+	# Find new state
 	if Input.is_action_pressed("attack"):
-		if attack_cooldown <= 0:
-			attack_cooldown = ATTACK_DELAY
-			state = "attack"
+		new_state = "attack"
 	elif direction == Vector2.ZERO:
-		state = "idle" # idle
+		new_state = "idle" # idle
 	elif direction != Vector2.ZERO:
-		state = "walk"
-
-	current_state = state
-
+		new_state = "walk"
+	
+	# update the state if it is different than previous
+	if new_state != current_state:
+		if prev_state == "attack":
+			# prevent spamming attack
+			await animation_player.animation_finished
+		current_state = new_state
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()

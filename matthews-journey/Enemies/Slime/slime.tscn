@@ -48,7 +48,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqhuv"]
-radius = 28.0179
+radius = 34.0147
 
 [node name="Slime" type="CharacterBody2D"]
 y_sort_enabled = true
