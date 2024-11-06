@@ -3,7 +3,9 @@ class_name Slime extends CharacterBody2D
 @onready var player: Player = $"../../Player"
 var player_detected: bool = false
 const SPEED = 25
+const MIN_WANDER = 0.3
 const MAX_WANDER = 0.5
+const MIN_IDLE = 1.0
 const MAX_IDLE = 1.5
 var wander_time: float
 var idle_time: float
@@ -47,18 +49,16 @@ func chase(delta) -> void:
 			
 func wander(delta) -> void:
 	if wander_time <= 0:
-		idle_time = MAX_IDLE
+		idle_time = randf_range(MIN_IDLE, MAX_IDLE)
 		velocity = Vector2.ZERO
 		current_state = "idle"
 	else:
 		wander_time -= delta
-		print(wander_time)
 	
 func idle(delta) -> void:
 	if idle_time <= 0:
-		wander_time = MAX_WANDER
+		wander_time = randf_range(MIN_WANDER, MAX_WANDER)
 		velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized() * SPEED
 		current_state = "wander"
 	else:
 		idle_time -= delta
-		print(idle_time)
