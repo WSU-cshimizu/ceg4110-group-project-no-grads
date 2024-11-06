@@ -12,8 +12,8 @@ var idle_time: float
 var current_state: String
 
 func _ready() -> void:
-	wander_time = MAX_WANDER
-	idle_time = MAX_IDLE
+	wander_time = randf_range(MIN_WANDER, MAX_WANDER)
+	idle_time = randf_range(MIN_IDLE, MAX_IDLE)
 	current_state = "idle"
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
