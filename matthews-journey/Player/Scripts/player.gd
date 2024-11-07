@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 # Health Variables
 signal healthChanged #VR
 @export var maxHealth = 5 #VR
-@onready var currentHealth: int = maxHealth #VR
+@onready var currentHealth: int = 3 #maxHealth #VR
 
 # Sprite variables
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -17,12 +17,10 @@ const DIRECTIONS = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
 # State Variables
 var current_state : String = "idle"
-const ATTACK_DELAY: float = 0.35   # delay between player attacks
-var attack_cooldown: float = 0.0  # current time delay until player can attack
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
+func _ready():
+	add_to_group("player")
 
 func _process(delta: float) -> void:
 	# Get the direction the player is pressing
@@ -93,7 +91,9 @@ func handleCollision(): #VR
 		var collider = collision. get_collider()
 		#print_debug(collider.name)
 
-func _on_hurt_box_area_entered(area): #VR
+func _on_hurt_box_area_entered(area: Area2D) -> void: #VR
+	if area is Collectable:
+		area.collect()
 	if area.name == "hitBox": 
 		print_debug(area.get_parent().name)
 		currentHealth -= 1
@@ -101,23 +101,37 @@ func _on_hurt_box_area_entered(area): #VR
 			get_tree().change_scene_to_file("res://UI/game_over.tscn")
 		healthChanged.emit(currentHealth)
 		
-func update_state(delta: float) -> void:
-	var state: String = current_state
-	
-	if attack_cooldown > 0:
-		attack_cooldown -= delta
+func _heal(area):
+	print_debug("_heal called with area: ", area.name)
+	if area.has_method("collect"):
+		print_debug("Area has collect method")
+		area.collect()
+		print_debug("Current health: ", currentHealth)
+		if currentHealth < maxHealth:
+			currentHealth += 1
+			healthChanged.emit(currentHealth)
+			print_debug("Health after healing: ", currentHealth)
+
+
 		
+func update_state(delta: float) -> void:
+	var new_state: String = current_state
+	var prev_state: String = current_state
+	
+	# Find new state
 	if Input.is_action_pressed("attack"):
-		if attack_cooldown <= 0:
-			attack_cooldown = ATTACK_DELAY
-			state = "attack"
+		new_state = "attack"
 	elif direction == Vector2.ZERO:
-		state = "idle" # idle
+		new_state = "idle" # idle
 	elif direction != Vector2.ZERO:
-		state = "walk"
-
-	current_state = state
-
+		new_state = "walk"
+	
+	# update the state if it is different than previous
+	if new_state != current_state:
+		if prev_state == "attack":
+			# prevent spamming attack
+			await animation_player.animation_finished
+		current_state = new_state
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()

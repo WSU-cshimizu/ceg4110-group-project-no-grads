@@ -22,16 +22,20 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Cow": "res://Cow.dch",
 "Random Guy": "res://addons/characters/Random Guy.dch",
 "Talking Guy": "res://addons/characters/Talking Guy.dch",
-"Telonis": "res://addons/characters/Telonis.dch"
+"Telonis": "res://addons/characters/Telonis.dch",
+"guard": "res://assets/UI/guard.dch"
 }
 directories/dtl_directory={
 "RandomChat1": "res://addons/timelines/RandomChat1.dtl",
 "RandomChat2": "res://addons/timelines/RandomChat2.dtl",
 "RandomChat3": "res://addons/timelines/RandomChat3.dtl",
 "TalkingGuyTalking": "res://addons/timelines/TalkingGuyTalking.dtl",
-"Tragoudi": "res://addons/timelines/Tragoudi.dtl"
+"Tragoudi": "res://addons/timelines/Tragoudi.dtl",
+"cow": "res://cow.dtl",
+"tent_guard": "res://addons/timelines/tent_guard.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
@@ -114,6 +118,9 @@ dialogic_default_action={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Terrain"
 2d_physics/layer_3="Enemies"
+2d_physics/layer_4="Clutter"
+2d_physics/layer_5="Collectables"
+2d_physics/layer_6="npcs"
 
 [rendering]
 

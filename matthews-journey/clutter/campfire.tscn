@@ -46,6 +46,7 @@ radius = 5.0
 [node name="Campfire" type="StaticBody2D"]
 y_sort_enabled = true
 position = Vector2(0, -16)
+collision_layer = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_rypea")

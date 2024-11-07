@@ -20,6 +20,7 @@ overrides = {
 "name_label_use_global_font": "false",
 "normal_font": "\"res://assets/Fonts/dpcomic.ttf\"",
 "text_use_global_font": "false"
+
 }
 
 [sub_resource type="Resource" id="Resource_2acws"]
@@ -36,4 +37,4 @@ script = ExtResource("2_gfh6k")
 name = "Basic"
 base_overrides = {}
 layers = Array[ExtResource("1_f1rr1")]([SubResource("Resource_lniqb"), SubResource("Resource_1dcsu"), SubResource("Resource_2acws")])
-metadata/_latest_layer = 2
+metadata/_latest_layer = 1

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfx6osk1qisbe"]
+
+[ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="1_impkx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0srk"]
+size = Vector2(46, 32)
+
+[node name="BigTent" type="StaticBody2D"]
+y_sort_enabled = true
+collision_layer = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_impkx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -17)
+shape = SubResource("RectangleShape2D_m0srk")
