@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="5_enysm"]
 [ext_resource type="Texture2D" uid="uid://cwauj365wm342" path="res://assets/Tiles/Picnic_Blankets.png" id="6_oe8xa"]
 [ext_resource type="Texture2D" uid="uid://dbu823ef36c01" path="res://addons/DialogAssets/PlayerChatIcon.png" id="8_uoqv5"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://UI/hud.tscn" id="10_7xuxi"]
+[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="10_7xuxi"]
 [ext_resource type="Script" path="res://player_chat_icon.gd" id="10_ibhwy"]
 [ext_resource type="PackedScene" uid="uid://dfx6osk1qisbe" path="res://clutter/BigTent.tscn" id="10_iltnf"]
 [ext_resource type="Texture2D" uid="uid://m6u5cu6ecewb" path="res://addons/DialogAssets/Telonis.png" id="11_4kw14"]
