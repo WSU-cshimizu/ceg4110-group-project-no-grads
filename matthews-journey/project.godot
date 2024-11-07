@@ -18,15 +18,16 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+SignalBus="*res://signal_bus.gd"
 
 [dialogic]
 
 directories/dch_directory={
-"Cow": "res://Cow.dch",
+"Cow": "res://addons/characters/Cow.dch",
 "Random Guy": "res://addons/characters/Random Guy.dch",
 "Talking Guy": "res://addons/characters/Talking Guy.dch",
 "Telonis": "res://addons/characters/Telonis.dch",
-"guard": "res://assets/UI/guard.dch"
+"guard": "res://addons/characters/guard.dch"
 }
 directories/dtl_directory={
 "RandomChat1": "res://addons/timelines/RandomChat1.dtl",
@@ -34,7 +35,7 @@ directories/dtl_directory={
 "RandomChat3": "res://addons/timelines/RandomChat3.dtl",
 "TalkingGuyTalking": "res://addons/timelines/TalkingGuyTalking.dtl",
 "Tragoudi": "res://addons/timelines/Tragoudi.dtl",
-"cow": "res://cow.dtl",
+"cow": "res://addons/timelines/cow.dtl",
 "tent_guard": "res://addons/timelines/tent_guard.dtl"
 }
 extensions_folder="res://addons/dialogic_additions"

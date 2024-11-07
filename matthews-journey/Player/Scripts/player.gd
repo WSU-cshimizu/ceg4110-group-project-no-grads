@@ -18,6 +18,7 @@ const DIRECTIONS = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 # State Variables
 var current_state : String = "idle"
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("player")
@@ -94,12 +95,12 @@ func handleCollision(): #VR
 func _on_hurt_box_area_entered(area: Area2D) -> void: #VR
 	if area is Collectable:
 		area.collect()
-	if area.name == "hitBox": 
-		print_debug(area.get_parent().name)
-		currentHealth -= 1
-		if currentHealth <= 0:
-			get_tree().change_scene_to_file("res://UI/game_over.tscn")
-		healthChanged.emit(currentHealth)
+	#if area.name == "hitBox": 
+		#print_debug(area.get_parent().name)
+		#currentHealth -= 1
+		#if currentHealth <= 0:
+			#get_tree().change_scene_to_file("res://UI/game_over.tscn")
+		#healthChanged.emit(currentHealth)
 		
 func _heal(area):
 	print_debug("_heal called with area: ", area.name)
@@ -135,7 +136,13 @@ func update_state(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
-	handleCollision() #VR
+	#handleCollision() #VR <-- this doesn't seem to do anything
 	
 func player():
 	pass
+
+func take_damage(damage):
+	currentHealth -= damage
+	if currentHealth <= 0:
+		get_tree().change_scene_to_file("res://UI/game_over.tscn")
+	healthChanged.emit(currentHealth)
