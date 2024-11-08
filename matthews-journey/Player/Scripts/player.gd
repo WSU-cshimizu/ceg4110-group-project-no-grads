@@ -86,22 +86,6 @@ func animation_direction() -> String:
 	else:
 		return "side"
 		
-func handleCollision(): #VR
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		var collider = collision. get_collider()
-		#print_debug(collider.name)
-
-func _on_hurt_box_area_entered(area: Area2D) -> void: #VR
-	if area is Collectable:
-		area.collect()
-	#if area.name == "hitBox": 
-		#print_debug(area.get_parent().name)
-		#currentHealth -= 1
-		#if currentHealth <= 0:
-			#get_tree().change_scene_to_file("res://UI/game_over.tscn")
-		#healthChanged.emit(currentHealth)
-		
 func _heal(area):
 	print_debug("_heal called with area: ", area.name)
 	if area.has_method("collect"):

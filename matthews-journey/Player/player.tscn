@@ -204,7 +204,7 @@ hframes = 8
 vframes = 25
 
 [node name="hurtBox" type="Area2D" parent="."]
-collision_mask = 55
+collision_mask = 52
 script = ExtResource("3_6rwjo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox"]
@@ -226,4 +226,4 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="area_entered" from="hurtBox" to="hurtBox" method="_on_area_entered"]
