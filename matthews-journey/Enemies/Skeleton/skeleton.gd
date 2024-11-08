@@ -1,7 +1,7 @@
 class_name Skeleton extends Enemy
 
 
-@export var health: int = 3
+@export var health: int = 1
 @export var damage: int = 2
 @export var speed = 25
 
