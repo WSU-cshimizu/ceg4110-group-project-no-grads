@@ -1,16 +1,25 @@
-class_name Skeleton extends CharacterBody2D
+class_name Skeleton extends Enemy
+
+
+@export var health: int = 1
+@export var damage: int = 2
+@export var speed = 25
+
 
 @onready var player: Player = $"../../Player"
 var player_detected = false
-const SPEED = 25
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
-	if body is Player:
+	#print("skelly hitbox entered")
+	#if body is Player:
+		#print("Skelly hit player")
+		#SignalBus.enemy_attack.emit(damage)
+		#print("skelly attack signal emitted")
 		pass
 
 func _physics_process(delta: float) -> void:
 	if player_detected:
-		velocity = position.direction_to(player.position) * SPEED
+		velocity = position.direction_to(player.position) * speed
 		move_and_slide()
 
 

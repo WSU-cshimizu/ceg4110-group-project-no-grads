@@ -5,9 +5,13 @@ signal healthChanged #VR
 @export var maxHealth = 5 #VR
 @onready var currentHealth: int = 3 #maxHealth #VR
 
+@export var damage: int = 1
+
 # Sprite variables
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var sword_hit_box: SwordHitBox = $Sprite2D/SwordHitBox
+
 
 # Direction Variables
 const SPEED = 175.0
@@ -18,9 +22,11 @@ const DIRECTIONS = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 # State Variables
 var current_state : String = "idle"
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("player")
+	sword_hit_box.monitoring = false
 
 func _process(delta: float) -> void:
 	# Get the direction the player is pressing
@@ -85,22 +91,6 @@ func animation_direction() -> String:
 	else:
 		return "side"
 		
-func handleCollision(): #VR
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		var collider = collision. get_collider()
-		#print_debug(collider.name)
-
-func _on_hurt_box_area_entered(area: Area2D) -> void: #VR
-	if area is Collectable:
-		area.collect()
-	if area.name == "hitBox": 
-		print_debug(area.get_parent().name)
-		currentHealth -= 1
-		if currentHealth <= 0:
-			get_tree().change_scene_to_file("res://UI/game_over.tscn")
-		healthChanged.emit(currentHealth)
-		
 func _heal(area):
 	print_debug("_heal called with area: ", area.name)
 	if area.has_method("collect"):
@@ -112,8 +102,6 @@ func _heal(area):
 			healthChanged.emit(currentHealth)
 			print_debug("Health after healing: ", currentHealth)
 
-
-		
 func update_state(delta: float) -> void:
 	var new_state: String = current_state
 	var prev_state: String = current_state
@@ -121,6 +109,7 @@ func update_state(delta: float) -> void:
 	# Find new state
 	if Input.is_action_pressed("attack"):
 		new_state = "attack"
+		sword_hit_box.monitoring = true
 	elif direction == Vector2.ZERO:
 		new_state = "idle" # idle
 	elif direction != Vector2.ZERO:
@@ -131,11 +120,19 @@ func update_state(delta: float) -> void:
 		if prev_state == "attack":
 			# prevent spamming attack
 			await animation_player.animation_finished
+			# turn off sword hit box after animation finishes
+			sword_hit_box.monitoring = false
 		current_state = new_state
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
-	handleCollision() #VR
+	#handleCollision() #VR <-- this doesn't seem to do anything
 	
 func player():
 	pass
+
+func take_damage(damage):
+	currentHealth -= damage
+	if currentHealth <= 0:
+		get_tree().change_scene_to_file("res://UI/game_over.tscn")
+	healthChanged.emit(currentHealth)

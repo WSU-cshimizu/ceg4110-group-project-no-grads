@@ -1,19 +1,22 @@
-class_name Slime extends CharacterBody2D
+class_name Slime extends Enemy
 
-@onready var player: Player = $"../../Player"
-var player_detected: bool = false
-const SPEED = 25
-const MIN_WANDER = 0.3
-const MAX_WANDER = 0.5
-const MIN_IDLE = 1.0
-const MAX_IDLE = 1.5
+@export var health: int = 1
+@export var damage: int = 1
+@export var speed: int = 25
+@export var min_wander: float = 0.3
+@export var max_wander: float = 0.5
+@export var min_idle: float= 1.0
+@export var max_idle: float = 1.5
+
 var wander_time: float
 var idle_time: float
+@onready var player: Player = $"../../Player"
+var player_detected: bool = false
 var current_state: String
 
 func _ready() -> void:
-	wander_time = randf_range(MIN_WANDER, MAX_WANDER)
-	idle_time = randf_range(MIN_IDLE, MAX_IDLE)
+	wander_time = randf_range(min_wander, max_wander)
+	idle_time = randf_range(min_idle, max_idle)
 	current_state = "idle"
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
@@ -45,11 +48,11 @@ func _on_detection_zone_body_exited(body: Node2D) -> void:
 		current_state = "wander"
 		
 func chase(delta) -> void:
-	velocity = position.direction_to(player.position) * SPEED
+	velocity = position.direction_to(player.position) * speed
 			
 func wander(delta) -> void:
 	if wander_time <= 0:
-		idle_time = randf_range(MIN_IDLE, MAX_IDLE)
+		idle_time = randf_range(min_idle, max_idle)
 		velocity = Vector2.ZERO
 		current_state = "idle"
 	else:
@@ -57,8 +60,8 @@ func wander(delta) -> void:
 	
 func idle(delta) -> void:
 	if idle_time <= 0:
-		wander_time = randf_range(MIN_WANDER, MAX_WANDER)
-		velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized() * SPEED
+		wander_time = randf_range(min_wander, max_wander)
+		velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized() * speed
 		current_state = "wander"
 	else:
 		idle_time -= delta

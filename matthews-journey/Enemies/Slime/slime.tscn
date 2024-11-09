@@ -1,14 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://dn3mwfqslkc7m"]
+[gd_scene load_steps=12 format=3 uid="uid://dn3mwfqslkc7m"]
 
 [ext_resource type="Script" path="res://Enemies/Slime/slime.gd" id="1_8ce83"]
 [ext_resource type="Texture2D" uid="uid://da5a8xe8hx3wy" path="res://assets/Enemies/Slime/Slime.png" id="1_gjw7w"]
+[ext_resource type="Script" path="res://Enemies/Slime/slime_hit_box.gd" id="3_r6bti"]
+[ext_resource type="Script" path="res://Enemies/Slime/slime_hurt_box.gd" id="4_m1bg0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_60wb6"]
+radius = 6.08276
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2rke"]
 radius = 4.99996
 height = 15.9999
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_60wb6"]
-radius = 6.08276
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c7r6n"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hqhuv"]
+radius = 34.0147
 
 [sub_resource type="Animation" id="Animation_6np17"]
 length = 0.001
@@ -47,9 +56,6 @@ _data = {
 "idle_down": SubResource("Animation_ov03q")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hqhuv"]
-radius = 34.0147
-
 [node name="Slime" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 4
@@ -57,6 +63,13 @@ collision_mask = 11
 platform_on_leave = 2
 platform_floor_layers = 4294967042
 script = ExtResource("1_8ce83")
+health = null
+damage = null
+speed = null
+min_wander = null
+max_wander = null
+min_idle = null
+max_idle = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -7)
@@ -64,19 +77,42 @@ texture = ExtResource("1_gjw7w")
 hframes = 6
 vframes = 3
 
-[node name="hitBox" type="Area2D" parent="."]
+[node name="PhysicsCollisionShape" type="CollisionShape2D" parent="."]
+visible = false
+light_mask = 16
+position = Vector2(-1, -5)
+shape = SubResource("CircleShape2D_60wb6")
+debug_color = Color(0, 0.6, 0.701961, 0.705882)
 
-[node name="HitBoxCollision" type="CollisionShape2D" parent="hitBox"]
+[node name="HitBox" type="Area2D" parent="."]
+visible = false
+collision_layer = 4
+script = ExtResource("3_r6bti")
+
+[node name="HitBoxCollision" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(-1, -6)
 rotation = 1.56685
 shape = SubResource("CapsuleShape2D_x2rke")
 debug_color = Color(0.789184, 0.124956, 0.229042, 0.42)
 
-[node name="PhysicsCollisionShape" type="CollisionShape2D" parent="."]
-light_mask = 16
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 33
+script = ExtResource("4_m1bg0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-1, -5)
-shape = SubResource("CircleShape2D_60wb6")
-debug_color = Color(0, 0.6, 0.701961, 0.705882)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_c7r6n")
+debug_color = Color(0.339181, 0.601347, 0.450914, 0.42)
+
+[node name="DetectionZone" type="Area2D" parent="."]
+visible = false
+
+[node name="DetectionCollision" type="CollisionShape2D" parent="DetectionZone"]
+position = Vector2(-1, -5)
+shape = SubResource("CircleShape2D_hqhuv")
+debug_color = Color(0.639216, 0.631373, 0.666667, 0.298039)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -84,12 +120,6 @@ libraries = {
 }
 autoplay = "idle_down"
 
-[node name="DetectionZone" type="Area2D" parent="."]
-
-[node name="DetectionCollision" type="CollisionShape2D" parent="DetectionZone"]
-position = Vector2(-1, -5)
-shape = SubResource("CircleShape2D_hqhuv")
-debug_color = Color(0.639216, 0.631373, 0.666667, 0.298039)
-
+[connection signal="area_entered" from="HitBox" to="HitBox" method="_on_area_entered"]
 [connection signal="body_entered" from="DetectionZone" to="." method="_on_detection_zone_body_entered"]
 [connection signal="body_exited" from="DetectionZone" to="." method="_on_detection_zone_body_exited"]
