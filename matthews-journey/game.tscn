@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=41 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cpfop7dxq1d24" path="res://addons/DialogAssets/RandomChatIcon.png" id="13_unkdt"]
 [ext_resource type="PackedScene" uid="uid://qrjg8tje8wa" path="res://clutter/trees/spruce_tree.tscn" id="14_45jsg"]
 [ext_resource type="PackedScene" uid="uid://dtgc2x7x1r410" path="res://clutter/campfire.tscn" id="14_pa2sc"]
+[ext_resource type="Script" path="res://UI/scripts/hud.gd" id="19_3ubn8"]
 [ext_resource type="PackedScene" uid="uid://yufh4cadm83p" path="res://npcs/guard/guard.tscn" id="24_jmqju"]
 [ext_resource type="PackedScene" uid="uid://bcf5hqn04g1dm" path="res://npcs/cow/cow.tscn" id="25_llkrr"]
 [ext_resource type="PackedScene" uid="uid://c0xueonklg3om" path="res://clutter/hay_Bale.tscn" id="26_7xph4"]
@@ -439,6 +440,7 @@ shape = SubResource("RectangleShape2D_ri746")
 position = Vector2(523, 106)
 
 [node name="CanvasLayer" parent="." instance=ExtResource("10_7xuxi")]
+script = ExtResource("19_3ubn8")
 
 [node name="Trees" type="Node2D" parent="."]
 y_sort_enabled = true
