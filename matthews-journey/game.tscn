@@ -516,7 +516,7 @@ position = Vector2(317, -24)
 
 [node name="Slime" parent="Enemies" instance=ExtResource("11_6t204")]
 position = Vector2(78, 204)
-health = 1
+health = 2
 damage = 1
 speed = 25
 min_wander = 0.3
@@ -526,7 +526,7 @@ max_idle = 1.5
 
 [node name="Slime2" parent="Enemies" instance=ExtResource("11_6t204")]
 position = Vector2(447, 138)
-health = 1
+health = 2
 damage = 1
 speed = 25
 min_wander = 0.3

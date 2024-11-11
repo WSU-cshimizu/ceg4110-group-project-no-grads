@@ -1,7 +1,10 @@
 class_name Slime extends Enemy
 
-@export var health: int = 1
+@onready var player: Player = $"../../Player"
+
+@export var health: int = 2
 @export var damage: int = 1
+@export var knockback_force: int = 10
 @export var speed: int = 25
 @export var min_wander: float = 0.3
 @export var max_wander: float = 0.5
@@ -10,8 +13,9 @@ class_name Slime extends Enemy
 
 var wander_time: float
 var idle_time: float
-@onready var player: Player = $"../../Player"
 var player_detected: bool = false
+var knocked_back: bool = false
+var knockback_velocity = Vector2.ZERO
 var current_state: String
 
 func _ready() -> void:
@@ -26,6 +30,8 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 
 func _physics_process(delta: float) -> void:
 	update_state(delta)
+	if knocked_back:
+		velocity = knockback_velocity
 	move_and_slide()
 		
 func update_state(delta):
@@ -65,3 +71,4 @@ func idle(delta) -> void:
 		current_state = "wander"
 	else:
 		idle_time -= delta
+		

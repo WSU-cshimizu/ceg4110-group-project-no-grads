@@ -6,6 +6,7 @@ signal healthChanged #VR
 @onready var currentHealth: int = 3 #maxHealth #VR
 
 @export var damage: int = 1
+@export var knockback_force = 10
 
 # Sprite variables
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -18,6 +19,9 @@ const SPEED = 175.0
 var direction : Vector2 = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
 const DIRECTIONS = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
+
+var knockback_velocity: Vector2 = Vector2.ZERO
+var knocked_back: bool = false
 
 # State Variables
 var current_state : String = "idle"
@@ -125,8 +129,9 @@ func update_state(delta: float) -> void:
 		current_state = new_state
 
 func _physics_process(delta: float) -> void:
+	if knocked_back:
+		velocity = knockback_velocity
 	move_and_slide()
-	#handleCollision() #VR <-- this doesn't seem to do anything
 	
 func player():
 	pass
