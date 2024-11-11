@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://debimm31ehn05"]
+
+[ext_resource type="Texture2D" uid="uid://2tvv0ob6cme5" path="res://assets/Enemies/Witch/With_Hut.png" id="1_gm3rv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6qqgd"]
+size = Vector2(103.25, 56)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tivn1"]
+size = Vector2(60, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ijex4"]
+radius = 17.1172
+
+[node name="WitchesHouse" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11, -53)
+texture = ExtResource("1_gm3rv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.375, -53)
+shape = SubResource("RectangleShape2D_6qqgd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-15, -14)
+shape = SubResource("RectangleShape2D_tivn1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(29, -29)
+shape = SubResource("CircleShape2D_ijex4")

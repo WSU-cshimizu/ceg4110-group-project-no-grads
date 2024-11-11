@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccy3v2v6l20ca"]
+
+[ext_resource type="Texture2D" uid="uid://dm4rtet75g0hc" path="res://assets/Enemies/Witch/Bat.png" id="1_qidft"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l6s5h"]
+radius = 3.0
+
+[sub_resource type="Animation" id="Animation_cf5q3"]
+resource_name = "fly"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, -2),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_23r5l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5ptb0"]
+_data = {
+"RESET": SubResource("Animation_23r5l"),
+"fly": SubResource("Animation_cf5q3")
+}
+
+[node name="Bat" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_qidft")
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_l6s5h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5ptb0")
+}
+autoplay = "fly"

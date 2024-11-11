@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://btqgvfhodoutv"]
+
+[ext_resource type="Texture2D" uid="uid://yr82bvb2e6mi" path="res://assets/Enemies/Witch/Witch.png" id="1_w7yby"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28i0x"]
+size = Vector2(13, 8.5)
+
+[sub_resource type="Animation" id="Animation_637y0"]
+resource_name = "idle_down"
+length = 1.05
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_wnecs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_okjw5"]
+_data = {
+"RESET": SubResource("Animation_wnecs"),
+"idle_down": SubResource("Animation_637y0")
+}
+
+[node name="Witch" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 32
+platform_on_leave = 2
+platform_floor_layers = 4294967040
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -12)
+texture = ExtResource("1_w7yby")
+hframes = 6
+vframes = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -4.75)
+shape = SubResource("RectangleShape2D_28i0x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_okjw5")
+}
+autoplay = "idle_down"

@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpab3uskcacr"]
+
+[ext_resource type="Texture2D" uid="uid://y6kqwec7j36o" path="res://assets/Enemies/Witch/Broom.png" id="1_qw2p4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8m51j"]
+size = Vector2(18, 7)
+
+[sub_resource type="Animation" id="Animation_kpuwx"]
+resource_name = "sweep"
+length = 1.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_f0yys"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u5gwg"]
+_data = {
+"RESET": SubResource("Animation_f0yys"),
+"sweep": SubResource("Animation_kpuwx")
+}
+
+[node name="WitchBroom" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 32
+platform_on_leave = 2
+platform_floor_layers = 4294967042
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_qw2p4")
+hframes = 8
+vframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_8m51j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_u5gwg")
+}
+autoplay = "sweep"
