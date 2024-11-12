@@ -42,12 +42,13 @@ func _process(delta: float) -> void:
 	
 	update_state(delta)
 	update_direction()
+	
+	if($"../NPCs/PlayerChatIcon".is_chatting):
+		direction = Vector2.ZERO
+		current_state = "idle"
+	
 	update_animation()
 
-		
-	if($"../PlayerChatIcon".is_chatting):
-		direction = Vector2.ZERO
-		
 	velocity = direction * SPEED
 	
 # Source for direction and animation updating: Michael Games AARPG tutorial series on youtube	

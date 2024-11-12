@@ -1,6 +1,6 @@
 extends HBoxContainer
-
-@onready var HeartGUIClass = preload("res://UI/heart_gui.tscn")
+const HEART_GUI = preload("res://UI/heart_gui.tscn")
+#@onready var HeartGUIClass = preload("res://UI/heart_gui.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,12 +12,11 @@ func _process(delta):
 
 func setMaxHearts (max: int):
 	for i in range(max):
-		var heart = HeartGUIClass.instantiate()
+		var heart = HEART_GUI.instantiate()
 		add_child(heart)
 		
-		
 func updateHearts(currentHealth: int):
-	var hearts = get_children()
+	var hearts = self.get_children()
 	
 	for i in range(currentHealth):
 		hearts[i].update(true)
