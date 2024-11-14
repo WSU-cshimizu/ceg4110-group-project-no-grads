@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=52 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://dj85ch73skqo1" path="res://clutter/trees/oak_tree.tscn" id="13_s5qvc"]
 [ext_resource type="PackedScene" uid="uid://c5tth2p3uql8l" path="res://clutter/well.tscn" id="13_tkp8l"]
 [ext_resource type="Texture2D" uid="uid://cpfop7dxq1d24" path="res://addons/DialogAssets/RandomChatIcon.png" id="13_unkdt"]
+[ext_resource type="PackedScene" uid="uid://b7xgvl1tsuaw8" path="res://Collectables/key.tscn" id="13_w0r6g"]
 [ext_resource type="PackedScene" uid="uid://qrjg8tje8wa" path="res://clutter/trees/spruce_tree.tscn" id="14_45jsg"]
 [ext_resource type="PackedScene" uid="uid://dtgc2x7x1r410" path="res://clutter/campfire.tscn" id="14_pa2sc"]
 [ext_resource type="PackedScene" uid="uid://debimm31ehn05" path="res://clutter/houses/witches_house.tscn" id="24_5v1h2"]
@@ -269,6 +270,7 @@ scenes/4/scene = ExtResource("9_37l6w")
 scenes/5/scene = ExtResource("10_tpbpg")
 scenes/6/scene = ExtResource("11_ro0lx")
 scenes/7/scene = ExtResource("12_6lyn2")
+scenes/8/scene = ExtResource("13_w0r6g")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnpgq"]
 texture = ExtResource("3_wfy1b")
@@ -396,7 +398,7 @@ tile_set = SubResource("TileSet_44y6g")
 format = 2
 layer_0/name = "Collectables"
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(589836, 2, 65536, 393220, 2, 65536, 262166, 2, 65536, 851996, 2, 65536, 458783, 4, 0, 393247, 4, 0, 393248, 4, 0, 393249, 4, 0, 458785, 4, 0, 458784, 4, 0, 458782, 4, 0, 393246, 4, 0, 327711, 4, 0, 327712, 4, 0, 458786, 4, 0, 393250, 4, 0, 327713, 4, 0, 262177, 4, 0, 262178, 4, 0, 327714, 4, 0, 262176, 4, 0, 196640, 4, 0, 131104, 4, 0, 196639, 4, 0, 262175, 4, 0, 327710, 4, 0, 262174, 4, 0, 983042, 2, 131072, 917528, 2, 196608, 1048599, 2, 262144, 1114137, 2, 327680, 1179671, 2, 393216, 1310743, 2, 458752)
+layer_0/tile_data = PackedInt32Array(589836, 2, 65536, 393220, 2, 65536, 262166, 2, 65536, 851996, 2, 65536, 458783, 4, 0, 393247, 4, 0, 393248, 4, 0, 393249, 4, 0, 458785, 4, 0, 458784, 4, 0, 458782, 4, 0, 393246, 4, 0, 327711, 4, 0, 327712, 4, 0, 458786, 4, 0, 393250, 4, 0, 327713, 4, 0, 262177, 4, 0, 262178, 4, 0, 327714, 4, 0, 262176, 4, 0, 196640, 4, 0, 131104, 4, 0, 196639, 4, 0, 262175, 4, 0, 327710, 4, 0, 262174, 4, 0, 983042, 2, 131072, 917528, 2, 196608, 1048599, 2, 262144, 1114137, 2, 327680, 1179671, 2, 393216, 1310743, 2, 458752, 1179667, 2, 524288, 1376283, 2, 458752, 1179678, 2, 458752, 1048607, 2, 458752, 1310749, 2, 458752, 1376281, 2, 458752)
 
 [node name="Ground" type="TileMapLayer" parent="Map/TileMap"]
 z_index = -2

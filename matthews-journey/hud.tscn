@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://UI/scripts/hud.gd" id="1_2u5q2"]
 [ext_resource type="Script" path="res://UI/scripts/hearts_container.gd" id="2_sq3j2"]
-[ext_resource type="Texture2D" uid="uid://t2q3eddwt4xu" path="res://assets/Icons/No Outline/Resources_Icons_NO_Outline.png" id="3_cyll5"]
+[ext_resource type="Texture2D" uid="uid://b3qhuotv2b0me" path="res://assets/Icons/No Outline/Resources_Icons_NO_Outline.png" id="3_cyll5"]
 [ext_resource type="Texture2D" uid="uid://dd06a50fyb11x" path="res://assets/UI/menu-button.png" id="3_wev6a"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
@@ -34,8 +34,28 @@ position = Vector2(3, 6)
 texture = ExtResource("3_cyll5")
 hframes = 6
 vframes = 6
+frame = 31
 
 [node name="coinLabel" type="Label" parent="MarginContainer/VBoxContainer/coinsContainer/Sprite2D"]
+offset_left = 9.0
+offset_top = -8.0
+offset_right = 19.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="keysContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/coinsContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/coinsContainer/keysContainer"]
+position = Vector2(3, 21)
+texture = ExtResource("3_cyll5")
+hframes = 6
+vframes = 6
+frame = 28
+
+[node name="keyLabel" type="Label" parent="MarginContainer/VBoxContainer/coinsContainer/keysContainer/Sprite2D"]
 offset_left = 9.0
 offset_top = -8.0
 offset_right = 19.0
@@ -48,7 +68,7 @@ layout_mode = 2
 size_flags_vertical = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/xpContainer"]
-position = Vector2(3, 19)
+position = Vector2(3, 32)
 texture = ExtResource("3_cyll5")
 hframes = 6
 vframes = 6

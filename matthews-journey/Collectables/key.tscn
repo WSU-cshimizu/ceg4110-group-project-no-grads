@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7t4gdgr7yrc1"]
+[gd_scene load_steps=8 format=3 uid="uid://b7xgvl1tsuaw8"]
 
-[ext_resource type="PackedScene" uid="uid://grm4chxifb06" path="res://Collectables/collectable.tscn" id="1_5cctw"]
-[ext_resource type="Script" path="res://Collectables/Currency/coin12.gd" id="2_dl8bj"]
-[ext_resource type="Texture2D" uid="uid://b3qhuotv2b0me" path="res://assets/Icons/No Outline/Resources_Icons_NO_Outline.png" id="3_vn6eo"]
+[ext_resource type="PackedScene" uid="uid://grm4chxifb06" path="res://Collectables/collectable.tscn" id="1_j85q6"]
+[ext_resource type="Script" path="res://Collectables/key.gd" id="2_w0tf1"]
+[ext_resource type="Texture2D" uid="uid://b3qhuotv2b0me" path="res://assets/Icons/No Outline/Resources_Icons_NO_Outline.png" id="3_wkmlq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gt7s"]
 radius = 7.0
@@ -45,18 +45,18 @@ _data = {
 "spin": SubResource("Animation_kfwhr")
 }
 
-[node name="Coin12" instance=ExtResource("1_5cctw")]
+[node name="Key" instance=ExtResource("1_j85q6")]
 collision_layer = 16
-script = ExtResource("2_dl8bj")
+script = ExtResource("2_w0tf1")
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CircleShape2D_5gt7s")
 
 [node name="Sprite2D" parent="." index="1"]
-texture = ExtResource("3_vn6eo")
+texture = ExtResource("3_wkmlq")
 hframes = 6
 vframes = 6
-frame = 33
+frame = 28
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {
