@@ -24,6 +24,8 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 func _physics_process(delta: float) -> void:
 	if player_detected:
 		velocity = position.direction_to(player.position) * speed
+	else:
+		velocity = Vector2.ZERO
 	if knocked_back:
 		velocity = knockback_velocity
 	move_and_slide()
