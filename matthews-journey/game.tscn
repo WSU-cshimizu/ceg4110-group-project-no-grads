@@ -1,8 +1,8 @@
-[gd_scene load_steps=45 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=46 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://UI/hud.tscn" id="2_ewdau"]
+[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="2_ewdau"]
 [ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_wxgtg"]
 [ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="3_cq82d"]
 [ext_resource type="Texture2D" uid="uid://dqlcq86g6gxav" path="res://assets/Tiles/Grass/Grass_1_Middle.png" id="3_wfy1b"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://btqgvfhodoutv" path="res://npcs/witch/witch.tscn" id="25_ws5ud"]
 [ext_resource type="PackedScene" uid="uid://c0xueonklg3om" path="res://clutter/hay_Bale.tscn" id="26_7xph4"]
 [ext_resource type="PackedScene" uid="uid://nd2qjqmlw7pm" path="res://npcs/witch/cauldron.tscn" id="31_mwnaf"]
+[ext_resource type="PackedScene" uid="uid://d2aqsnmwx8ybt" path="res://Collectables/cherry.tscn" id="32_er556"]
 [ext_resource type="PackedScene" uid="uid://ccy3v2v6l20ca" path="res://npcs/witch/bat.tscn" id="32_kv71m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74dcv"]
@@ -257,6 +258,7 @@ texture = ExtResource("3_cq82d")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_0j61l"]
 resource_name = "Collectables"
 scenes/1/scene = ExtResource("5_e5nac")
+scenes/2/scene = ExtResource("32_er556")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnpgq"]
 texture = ExtResource("3_wfy1b")
@@ -384,7 +386,7 @@ tile_set = SubResource("TileSet_44y6g")
 format = 2
 layer_0/name = "Collectables"
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(589836, 2, 65536, 393220, 2, 65536, 262166, 2, 65536, 851996, 2, 65536, 458783, 4, 0, 393247, 4, 0, 393248, 4, 0, 393249, 4, 0, 458785, 4, 0, 458784, 4, 0, 458782, 4, 0, 393246, 4, 0, 327711, 4, 0, 327712, 4, 0, 458786, 4, 0, 393250, 4, 0, 327713, 4, 0, 262177, 4, 0, 262178, 4, 0, 327714, 4, 0, 262176, 4, 0, 196640, 4, 0, 131104, 4, 0, 196639, 4, 0, 262175, 4, 0, 327710, 4, 0, 262174, 4, 0)
+layer_0/tile_data = PackedInt32Array(589836, 2, 65536, 393220, 2, 65536, 262166, 2, 65536, 851996, 2, 65536, 458783, 4, 0, 393247, 4, 0, 393248, 4, 0, 393249, 4, 0, 458785, 4, 0, 458784, 4, 0, 458782, 4, 0, 393246, 4, 0, 327711, 4, 0, 327712, 4, 0, 458786, 4, 0, 393250, 4, 0, 327713, 4, 0, 262177, 4, 0, 262178, 4, 0, 327714, 4, 0, 262176, 4, 0, 196640, 4, 0, 131104, 4, 0, 196639, 4, 0, 262175, 4, 0, 327710, 4, 0, 262174, 4, 0, 983042, 2, 131072)
 
 [node name="Ground" type="TileMapLayer" parent="Map/TileMap"]
 z_index = -2
