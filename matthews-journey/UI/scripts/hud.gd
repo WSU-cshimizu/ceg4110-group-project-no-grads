@@ -18,9 +18,20 @@ func _ready(): #VR
 	
 func _on_coins_changed(new_amount: int):
 	coinLabel.text = str(new_amount)
+	if new_amount >= 500:
+		$MarginContainer/VBoxContainer/coinsContainer/Sprite2D.frame = 21
+	elif new_amount >= 200:
+		$MarginContainer/VBoxContainer/coinsContainer/Sprite2D.frame = 3  
+	elif new_amount >= 100:
+		$MarginContainer/VBoxContainer/coinsContainer/Sprite2D.frame = 12 
+	elif new_amount > 30:
+		$MarginContainer/VBoxContainer/coinsContainer/Sprite2D.frame = 0  
+	else:
+		$MarginContainer/VBoxContainer/coinsContainer/Sprite2D.frame = 6  
 	
 func _on_xp_changed(new_amount: int):
 	xpLabel.text = str(new_amount)
 	
 func _process(delta: float) -> void:
 	pass
+	
