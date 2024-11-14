@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://oldhud.tscn" id="2_ewdau"]
 [ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_wxgtg"]
 [ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="3_cq82d"]
 [ext_resource type="Texture2D" uid="uid://dqlcq86g6gxav" path="res://assets/Tiles/Grass/Grass_1_Middle.png" id="3_wfy1b"]
@@ -32,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://nd2qjqmlw7pm" path="res://npcs/witch/cauldron.tscn" id="31_mwnaf"]
 [ext_resource type="PackedScene" uid="uid://d2aqsnmwx8ybt" path="res://Collectables/cherry.tscn" id="32_er556"]
 [ext_resource type="PackedScene" uid="uid://ccy3v2v6l20ca" path="res://npcs/witch/bat.tscn" id="32_kv71m"]
+[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="32_nw7xe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74dcv"]
 size = Vector2(1099, 16)
@@ -355,8 +355,6 @@ script = ExtResource("1_u0244")
 [node name="Player" parent="." instance=ExtResource("1_43ojw")]
 position = Vector2(238, 135)
 
-[node name="GUI" parent="." instance=ExtResource("2_ewdau")]
-
 [node name="Borders" type="Node2D" parent="."]
 position = Vector2(0, -2)
 
@@ -555,6 +553,8 @@ script = ExtResource("11_pvffc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/RandomChatIcon/RandomDetect"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ri746")
+
+[node name="GUI" parent="." instance=ExtResource("32_nw7xe")]
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="child_entered_tree" from="Enemies" to="." method="_on_enemies_child_entered_tree"]

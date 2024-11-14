@@ -3,7 +3,8 @@ extends CanvasLayer
 static var image = load('res://assets/UI/health-heart.png')
 #VR
 @onready var player: Player = $"../Player"
-@onready var heartsContainer: HBoxContainer = $MarginContainer/heartsContainer
+@onready var heartsContainer: HBoxContainer = $MarginContainer/VBoxContainer/heartsContainer
+
 
 func _ready(): #VR
 	heartsContainer.setMaxHearts(player.maxHealth)
