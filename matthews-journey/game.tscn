@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://c0xueonklg3om" path="res://clutter/hay_Bale.tscn" id="26_7xph4"]
 [ext_resource type="PackedScene" uid="uid://nd2qjqmlw7pm" path="res://npcs/witch/cauldron.tscn" id="31_mwnaf"]
 [ext_resource type="PackedScene" uid="uid://d2aqsnmwx8ybt" path="res://Collectables/cherry.tscn" id="32_er556"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="32_hyd6n"]
+[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://oldhud.tscn" id="32_hyd6n"]
 [ext_resource type="PackedScene" uid="uid://ccy3v2v6l20ca" path="res://npcs/witch/bat.tscn" id="32_kv71m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74dcv"]

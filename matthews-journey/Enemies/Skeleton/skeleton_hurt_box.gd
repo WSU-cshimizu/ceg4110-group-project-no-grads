@@ -1,11 +1,16 @@
 class_name SkeletonHurtBox extends HurtBox
 
 @onready var skeleton: Skeleton = $".."
+var player: Player
+
+func _ready() -> void:
+	player = get_tree().get_first_node_in_group("player")
 
 func take_attack(attack: Attack):
 	knockback(attack.direction, attack.knockback)
 	skeleton.health -= attack.damage
 	if skeleton.health <= 0:
+		player.collect_xp(skeleton.xp)
 		skeleton.queue_free()
 
 func knockback(direction: Vector2, force: int) -> void:

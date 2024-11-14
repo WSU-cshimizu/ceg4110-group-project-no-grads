@@ -6,6 +6,7 @@ class_name Slime extends Enemy
 @export var damage: int = 1
 @export var knockback_force: int = 10
 @export var speed: int = 25
+@export var xp: int = 1
 @export var min_wander: float = 0.3
 @export var max_wander: float = 0.5
 @export var min_idle: float= 1.0

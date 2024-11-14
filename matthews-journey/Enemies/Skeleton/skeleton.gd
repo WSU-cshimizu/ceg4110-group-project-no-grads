@@ -4,7 +4,8 @@ class_name Skeleton extends Enemy
 @export var health: int = 3
 @export var damage: int = 2
 @export var knockback_force: int = 25
-@export var speed = 25
+@export var speed: int = 25
+@export var xp: int = 2
 
 
 @onready var player: Player = $"../../Player"

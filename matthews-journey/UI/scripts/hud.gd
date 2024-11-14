@@ -9,11 +9,12 @@ static var image = load('res://assets/UI/health-heart.png')
 
 
 func _ready(): #VR
+	player = get_tree().get_first_node_in_group("player")
 	heartsContainer.setMaxHearts(player.maxHealth)
 	heartsContainer.updateHearts(player.currentHealth)
 	player.healthChanged.connect(heartsContainer.updateHearts)
-	player = get_tree().get_first_node_in_group("player")
 	player.coinsChanged.connect(_on_coins_changed)
+	player.xpChanged.connect(_on_xp_changed)
 	
 func _on_coins_changed(new_amount: int):
 	coinLabel.text = str(new_amount)

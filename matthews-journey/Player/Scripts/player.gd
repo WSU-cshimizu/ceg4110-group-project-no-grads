@@ -9,6 +9,9 @@ signal healthChanged #VR
 signal coinsChanged
 var coins: int = 0
 
+signal xpChanged
+var xp: int = 0
+
 # Knockback Variables
 @export var damage: int = 1
 @export var knockback_force = 10
@@ -151,3 +154,8 @@ func take_damage(damage):
 func collect_coins(amount: int):
 	coins += amount
 	coinsChanged.emit(coins)
+
+func collect_xp(amount: int):
+	xp += amount
+	print("xp = ", xp)
+	xpChanged.emit(xp)
