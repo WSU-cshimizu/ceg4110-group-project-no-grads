@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=51 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
@@ -9,13 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://bvs1b5q0worqx" path="res://Collectables/apple.tscn" id="5_e5nac"]
 [ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="5_enysm"]
 [ext_resource type="Texture2D" uid="uid://cwauj365wm342" path="res://assets/Tiles/Picnic_Blankets.png" id="6_oe8xa"]
+[ext_resource type="PackedScene" uid="uid://bpaxr8g60cnt5" path="res://Collectables/Currency/coin03.tscn" id="8_gosv3"]
 [ext_resource type="Texture2D" uid="uid://dbu823ef36c01" path="res://addons/DialogAssets/PlayerChatIcon.png" id="8_uoqv5"]
+[ext_resource type="PackedScene" uid="uid://desptnajrw7y" path="res://Collectables/Currency/coin06.tscn" id="9_37l6w"]
 [ext_resource type="PackedScene" uid="uid://bpab3uskcacr" path="res://npcs/witch/witch_broom.tscn" id="10_10170"]
 [ext_resource type="Script" path="res://player_chat_icon.gd" id="10_ibhwy"]
 [ext_resource type="PackedScene" uid="uid://dfx6osk1qisbe" path="res://clutter/BigTent.tscn" id="10_iltnf"]
+[ext_resource type="PackedScene" uid="uid://b7t4gdgr7yrc1" path="res://Collectables/Currency/coin12.tscn" id="10_tpbpg"]
 [ext_resource type="Texture2D" uid="uid://m6u5cu6ecewb" path="res://addons/DialogAssets/Telonis.png" id="11_4kw14"]
 [ext_resource type="PackedScene" uid="uid://dn3mwfqslkc7m" path="res://Enemies/Slime/slime.tscn" id="11_6t204"]
 [ext_resource type="Script" path="res://random_chat_icon.gd" id="11_pvffc"]
+[ext_resource type="PackedScene" uid="uid://b2lqhtgnh6gy3" path="res://Collectables/Currency/coin30.tscn" id="11_ro0lx"]
+[ext_resource type="PackedScene" uid="uid://5uvnd13ku3sr" path="res://Collectables/Currency/coin90.tscn" id="12_6lyn2"]
 [ext_resource type="PackedScene" uid="uid://craqp6dyl18a3" path="res://Enemies/Skeleton/skeleton.tscn" id="12_c6uob"]
 [ext_resource type="Script" path="res://telonis.gd" id="12_ylaav"]
 [ext_resource type="PackedScene" uid="uid://dj85ch73skqo1" path="res://clutter/trees/oak_tree.tscn" id="13_s5qvc"]
@@ -30,8 +35,8 @@
 [ext_resource type="PackedScene" uid="uid://c0xueonklg3om" path="res://clutter/hay_Bale.tscn" id="26_7xph4"]
 [ext_resource type="PackedScene" uid="uid://nd2qjqmlw7pm" path="res://npcs/witch/cauldron.tscn" id="31_mwnaf"]
 [ext_resource type="PackedScene" uid="uid://d2aqsnmwx8ybt" path="res://Collectables/cherry.tscn" id="32_er556"]
+[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="32_hyd6n"]
 [ext_resource type="PackedScene" uid="uid://ccy3v2v6l20ca" path="res://npcs/witch/bat.tscn" id="32_kv71m"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="32_nw7xe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74dcv"]
 size = Vector2(1099, 16)
@@ -259,6 +264,11 @@ texture = ExtResource("3_cq82d")
 resource_name = "Collectables"
 scenes/1/scene = ExtResource("5_e5nac")
 scenes/2/scene = ExtResource("32_er556")
+scenes/3/scene = ExtResource("8_gosv3")
+scenes/4/scene = ExtResource("9_37l6w")
+scenes/5/scene = ExtResource("10_tpbpg")
+scenes/6/scene = ExtResource("11_ro0lx")
+scenes/7/scene = ExtResource("12_6lyn2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnpgq"]
 texture = ExtResource("3_wfy1b")
@@ -355,6 +365,8 @@ script = ExtResource("1_u0244")
 [node name="Player" parent="." instance=ExtResource("1_43ojw")]
 position = Vector2(238, 135)
 
+[node name="CanvasLayer" parent="." instance=ExtResource("32_hyd6n")]
+
 [node name="Borders" type="Node2D" parent="."]
 position = Vector2(0, -2)
 
@@ -384,7 +396,7 @@ tile_set = SubResource("TileSet_44y6g")
 format = 2
 layer_0/name = "Collectables"
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(589836, 2, 65536, 393220, 2, 65536, 262166, 2, 65536, 851996, 2, 65536, 458783, 4, 0, 393247, 4, 0, 393248, 4, 0, 393249, 4, 0, 458785, 4, 0, 458784, 4, 0, 458782, 4, 0, 393246, 4, 0, 327711, 4, 0, 327712, 4, 0, 458786, 4, 0, 393250, 4, 0, 327713, 4, 0, 262177, 4, 0, 262178, 4, 0, 327714, 4, 0, 262176, 4, 0, 196640, 4, 0, 131104, 4, 0, 196639, 4, 0, 262175, 4, 0, 327710, 4, 0, 262174, 4, 0, 983042, 2, 131072)
+layer_0/tile_data = PackedInt32Array(589836, 2, 65536, 393220, 2, 65536, 262166, 2, 65536, 851996, 2, 65536, 458783, 4, 0, 393247, 4, 0, 393248, 4, 0, 393249, 4, 0, 458785, 4, 0, 458784, 4, 0, 458782, 4, 0, 393246, 4, 0, 327711, 4, 0, 327712, 4, 0, 458786, 4, 0, 393250, 4, 0, 327713, 4, 0, 262177, 4, 0, 262178, 4, 0, 327714, 4, 0, 262176, 4, 0, 196640, 4, 0, 131104, 4, 0, 196639, 4, 0, 262175, 4, 0, 327710, 4, 0, 262174, 4, 0, 983042, 2, 131072, 917528, 2, 196608, 1048599, 2, 262144, 1114137, 2, 327680, 1179671, 2, 393216, 1310743, 2, 458752)
 
 [node name="Ground" type="TileMapLayer" parent="Map/TileMap"]
 z_index = -2
@@ -553,8 +565,6 @@ script = ExtResource("11_pvffc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/RandomChatIcon/RandomDetect"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ri746")
-
-[node name="GUI" parent="." instance=ExtResource("32_nw7xe")]
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="child_entered_tree" from="Enemies" to="." method="_on_enemies_child_entered_tree"]

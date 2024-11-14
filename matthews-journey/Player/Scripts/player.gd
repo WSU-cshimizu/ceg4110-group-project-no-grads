@@ -5,6 +5,11 @@ signal healthChanged #VR
 @export var maxHealth = 5 #VR
 @onready var currentHealth: int = 3 #maxHealth #VR
 
+# Collection Variables
+signal coinsChanged
+var coins: int = 0
+
+# Knockback Variables
 @export var damage: int = 1
 @export var knockback_force = 10
 
@@ -142,3 +147,7 @@ func take_damage(damage):
 	if currentHealth <= 0:
 		get_tree().change_scene_to_file("res://UI/game_over.tscn")
 	healthChanged.emit(currentHealth)
+
+func collect_coins(amount: int):
+	coins += amount
+	coinsChanged.emit(coins)

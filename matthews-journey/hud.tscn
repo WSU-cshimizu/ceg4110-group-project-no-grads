@@ -35,7 +35,7 @@ texture = ExtResource("3_cyll5")
 hframes = 6
 vframes = 6
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/coinsContainer/Sprite2D"]
+[node name="coinLabel" type="Label" parent="MarginContainer/VBoxContainer/coinsContainer/Sprite2D"]
 offset_left = 9.0
 offset_top = -8.0
 offset_right = 19.0
