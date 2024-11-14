@@ -5,6 +5,8 @@ static var image = load('res://assets/UI/health-heart.png')
 @onready var player: Player = $"../Player"
 @onready var heartsContainer: HBoxContainer = $MarginContainer/VBoxContainer/heartsContainer
 @onready var coinLabel = $MarginContainer/VBoxContainer/coinsContainer/Sprite2D/coinLabel 
+@onready var xpLabel =  $MarginContainer/VBoxContainer/xpContainer/Sprite2D/xpLabel
+
 
 func _ready(): #VR
 	heartsContainer.setMaxHearts(player.maxHealth)
@@ -15,6 +17,9 @@ func _ready(): #VR
 	
 func _on_coins_changed(new_amount: int):
 	coinLabel.text = str(new_amount)
+	
+func _on_xp_changed(new_amount: int):
+	xpLabel.text = str(new_amount)
 	
 func _process(delta: float) -> void:
 	pass

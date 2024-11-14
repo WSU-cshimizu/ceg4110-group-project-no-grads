@@ -30,12 +30,42 @@ layout_mode = 2
 size_flags_vertical = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/coinsContainer"]
-position = Vector2(3, 15)
+position = Vector2(3, 6)
 texture = ExtResource("3_cyll5")
 hframes = 6
 vframes = 6
 
 [node name="coinLabel" type="Label" parent="MarginContainer/VBoxContainer/coinsContainer/Sprite2D"]
+offset_left = 9.0
+offset_top = -8.0
+offset_right = 19.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="xpContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/xpContainer"]
+position = Vector2(3, 19)
+texture = ExtResource("3_cyll5")
+hframes = 6
+vframes = 6
+frame = 29
+
+[node name="xp" type="Label" parent="MarginContainer/VBoxContainer/xpContainer/Sprite2D"]
+offset_left = -9.0
+offset_top = -13.0
+offset_right = 11.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "XP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="xpLabel" type="Label" parent="MarginContainer/VBoxContainer/xpContainer/Sprite2D"]
 offset_left = 9.0
 offset_top = -8.0
 offset_right = 19.0
