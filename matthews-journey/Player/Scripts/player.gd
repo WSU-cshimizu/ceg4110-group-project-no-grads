@@ -51,9 +51,9 @@ func _process(delta: float) -> void:
 	update_state(delta)
 	update_direction()
 	
-	if($"../NPCs/PlayerChatIcon".is_chatting):
-		direction = Vector2.ZERO
-		current_state = "idle"
+	#if($"../NPCs/PlayerChatIcon".is_chatting):
+		#direction = Vector2.ZERO
+		#current_state = "idle"
 	
 	update_animation()
 
