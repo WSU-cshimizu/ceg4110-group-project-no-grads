@@ -64,5 +64,5 @@ func _on_detection_zone_body_exited(body: Node2D) -> void:
 		chatting = false
 
 func _input(event: InputEvent) -> void:
-	if chatting and event.is_action_pressed("interact"):
+	if chatting and event.is_action_pressed("dialogic_default_action"):
 		Dialogic.start("cow")
