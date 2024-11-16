@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://yufh4cadm83p"]
+[gd_scene load_steps=9 format=3 uid="uid://yufh4cadm83p"]
 
 [ext_resource type="Texture2D" uid="uid://cbbxpvxjgrrhj" path="res://assets/Enemies/Knights/Templar.png" id="1_386i0"]
 [ext_resource type="Script" path="res://npcs/guard/detection_area.gd" id="2_3thvc"]
+[ext_resource type="Texture2D" uid="uid://chmeya04qtohw" path="res://assets/UI/UI_Icons.png" id="3_wdl6s"]
 
 [sub_resource type="Animation" id="Animation_cjxu8"]
 length = 0.001
@@ -72,9 +73,18 @@ position = Vector2(-1, -5)
 shape = SubResource("CircleShape2D_km0gr")
 debug_color = Color(0.285734, 0.630518, 0, 0.42)
 
+[node name="ChatIcon" type="Sprite2D" parent="detection_area"]
+visible = false
+position = Vector2(-2, -26)
+texture = ExtResource("3_wdl6s")
+hframes = 8
+vframes = 8
+frame = 62
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
 position = Vector2(-1.5, -4)
 shape = SubResource("RectangleShape2D_xumhi")
 
 [connection signal="body_entered" from="detection_area" to="detection_area" method="_on_body_entered"]
+[connection signal="body_exited" from="detection_area" to="detection_area" method="_on_body_exited"]
