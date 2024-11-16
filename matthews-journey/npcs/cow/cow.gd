@@ -14,6 +14,7 @@ var idle_time: float
 var direction: Vector2
 var current_state: String
 var chatting: bool = false
+var done_talking: bool = false
 
 
 func _ready() -> void:
@@ -62,7 +63,9 @@ func _on_detection_zone_body_exited(body: Node2D) -> void:
 	if body is Player:
 		chat_icon.visible = false
 		chatting = false
+		done_talking = false
 
 func _input(event: InputEvent) -> void:
-	if chatting and event.is_action_pressed("dialogic_default_action"):
+	if chatting and not done_talking and event.is_action_pressed("dialogic_default_action"):
+		done_talking = true
 		Dialogic.start("cow")
