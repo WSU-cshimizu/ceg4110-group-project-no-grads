@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=53 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://d2aqsnmwx8ybt" path="res://Collectables/cherry.tscn" id="32_er556"]
 [ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://oldhud.tscn" id="32_hyd6n"]
 [ext_resource type="PackedScene" uid="uid://ccy3v2v6l20ca" path="res://npcs/witch/bat.tscn" id="32_kv71m"]
+[ext_resource type="PackedScene" uid="uid://cbx6lmapgf3mg" path="res://Enemies/Jester/jester.tscn" id="39_q4hbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74dcv"]
 size = Vector2(1099, 16)
@@ -567,6 +568,9 @@ script = ExtResource("11_pvffc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/RandomChatIcon/RandomDetect"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_ri746")
+
+[node name="Jester" parent="." instance=ExtResource("39_q4hbr")]
+position = Vector2(664, 271)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="child_entered_tree" from="Enemies" to="." method="_on_enemies_child_entered_tree"]
