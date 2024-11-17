@@ -8,6 +8,8 @@ extends Node2D
 # SFX
 @onready var slime: AudioStreamPlayer2D = $SFX/slime
 @onready var skeleton: AudioStreamPlayer2D = $SFX/skeleton
+@onready var player_hurt: AudioStreamPlayer2D = $SFX/player_hurt
+@onready var player_died: AudioStreamPlayer2D = $SFX/player_died
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,4 +39,8 @@ func sfx(sound: String):
 		slime.play()
 	elif sound == "skeleton":
 		skeleton.play()
+	elif sound == "player_hurt":
+		player_hurt.play()
+	elif sound == "player_died":
+		player_died.play()
 		

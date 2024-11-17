@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://waf750gl311j"]
+[gd_scene load_steps=9 format=3 uid="uid://waf750gl311j"]
 
 [ext_resource type="Script" path="res://music_manager.gd" id="1_8nrpt"]
 [ext_resource type="AudioStream" uid="uid://colb0onvpata8" path="res://assets/Music/036_Tale_of_Grandeur.mp3" id="1_xuk3t"]
@@ -6,6 +6,8 @@
 [ext_resource type="AudioStream" uid="uid://emaaj1rwm5ks" path="res://assets/Music/TownTheme.mp3" id="3_rxvax"]
 [ext_resource type="AudioStream" uid="uid://cimh5lvovsfrm" path="res://assets/Sounds/slime.ogg" id="5_xo3in"]
 [ext_resource type="AudioStream" uid="uid://c6cwjenymn5tg" path="res://assets/Sounds/wood-small.wav" id="6_klwqd"]
+[ext_resource type="AudioStream" uid="uid://cjuvb5m6v8h5p" path="res://assets/Sounds/01._damage_grunt_male.wav" id="7_sgub5"]
+[ext_resource type="AudioStream" uid="uid://daw6drps36ks5" path="res://assets/Sounds/01._thats_gotta_hurt.wav" id="8_512w7"]
 
 [node name="MusicManager" type="Node2D"]
 script = ExtResource("1_8nrpt")
@@ -28,3 +30,9 @@ stream = ExtResource("5_xo3in")
 
 [node name="skeleton" type="AudioStreamPlayer2D" parent="SFX"]
 stream = ExtResource("6_klwqd")
+
+[node name="player_hurt" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("7_sgub5")
+
+[node name="player_died" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("8_512w7")
