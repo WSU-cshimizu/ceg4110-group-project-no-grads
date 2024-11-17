@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 SignalBus="*res://signal_bus.gd"
+MusicManager="*res://music_manager.tscn"
 
 [dialogic]
 

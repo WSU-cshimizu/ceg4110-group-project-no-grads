@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://waf750gl311j"]
+
+[ext_resource type="Script" path="res://music_manager.gd" id="1_8nrpt"]
+[ext_resource type="AudioStream" uid="uid://colb0onvpata8" path="res://assets/Music/036_Tale_of_Grandeur.mp3" id="1_xuk3t"]
+[ext_resource type="AudioStream" uid="uid://c3y2cuw7vebet" path="res://assets/Music/041_First_Dark_Sky.mp3" id="2_xyijd"]
+[ext_resource type="AudioStream" uid="uid://emaaj1rwm5ks" path="res://assets/Music/TownTheme.mp3" id="3_rxvax"]
+
+[node name="MusicManager" type="Node2D"]
+script = ExtResource("1_8nrpt")
+
+[node name="MainMenu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_xuk3t")
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_xyijd")
+
+[node name="Town" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_rxvax")

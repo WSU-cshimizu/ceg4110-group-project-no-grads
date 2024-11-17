@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnvlqbqwe04td"]
+
+[ext_resource type="AudioStream" uid="uid://colb0onvpata8" path="res://assets/Music/036_Tale_of_Grandeur.mp3" id="1_xxvjs"]
+
+[node name="BgMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_xxvjs")
+autoplay = true

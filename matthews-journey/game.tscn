@@ -372,7 +372,7 @@ script = ExtResource("1_u0244")
 [node name="Player" parent="." instance=ExtResource("1_43ojw")]
 position = Vector2(238, 135)
 
-[node name="CanvasLayer" parent="." instance=ExtResource("32_hyd6n")]
+[node name="HUD" parent="." instance=ExtResource("32_hyd6n")]
 
 [node name="Borders" type="Node2D" parent="."]
 position = Vector2(0, -2)
