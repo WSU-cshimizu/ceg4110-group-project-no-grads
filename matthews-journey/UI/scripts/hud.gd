@@ -7,6 +7,7 @@ static var image = load('res://assets/UI/health-heart.png')
 @onready var coinLabel = $MarginContainer/VBoxContainer/coinsContainer/Sprite2D/coinLabel 
 @onready var keyLabel = $MarginContainer/VBoxContainer/coinsContainer/keysContainer/Sprite2D/keyLabel
 @onready var xpLabel =  $MarginContainer/VBoxContainer/xpContainer/Sprite2D/xpLabel
+@onready var menu_button: Button = $MenuButton
 
 
 func _ready(): #VR
@@ -17,6 +18,7 @@ func _ready(): #VR
 	player.coinsChanged.connect(_on_coins_changed)
 	player.keysChanged.connect(_on_keys_changed)
 	player.xpChanged.connect(_on_xp_changed)
+	menu_button.flat = true
 	
 func _on_coins_changed(new_amount: int):
 	coinLabel.text = str(new_amount)
@@ -40,3 +42,5 @@ func _on_xp_changed(new_amount: int):
 func _process(delta: float) -> void:
 	pass
 	
+func _on_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://UI/main_menu.tscn")

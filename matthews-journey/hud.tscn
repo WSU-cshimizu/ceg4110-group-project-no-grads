@@ -93,9 +93,11 @@ offset_bottom = 15.0
 theme_override_font_sizes/font_size = 12
 text = "0"
 
-[node name="MenuButton" type="MenuButton" parent="."]
+[node name="MenuButton" type="Button" parent="."]
 offset_left = 449.0
 offset_top = 2.0
 offset_right = 477.0
 offset_bottom = 30.0
 icon = ExtResource("3_wev6a")
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
