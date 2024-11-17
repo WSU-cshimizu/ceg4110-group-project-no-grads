@@ -1,4 +1,4 @@
-extends CanvasLayer
+class_name Hud extends CanvasLayer
 
 static var image = load('res://assets/UI/health-heart.png')
 #VR

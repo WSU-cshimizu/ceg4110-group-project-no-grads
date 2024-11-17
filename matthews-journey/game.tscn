@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_wxgtg"]
 [ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="3_cq82d"]
 [ext_resource type="Texture2D" uid="uid://dqlcq86g6gxav" path="res://assets/Tiles/Grass/Grass_1_Middle.png" id="3_wfy1b"]
+[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="3_yby0a"]
 [ext_resource type="Texture2D" uid="uid://bcylv2e3y774v" path="res://assets/Tiles/Grass/Path_Middle.png" id="4_ahu12"]
 [ext_resource type="PackedScene" uid="uid://bvs1b5q0worqx" path="res://Collectables/apple.tscn" id="5_e5nac"]
 [ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="5_enysm"]
@@ -38,7 +39,6 @@
 [ext_resource type="PackedScene" uid="uid://c0xueonklg3om" path="res://clutter/hay_Bale.tscn" id="26_7xph4"]
 [ext_resource type="PackedScene" uid="uid://nd2qjqmlw7pm" path="res://npcs/witch/cauldron.tscn" id="31_mwnaf"]
 [ext_resource type="PackedScene" uid="uid://d2aqsnmwx8ybt" path="res://Collectables/cherry.tscn" id="32_er556"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://oldhud.tscn" id="32_hyd6n"]
 [ext_resource type="PackedScene" uid="uid://ccy3v2v6l20ca" path="res://npcs/witch/bat.tscn" id="32_kv71m"]
 [ext_resource type="PackedScene" uid="uid://cbx6lmapgf3mg" path="res://Enemies/Jester/jester.tscn" id="39_q4hbr"]
 [ext_resource type="PackedScene" uid="uid://dec5m2yeb5ufi" path="res://npcs/pigs/pig1.tscn" id="40_erf67"]
@@ -374,7 +374,7 @@ script = ExtResource("1_u0244")
 [node name="Player" parent="." instance=ExtResource("1_43ojw")]
 position = Vector2(238, 135)
 
-[node name="HUD" parent="." instance=ExtResource("32_hyd6n")]
+[node name="Hud" parent="." instance=ExtResource("3_yby0a")]
 
 [node name="Borders" type="Node2D" parent="."]
 position = Vector2(0, -2)
