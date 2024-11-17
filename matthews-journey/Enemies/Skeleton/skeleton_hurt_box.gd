@@ -10,6 +10,7 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 
 func take_attack(attack: Attack):
+	MusicManager.sfx("skeleton")
 	knockback(attack.direction, attack.knockback)
 	skeleton.health -= attack.damage
 	if skeleton.health <= 0:

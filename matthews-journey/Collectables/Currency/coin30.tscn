@@ -66,3 +66,4 @@ libraries = {
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
 stream = ExtResource("4_p1gmi")
+volume_db = -10.0

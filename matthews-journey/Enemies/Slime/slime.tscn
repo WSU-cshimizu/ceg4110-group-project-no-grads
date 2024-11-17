@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dn3mwfqslkc7m"]
+[gd_scene load_steps=13 format=3 uid="uid://dn3mwfqslkc7m"]
 
 [ext_resource type="Script" path="res://Enemies/Slime/slime.gd" id="1_8ce83"]
 [ext_resource type="Texture2D" uid="uid://da5a8xe8hx3wy" path="res://assets/Enemies/Slime/Slime.png" id="1_gjw7w"]
 [ext_resource type="Script" path="res://Enemies/Slime/slime_hit_box.gd" id="3_r6bti"]
 [ext_resource type="Script" path="res://Enemies/Slime/slime_hurt_box.gd" id="4_m1bg0"]
+[ext_resource type="AudioStream" uid="uid://cimh5lvovsfrm" path="res://assets/Sounds/slime.ogg" id="5_vtign"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_60wb6"]
 radius = 6.08276
@@ -98,6 +99,9 @@ position = Vector2(-1, -5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_c7r6n")
 debug_color = Color(0.339181, 0.601347, 0.450914, 0.42)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="HurtBox"]
+stream = ExtResource("5_vtign")
 
 [node name="DetectionZone" type="Area2D" parent="."]
 visible = false

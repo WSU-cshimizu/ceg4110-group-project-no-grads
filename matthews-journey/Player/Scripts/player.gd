@@ -23,6 +23,12 @@ var xp: int = 0
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var sword_hit_box: SwordHitBox = $Sprite2D/SwordHitBox
 
+# sfx variables
+@onready var swing_1: AudioStreamPlayer2D = $swing1
+@onready var swing_2: AudioStreamPlayer2D = $swing2
+@onready var swing_3: AudioStreamPlayer2D = $swing3
+var swings: Array[AudioStreamPlayer2D]
+var swung: bool = false
 
 # Direction Variables
 const SPEED = 175.0
@@ -41,6 +47,9 @@ var current_state : String = "idle"
 func _ready():
 	add_to_group("player")
 	sword_hit_box.monitoring = false
+	swings.append(swing_1)
+	swings.append(swing_2)
+	swings.append(swing_3)
 
 func _process(delta: float) -> void:
 	# Get the direction the player is pressing
@@ -133,10 +142,15 @@ func update_state(delta: float) -> void:
 	# update the state if it is different than previous
 	if new_state != current_state:
 		if prev_state == "attack":
+			# prevent sfx from playing repeatedly
+			if not swung:
+				swings.pick_random().play()
+				swung = true
 			# prevent spamming attack
 			await animation_player.animation_finished
 			# turn off sword hit box after animation finishes
 			sword_hit_box.monitoring = false
+			swung = false
 		current_state = new_state
 
 func _physics_process(delta: float) -> void:

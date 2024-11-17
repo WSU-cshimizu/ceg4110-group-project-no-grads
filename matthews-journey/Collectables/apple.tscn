@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvs1b5q0worqx"]
+[gd_scene load_steps=9 format=3 uid="uid://bvs1b5q0worqx"]
 
 [ext_resource type="PackedScene" uid="uid://grm4chxifb06" path="res://Collectables/collectable.tscn" id="1_ku8nw"]
 [ext_resource type="Script" path="res://Collectables/apple.gd" id="2_5t8f6"]
 [ext_resource type="Texture2D" uid="uid://cs4i8oad4yvg8" path="res://assets/Icons/No Outline/Food_Icons_NO_Outline.png" id="2_lesgu"]
+[ext_resource type="AudioStream" uid="uid://b8jgd2k6cmyln" path="res://assets/Sounds/Rise03.wav" id="4_fqsq5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gt7s"]
 radius = 7.0
@@ -62,3 +63,6 @@ frame = 30
 libraries = {
 "": SubResource("AnimationLibrary_h7ot0")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("4_fqsq5")

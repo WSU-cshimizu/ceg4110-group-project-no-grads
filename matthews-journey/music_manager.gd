@@ -1,7 +1,13 @@
 extends Node2D
-@onready var main_menu: AudioStreamPlayer2D = $MainMenu
-@onready var game_over: AudioStreamPlayer2D = $GameOver
-@onready var town: AudioStreamPlayer2D = $Town
+
+# Music
+@onready var main_menu: AudioStreamPlayer2D = $Music/MainMenu
+@onready var game_over: AudioStreamPlayer2D = $Music/GameOver
+@onready var town: AudioStreamPlayer2D = $Music/Town
+
+# SFX
+@onready var slime: AudioStreamPlayer2D = $SFX/slime
+@onready var skeleton: AudioStreamPlayer2D = $SFX/skeleton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,3 +31,10 @@ func _stop_all():
 	game_over.stop()
 	town.stop()
 	main_menu.stop()
+	
+func sfx(sound: String):
+	if sound == "slime":
+		slime.play()
+	elif sound == "skeleton":
+		skeleton.play()
+		
