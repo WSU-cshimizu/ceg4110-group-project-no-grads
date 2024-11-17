@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=59 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://gbnjxsboe6pm" path="res://clutter/trees/cherry_tree.tscn" id="18_3ntgq"]
 [ext_resource type="PackedScene" uid="uid://debimm31ehn05" path="res://clutter/houses/witches_house.tscn" id="24_5v1h2"]
 [ext_resource type="PackedScene" uid="uid://yufh4cadm83p" path="res://npcs/guard/guard.tscn" id="24_jmqju"]
+[ext_resource type="PackedScene" uid="uid://6uflg1ulrlyf" path="res://clutter/lantern_post.tscn" id="25_3u7qh"]
 [ext_resource type="PackedScene" uid="uid://bcf5hqn04g1dm" path="res://npcs/cow/cow.tscn" id="25_llkrr"]
 [ext_resource type="PackedScene" uid="uid://btqgvfhodoutv" path="res://npcs/witch/witch.tscn" id="25_ws5ud"]
 [ext_resource type="PackedScene" uid="uid://c0xueonklg3om" path="res://clutter/hay_Bale.tscn" id="26_7xph4"]
@@ -43,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://dec5m2yeb5ufi" path="res://npcs/pigs/pig1.tscn" id="40_erf67"]
 [ext_resource type="PackedScene" uid="uid://dbpx5nu5alctw" path="res://npcs/sheep/sheep.tscn" id="41_du7st"]
 [ext_resource type="PackedScene" uid="uid://ob52nyrqk1ux" path="res://clutter/trees/apple_tree.tscn" id="42_t4pb5"]
+[ext_resource type="PackedScene" uid="uid://d21bqnlwov14r" path="res://clutter/fountain.tscn" id="44_mblhu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74dcv"]
 size = Vector2(1099, 16)
@@ -505,6 +507,9 @@ position = Vector2(664, 271)
 [node name="Clutter" type="Node2D" parent="."]
 y_sort_enabled = true
 
+[node name="LanternPost" parent="Clutter" instance=ExtResource("25_3u7qh")]
+position = Vector2(541, 111)
+
 [node name="WitchesHouse" parent="Clutter" instance=ExtResource("24_5v1h2")]
 position = Vector2(-178, 233)
 collision_layer = 8
@@ -595,6 +600,9 @@ default_animation = "sleep"
 
 [node name="Sheep2" parent="NPCs" instance=ExtResource("41_du7st")]
 position = Vector2(67, 81)
+
+[node name="Fountain" parent="." instance=ExtResource("44_mblhu")]
+position = Vector2(-131, 42)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="child_entered_tree" from="Enemies" to="." method="_on_enemies_child_entered_tree"]
