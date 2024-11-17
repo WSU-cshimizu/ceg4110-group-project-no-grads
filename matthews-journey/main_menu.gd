@@ -1,6 +1,10 @@
 extends Control
 
 @onready var main_menu_music: AudioStreamPlayer2D = $MainMenuMusic
+@onready var begin_game: Button = $VBoxContainer/BeginGame
+@onready var controls: Button = $VBoxContainer/Controls
+@onready var quit_game: Button = $VBoxContainer/QuitGame
+
 
 func _ready() -> void:
 	main_menu_music.playing = true
