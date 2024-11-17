@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ob52nyrqk1ux"]
+
+[ext_resource type="Texture2D" uid="uid://bho5xaf5fcih3" path="res://assets/Crops/Apple_Tree.png" id="1_hc7d0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8u10"]
+size = Vector2(4, 4)
+
+[node name="AppleTree" type="StaticBody2D"]
+scale = Vector2(2, 2)
+collision_layer = 8
+collision_mask = 37
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -17)
+texture = ExtResource("1_hc7d0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_x8u10")

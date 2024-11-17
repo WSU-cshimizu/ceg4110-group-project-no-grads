@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://5uvnd13ku3sr"]
+[gd_scene load_steps=9 format=3 uid="uid://5uvnd13ku3sr"]
 
 [ext_resource type="PackedScene" uid="uid://grm4chxifb06" path="res://Collectables/collectable.tscn" id="1_5ndqg"]
 [ext_resource type="Script" path="res://Collectables/Currency/coin90.gd" id="2_41ue4"]
 [ext_resource type="Texture2D" uid="uid://b3qhuotv2b0me" path="res://assets/Icons/No Outline/Resources_Icons_NO_Outline.png" id="3_vqp6r"]
+[ext_resource type="AudioStream" uid="uid://cliw744p2chig" path="res://assets/Sounds/coin.wav" id="4_rdawl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gt7s"]
 radius = 7.0
@@ -62,3 +63,6 @@ frame = 35
 libraries = {
 "": SubResource("AnimationLibrary_h7ot0")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("4_rdawl")
