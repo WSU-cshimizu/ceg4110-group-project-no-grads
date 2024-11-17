@@ -10,6 +10,7 @@ extends Node2D
 @onready var skeleton: AudioStreamPlayer2D = $SFX/skeleton
 @onready var player_hurt: AudioStreamPlayer2D = $SFX/player_hurt
 @onready var player_died: AudioStreamPlayer2D = $SFX/player_died
+@onready var level_up: AudioStreamPlayer2D = $SFX/level_up
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -43,4 +44,9 @@ func sfx(sound: String):
 		player_hurt.play()
 	elif sound == "player_died":
 		player_died.play()
+	elif sound == "level_up":
+		_stop_all()
+		level_up.play()
+		await level_up.finished
+		town.play()
 		

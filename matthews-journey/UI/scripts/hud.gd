@@ -18,6 +18,7 @@ func _ready(): #VR
 	player.coinsChanged.connect(_on_coins_changed)
 	player.keysChanged.connect(_on_keys_changed)
 	player.xpChanged.connect(_on_xp_changed)
+	player.level_up.connect(heartsContainer.setMaxHearts)
 	menu_button.flat = true
 	
 func _on_coins_changed(new_amount: int):
