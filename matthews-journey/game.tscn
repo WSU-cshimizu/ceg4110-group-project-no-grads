@@ -372,6 +372,7 @@ y_sort_enabled = true
 script = ExtResource("1_u0244")
 
 [node name="Player" parent="." instance=ExtResource("1_43ojw")]
+unique_name_in_owner = true
 position = Vector2(238, 135)
 
 [node name="Hud" parent="." instance=ExtResource("3_yby0a")]
@@ -504,6 +505,27 @@ position = Vector2(447, 138)
 [node name="Jester" parent="Enemies" instance=ExtResource("39_q4hbr")]
 position = Vector2(664, 271)
 
+[node name="Skeleton3" parent="Enemies" instance=ExtResource("12_c6uob")]
+position = Vector2(156, 257)
+
+[node name="Skeleton4" parent="Enemies" instance=ExtResource("12_c6uob")]
+position = Vector2(655, -41)
+
+[node name="Slime3" parent="Enemies" instance=ExtResource("11_6t204")]
+position = Vector2(616, 373)
+
+[node name="Slime4" parent="Enemies" instance=ExtResource("11_6t204")]
+position = Vector2(592, 346)
+
+[node name="Slime5" parent="Enemies" instance=ExtResource("11_6t204")]
+position = Vector2(570, 380)
+
+[node name="Slime6" parent="Enemies" instance=ExtResource("11_6t204")]
+position = Vector2(28, -29)
+
+[node name="Slime7" parent="Enemies" instance=ExtResource("11_6t204")]
+position = Vector2(-198, -61)
+
 [node name="Clutter" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -534,6 +556,9 @@ position = Vector2(629, 145)
 
 [node name="Campfire2" parent="Clutter" instance=ExtResource("14_pa2sc")]
 position = Vector2(282, 185)
+
+[node name="Fountain" parent="Clutter" instance=ExtResource("44_mblhu")]
+position = Vector2(-131, 42)
 
 [node name="NPCs" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -600,9 +625,6 @@ default_animation = "sleep"
 
 [node name="Sheep2" parent="NPCs" instance=ExtResource("41_du7st")]
 position = Vector2(67, 81)
-
-[node name="Fountain" parent="." instance=ExtResource("44_mblhu")]
-position = Vector2(-131, 42)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="child_entered_tree" from="Enemies" to="." method="_on_enemies_child_entered_tree"]

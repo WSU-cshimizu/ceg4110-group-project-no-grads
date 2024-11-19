@@ -1,9 +1,46 @@
-[gd_scene load_steps=5 format=3 uid="uid://csc7yvvc5b2sd"]
+[gd_scene load_steps=8 format=3 uid="uid://csc7yvvc5b2sd"]
 
 [ext_resource type="Script" path="res://UI/scripts/hud.gd" id="1_2u5q2"]
 [ext_resource type="Script" path="res://UI/scripts/hearts_container.gd" id="2_sq3j2"]
 [ext_resource type="Texture2D" uid="uid://b3qhuotv2b0me" path="res://assets/Icons/No Outline/Resources_Icons_NO_Outline.png" id="3_cyll5"]
 [ext_resource type="Texture2D" uid="uid://dd06a50fyb11x" path="res://assets/UI/menu-button.png" id="3_wev6a"]
+
+[sub_resource type="Animation" id="Animation_6sf3v"]
+resource_name = "level_up_label"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.03333, 3.46667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_i8dl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0gnsq"]
+_data = {
+"RESET": SubResource("Animation_i8dl7"),
+"level_up_label": SubResource("Animation_6sf3v")
+}
 
 [node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_2u5q2")
@@ -99,5 +136,18 @@ offset_top = 2.0
 offset_right = 477.0
 offset_bottom = 30.0
 icon = ExtResource("3_wev6a")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 199.0
+offset_top = 64.0
+offset_right = 270.0
+offset_bottom = 87.0
+text = "Level Up!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0gnsq")
+}
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

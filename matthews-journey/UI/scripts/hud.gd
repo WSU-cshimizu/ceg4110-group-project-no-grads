@@ -8,6 +8,7 @@ static var image = load('res://assets/UI/health-heart.png')
 @onready var keyLabel = $MarginContainer/VBoxContainer/coinsContainer/keysContainer/Sprite2D/keyLabel
 @onready var xpLabel =  $MarginContainer/VBoxContainer/xpContainer/Sprite2D/xpLabel
 @onready var menu_button: Button = $MenuButton
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 
 func _ready(): #VR
@@ -18,7 +19,7 @@ func _ready(): #VR
 	player.coinsChanged.connect(_on_coins_changed)
 	player.keysChanged.connect(_on_keys_changed)
 	player.xpChanged.connect(_on_xp_changed)
-	player.level_up.connect(heartsContainer.setMaxHearts)
+	player.level_up.connect(_on_level_up)
 	menu_button.flat = true
 	
 func _on_coins_changed(new_amount: int):
@@ -45,3 +46,8 @@ func _process(delta: float) -> void:
 	
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://UI/main_menu.tscn")
+
+func _on_level_up(maxHealth: int):
+	print("hud recieved level up signal")
+	heartsContainer.setMaxHearts(maxHealth)
+	animation_player.play("level_up_label")

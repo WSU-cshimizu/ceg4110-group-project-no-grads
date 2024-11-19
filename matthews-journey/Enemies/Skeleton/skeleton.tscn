@@ -372,7 +372,6 @@ shape = SubResource("RectangleShape2D_e013t")
 debug_color = Color(0.341974, 0.600467, 0.454275, 0.42)
 
 [node name="DetectionZone" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone"]
@@ -383,10 +382,17 @@ debug_color = Color(0.541176, 0.560784, 0.623529, 0.145098)
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_xprda")
-animation = &"die"
+animation = &"idle_down"
 autoplay = "idle_down"
-frame = 3
-frame_progress = 1.0
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+modulate = Color(0.415686, 1, 0.301961, 1)
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = -20.0
+show_percentage = false
 
 [connection signal="area_entered" from="HitBox" to="HitBox" method="_on_area_entered"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

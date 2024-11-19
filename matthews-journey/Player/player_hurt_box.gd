@@ -6,7 +6,6 @@ func take_attack(attack: Attack):
 	knockback(attack.direction, attack.knockback)
 	print("Player took " + str(attack.damage) + " damage!")
 	player.take_damage(attack.damage)
-	# TODO knockback in player function
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Collectable:

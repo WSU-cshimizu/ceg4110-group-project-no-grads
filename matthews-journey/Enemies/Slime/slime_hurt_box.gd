@@ -13,6 +13,8 @@ func take_attack(attack: Attack):
 	MusicManager.sfx("slime")
 	knockback(attack.direction, attack.knockback)
 	slime.health -= attack.damage
+	slime.progress_bar.value = slime.health
+	slime.progress_bar.visible = true
 	if slime.health <= 0:
 		player.collect_xp(slime.xp)
 		for i in range(drop_count):

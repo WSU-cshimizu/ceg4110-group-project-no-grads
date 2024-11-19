@@ -11,21 +11,19 @@ var direction = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
 const DIRECTIONS = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
-@onready var player: Player = $"../../Player"
+@onready var player: Player = %Player
+#@onready var player: Player = $"../../Player"
 @onready var sprite: AnimatedSprite2D = $Sprite2D
+@onready var progress_bar: ProgressBar = $ProgressBar
 
 var knockback_velocity: Vector2 = Vector2.ZERO
 var knocked_back: bool = false
 var player_detected: bool = false
 var current_state : String = "idle"
 
-func _on_hit_box_body_entered(body: Node2D) -> void:
-	#print("skelly hitbox entered")
-	#if body is Player:
-		#print("Skelly hit player")
-		#SignalBus.enemy_attack.emit(damage)
-		#print("skelly attack signal emitted")
-		pass
+func _ready() -> void:
+	progress_bar.max_value = health
+	progress_bar.value = health
 
 func _physics_process(delta: float) -> void:
 	if player_detected and not current_state == "dying":
@@ -50,6 +48,7 @@ func _on_detection_zone_body_entered(body: Node2D) -> void:
 
 func _on_detection_zone_body_exited(body: Node2D) -> void:
 	if body is Player:
+		player = body
 		player_detected = false
 		current_state = "idle"
 		
