@@ -1,6 +1,7 @@
 class_name Slime extends Enemy
 
 @onready var player: Player = $"../../Player"
+@onready var progress_bar: ProgressBar = $ProgressBar	#6aff4d
 
 @export var health: int = 2
 @export var damage: int = 1
@@ -23,6 +24,8 @@ func _ready() -> void:
 	wander_time = randf_range(min_wander, max_wander)
 	idle_time = randf_range(min_idle, max_idle)
 	current_state = "idle"
+	progress_bar.max_value = health
+	progress_bar.value = health
 
 func _on_hit_box_body_entered(body: Node2D) -> void:
 	if body is Player:

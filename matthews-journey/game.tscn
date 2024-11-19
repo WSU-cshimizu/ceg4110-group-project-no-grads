@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dif1q6xtxn3ta" path="res://assets/Tiles/Grass/Grass_Tiles_1.png" id="2_wxgtg"]
 [ext_resource type="Texture2D" uid="uid://dbmaclln1p5e7" path="res://assets/House/Buildings/Tent/Tent_Big.png" id="3_cq82d"]
 [ext_resource type="Texture2D" uid="uid://dqlcq86g6gxav" path="res://assets/Tiles/Grass/Grass_1_Middle.png" id="3_wfy1b"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="3_yby0a"]
+[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://oldhud.tscn" id="3_yby0a"]
 [ext_resource type="Texture2D" uid="uid://bcylv2e3y774v" path="res://assets/Tiles/Grass/Path_Middle.png" id="4_ahu12"]
 [ext_resource type="PackedScene" uid="uid://bvs1b5q0worqx" path="res://Collectables/apple.tscn" id="5_e5nac"]
 [ext_resource type="Texture2D" uid="uid://cchoacwoo2iac" path="res://assets/Tiles/Grass/Path_Decoration.png" id="5_enysm"]
