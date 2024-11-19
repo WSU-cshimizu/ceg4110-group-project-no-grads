@@ -52,21 +52,24 @@
 - Added HUD xp count
 
 **Cara's Weekly Contribution's**
-    - Complete rework of the game map
-    - Map is to be final version of the level for the game
-    - map includes town area, forest, river, and witch's hut location
+ - Complete rework of the game map
+- Map is to be final version of the level for the game
+- map includes town area, forest, river, and witch's hut location
 
 **Josiah's Weekly Contribution's**
-    - As discussed in discord, due to scheduling problems no work has been done
+- As discussed in discord, due to scheduling problems no work has been done
 
 ## Action Items
 **Robert**
 - Add enemies and obstacles to new map
+  
 **Virginia**
 - Add Level to HUD
 - Add collectibles and pickups to new map
+
 **Cara**
 - Add collisions to the new map tileset
+
 **Josiah**
 - Not present at class meeting to discuss weekly action item's. Has stated no current work being done
  
