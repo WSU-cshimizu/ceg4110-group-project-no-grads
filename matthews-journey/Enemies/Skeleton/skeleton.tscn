@@ -372,7 +372,6 @@ shape = SubResource("RectangleShape2D_e013t")
 debug_color = Color(0.341974, 0.600467, 0.454275, 0.42)
 
 [node name="DetectionZone" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone"]

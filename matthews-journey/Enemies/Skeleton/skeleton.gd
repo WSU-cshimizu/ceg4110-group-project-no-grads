@@ -11,7 +11,8 @@ var direction = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN
 const DIRECTIONS = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
-@onready var player: Player = $"../../Player"
+@onready var player: Player = %Player
+#@onready var player: Player = $"../../Player"
 @onready var sprite: AnimatedSprite2D = $Sprite2D
 @onready var progress_bar: ProgressBar = $ProgressBar
 
@@ -47,6 +48,7 @@ func _on_detection_zone_body_entered(body: Node2D) -> void:
 
 func _on_detection_zone_body_exited(body: Node2D) -> void:
 	if body is Player:
+		player = body
 		player_detected = false
 		current_state = "idle"
 		

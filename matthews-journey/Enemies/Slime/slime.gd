@@ -1,6 +1,6 @@
 class_name Slime extends Enemy
 
-@onready var player: Player = $"../../Player"
+@onready var player: Player = %Player
 @onready var progress_bar: ProgressBar = $ProgressBar	#6aff4d
 
 @export var health: int = 2
