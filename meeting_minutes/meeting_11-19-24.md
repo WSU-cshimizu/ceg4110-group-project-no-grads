@@ -61,14 +61,14 @@
 
 ## Action Items
 **Robert**
-* Add enemies and obstacles to new map
+- Add enemies and obstacles to new map
 **Virginia**
-* Add Level to HUD
-* Add collectibles and pickups to new map
+- Add Level to HUD
+- Add collectibles and pickups to new map
 **Cara**
-* Add collisions to the new map tileset
+- Add collisions to the new map tileset
 **Josiah**
-* Not present at class meeting to discuss weekly action item's. Has stated no current work being done
+- Not present at class meeting to discuss weekly action item's. Has stated no current work being done
  
 
 ## Signatures
