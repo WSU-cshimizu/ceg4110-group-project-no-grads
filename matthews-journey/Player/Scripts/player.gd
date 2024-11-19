@@ -190,6 +190,6 @@ func collect_xp(amount: int):
 		level += 1
 		maxHealth += 1
 		currentHealth += 1
-		level_up.emit(maxHealth)
+		level_up.emit(level, maxHealth)
 		healthChanged.emit(currentHealth)
 		
