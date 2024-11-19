@@ -6,7 +6,7 @@
 - BS Computer Science Senior
 - Team Role: Game Engine Designer
 
-### Virginia Rich
+### Virginia Richards
 - BS Computer Science Senior & Math minor
 - Team Role: Art and Level Designer
 
