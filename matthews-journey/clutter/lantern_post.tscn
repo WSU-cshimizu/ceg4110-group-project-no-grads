@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://6uflg1ulrlyf"]
+
+[ext_resource type="Texture2D" uid="uid://djlaptd66xuaq" path="res://assets/Outdoor decoration/Lanter_Posts.png" id="1_3i3sx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g87cc"]
+size = Vector2(9, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkbw6"]
+atlas = ExtResource("1_3i3sx")
+region = Rect2(0, 432, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6e0d"]
+atlas = ExtResource("1_3i3sx")
+region = Rect2(32, 432, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf5mb"]
+atlas = ExtResource("1_3i3sx")
+region = Rect2(64, 432, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jsv0"]
+atlas = ExtResource("1_3i3sx")
+region = Rect2(96, 432, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqf0h"]
+atlas = ExtResource("1_3i3sx")
+region = Rect2(128, 432, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqb7p"]
+atlas = ExtResource("1_3i3sx")
+region = Rect2(160, 432, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3lk1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkbw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6e0d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf5mb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jsv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqf0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqb7p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_ls16n"]
+offsets = PackedFloat32Array(0, 0.772727)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rh0wv"]
+gradient = SubResource("Gradient_ls16n")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="LanternPost" type="StaticBody2D"]
+collision_layer = 8
+collision_mask = 37
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -5)
+shape = SubResource("RectangleShape2D_g87cc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_w3lk1")
+frame_progress = 0.0841197
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-7, -24)
+color = Color(0.992867, 0.971432, 0.736944, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_rh0wv")

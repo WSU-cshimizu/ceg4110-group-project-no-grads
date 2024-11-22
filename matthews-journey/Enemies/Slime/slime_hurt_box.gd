@@ -2,15 +2,26 @@ class_name SlimeHurtBox extends HurtBox
 
 @onready var slime: Slime = $".."
 var player: Player
+var drop_count = 2
+const COIN_03 = preload("res://Collectables/Currency/coin03.tscn")
+@onready var damage_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 
 func take_attack(attack: Attack):
+	MusicManager.sfx("slime")
 	knockback(attack.direction, attack.knockback)
 	slime.health -= attack.damage
+	slime.progress_bar.value = slime.health
+	slime.progress_bar.visible = true
 	if slime.health <= 0:
 		player.collect_xp(slime.xp)
+		for i in range(drop_count):
+			var coin: Coin03 = COIN_03.instantiate()
+			slime.get_parent().call_deferred("add_child", coin)
+			var spawn_offset = Vector2(randi_range(1, 15), randi_range(1, 15))
+			coin.global_position = slime.global_position + spawn_offset
 		slime.queue_free()
 
 func knockback(direction: Vector2, force: int) -> void:

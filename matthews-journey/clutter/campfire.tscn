@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtgc2x7x1r410"]
+[gd_scene load_steps=9 format=3 uid="uid://dtgc2x7x1r410"]
 
 [ext_resource type="Texture2D" uid="uid://bhlrgd4arc11n" path="res://assets/Outdoor decoration/Campfire_Anim.png" id="1_rypea"]
 [ext_resource type="Script" path="res://clutter/fire_hit_box.gd" id="2_85w7b"]
@@ -44,6 +44,15 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_2w8yl"]
 radius = 5.0
 
+[sub_resource type="Gradient" id="Gradient_dlv8l"]
+offsets = PackedFloat32Array(0, 0.772727)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rd04x"]
+gradient = SubResource("Gradient_dlv8l")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Campfire" type="StaticBody2D"]
 y_sort_enabled = true
 position = Vector2(0, -16)
@@ -65,5 +74,12 @@ script = ExtResource("2_85w7b")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="hitBox"]
 position = Vector2(-1, 9)
 shape = SubResource("CircleShape2D_2w8yl")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-1, 10)
+scale = Vector2(0.71875, 0.71875)
+color = Color(0.992867, 0.971432, 0.736944, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_rd04x")
 
 [connection signal="area_entered" from="hitBox" to="hitBox" method="_on_area_entered"]

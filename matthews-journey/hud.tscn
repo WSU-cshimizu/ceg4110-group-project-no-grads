@@ -1,16 +1,55 @@
-[gd_scene load_steps=5 format=3 uid="uid://csc7yvvc5b2sd"]
+[gd_scene load_steps=9 format=3 uid="uid://csc7yvvc5b2sd"]
 
 [ext_resource type="Script" path="res://UI/scripts/hud.gd" id="1_2u5q2"]
+[ext_resource type="Texture2D" uid="uid://bngpcrwyhvvh5" path="res://assets/Icons/No Outline/Other_Icons_NO_Outline.png" id="2_7od1e"]
 [ext_resource type="Script" path="res://UI/scripts/hearts_container.gd" id="2_sq3j2"]
-[ext_resource type="Texture2D" uid="uid://t2q3eddwt4xu" path="res://assets/Icons/No Outline/Resources_Icons_NO_Outline.png" id="3_cyll5"]
+[ext_resource type="Texture2D" uid="uid://b3qhuotv2b0me" path="res://assets/Icons/No Outline/Resources_Icons_NO_Outline.png" id="3_cyll5"]
 [ext_resource type="Texture2D" uid="uid://dd06a50fyb11x" path="res://assets/UI/menu-button.png" id="3_wev6a"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[sub_resource type="Animation" id="Animation_i8dl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6sf3v"]
+resource_name = "level_up_label"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.03333, 3.46667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0gnsq"]
+_data = {
+"RESET": SubResource("Animation_i8dl7"),
+"level_up_label": SubResource("Animation_6sf3v")
+}
+
+[node name="Hud" type="CanvasLayer"]
 script = ExtResource("1_2u5q2")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 19.0
+offset_right = 112.0
+offset_bottom = 71.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/margin_left = 8
@@ -20,22 +59,57 @@ theme_override_constants/margin_top = 8
 layout_mode = 2
 
 [node name="heartsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_direction = 2
 layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 0
 theme_override_constants/separation = 4
 script = ExtResource("2_sq3j2")
 
-[node name="coinsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 112.0
+offset_bottom = 71.0
+
+[node name="lvContainer" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer2/lvContainer"]
+position = Vector2(5, 9)
+texture = ExtResource("2_7od1e")
+hframes = 5
+vframes = 3
+frame = 11
+
+[node name="lv" type="Label" parent="MarginContainer2/lvContainer/Sprite2D"]
+offset_left = -6.0
+offset_top = -12.0
+offset_right = 33.0
+offset_bottom = 1.0
+theme_override_font_sizes/font_size = 6
+text = "lv"
+
+[node name="lvLabel" type="Label" parent="MarginContainer2/lvContainer/Sprite2D"]
+offset_left = -1.0
+offset_top = -14.0
+offset_right = 9.0
+offset_bottom = 10.0
+theme_override_font_sizes/font_size = 17
+text = "0"
+
+[node name="coinsContainer" type="HBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/coinsContainer"]
-position = Vector2(3, 6)
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer2/coinsContainer"]
+position = Vector2(3, -39)
 texture = ExtResource("3_cyll5")
 hframes = 6
 vframes = 6
+frame = 31
 
-[node name="coinLabel" type="Label" parent="MarginContainer/VBoxContainer/coinsContainer/Sprite2D"]
+[node name="coinLabel" type="Label" parent="MarginContainer2/coinsContainer/Sprite2D"]
 offset_left = 9.0
 offset_top = -8.0
 offset_right = 19.0
@@ -43,18 +117,37 @@ offset_bottom = 15.0
 theme_override_font_sizes/font_size = 12
 text = "0"
 
-[node name="xpContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="keysContainer" type="HBoxContainer" parent="MarginContainer2"]
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/xpContainer"]
-position = Vector2(3, 19)
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer2/keysContainer"]
+position = Vector2(3, -24)
+texture = ExtResource("3_cyll5")
+hframes = 6
+vframes = 6
+frame = 28
+
+[node name="keyLabel" type="Label" parent="MarginContainer2/keysContainer/Sprite2D"]
+offset_left = 9.0
+offset_top = -8.0
+offset_right = 19.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="xpContainer" type="HBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer2/xpContainer"]
+position = Vector2(3, -9)
 texture = ExtResource("3_cyll5")
 hframes = 6
 vframes = 6
 frame = 29
 
-[node name="xp" type="Label" parent="MarginContainer/VBoxContainer/xpContainer/Sprite2D"]
+[node name="xp" type="Label" parent="MarginContainer2/xpContainer/Sprite2D"]
 offset_left = -9.0
 offset_top = -13.0
 offset_right = 11.0
@@ -65,7 +158,7 @@ text = "XP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="xpLabel" type="Label" parent="MarginContainer/VBoxContainer/xpContainer/Sprite2D"]
+[node name="xpLabel" type="Label" parent="MarginContainer2/xpContainer/Sprite2D"]
 offset_left = 9.0
 offset_top = -8.0
 offset_right = 19.0
@@ -73,9 +166,24 @@ offset_bottom = 15.0
 theme_override_font_sizes/font_size = 12
 text = "0"
 
-[node name="MenuButton" type="MenuButton" parent="."]
+[node name="MenuButton" type="Button" parent="."]
 offset_left = 449.0
 offset_top = 2.0
 offset_right = 477.0
 offset_bottom = 30.0
 icon = ExtResource("3_wev6a")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 199.0
+offset_top = 64.0
+offset_right = 270.0
+offset_bottom = 87.0
+text = "Level Up!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0gnsq")
+}
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

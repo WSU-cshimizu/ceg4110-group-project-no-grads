@@ -5,12 +5,18 @@ signal healthChanged #VR
 @export var maxHealth = 5 #VR
 @onready var currentHealth: int = 3 #maxHealth #VR
 
-# Collection Variables
+# Collectables Variables
 signal coinsChanged
+signal keysChanged
 var coins: int = 0
+var keys: int = 0
 
+# XP and level variables
 signal xpChanged
+signal level_up
 var xp: int = 0
+var level = 1
+var xp_to_lvl = {1: 5, 2: 15, 3: 30}
 
 # Knockback Variables
 @export var damage: int = 1
@@ -21,6 +27,12 @@ var xp: int = 0
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var sword_hit_box: SwordHitBox = $Sprite2D/SwordHitBox
 
+# sfx variables
+@onready var swing_1: AudioStreamPlayer2D = $swing1
+@onready var swing_2: AudioStreamPlayer2D = $swing2
+@onready var swing_3: AudioStreamPlayer2D = $swing3
+var swings: Array[AudioStreamPlayer2D]
+var swung: bool = false
 
 # Direction Variables
 const SPEED = 175.0
@@ -39,6 +51,9 @@ var current_state : String = "idle"
 func _ready():
 	add_to_group("player")
 	sword_hit_box.monitoring = false
+	swings.append(swing_1)
+	swings.append(swing_2)
+	swings.append(swing_3)
 
 func _process(delta: float) -> void:
 	# Get the direction the player is pressing
@@ -131,10 +146,15 @@ func update_state(delta: float) -> void:
 	# update the state if it is different than previous
 	if new_state != current_state:
 		if prev_state == "attack":
+			# prevent sfx from playing repeatedly
+			if not swung:
+				swings.pick_random().play()
+				swung = true
 			# prevent spamming attack
 			await animation_player.animation_finished
 			# turn off sword hit box after animation finishes
 			sword_hit_box.monitoring = false
+			swung = false
 		current_state = new_state
 
 func _physics_process(delta: float) -> void:
@@ -146,16 +166,30 @@ func player():
 	pass
 
 func take_damage(damage):
+	MusicManager.sfx("player_hurt")
 	currentHealth -= damage
 	if currentHealth <= 0:
 		get_tree().change_scene_to_file("res://UI/game_over.tscn")
 	healthChanged.emit(currentHealth)
-
+	
 func collect_coins(amount: int):
 	coins += amount
 	coinsChanged.emit(coins)
-
+	
+func collect_keys(amount: int):
+	keys += amount
+	keysChanged.emit(keys)
+	
 func collect_xp(amount: int):
 	xp += amount
 	print("xp = ", xp)
 	xpChanged.emit(xp)
+	# if xp is over the level up threshold, increase max health by 1
+	if xp >= xp_to_lvl[level]:
+		MusicManager.sfx("level_up")
+		level += 1
+		maxHealth += 1
+		currentHealth += 1
+		level_up.emit(level, maxHealth)
+		healthChanged.emit(currentHealth)
+		

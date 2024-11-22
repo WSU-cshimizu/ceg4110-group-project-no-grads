@@ -1,9 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://bluo47r4gdfuw"]
+[gd_scene load_steps=22 format=3 uid="uid://bluo47r4gdfuw"]
 
 [ext_resource type="Script" path="res://Player/Scripts/player.gd" id="1_pttgt"]
 [ext_resource type="Texture2D" uid="uid://blfxrwpiysnxq" path="res://assets/Player/Player.png" id="2_sdbpx"]
 [ext_resource type="Script" path="res://Player/player_hurt_box.gd" id="3_6rwjo"]
+[ext_resource type="AudioStream" uid="uid://chdphi1u2t5xk" path="res://assets/Sounds/swing.wav" id="4_llycr"]
 [ext_resource type="Script" path="res://Player/sword_hit_box.gd" id="4_mfua4"]
+[ext_resource type="AudioStream" uid="uid://bl02yuvuom7hp" path="res://assets/Sounds/swing2.wav" id="5_0g0b2"]
+[ext_resource type="AudioStream" uid="uid://dvwn3m5jrbnat" path="res://assets/Sounds/swing3.wav" id="6_njv4f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wvwhm"]
 radius = 8.0
@@ -339,7 +342,20 @@ libraries = {
 "": SubResource("AnimationLibrary_topmh")
 }
 
+[node name="swing1" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -22)
+stream = ExtResource("4_llycr")
+
+[node name="swing2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -22)
+stream = ExtResource("5_0g0b2")
+
+[node name="swing3" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -22)
+stream = ExtResource("6_njv4f")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="area_entered" from="Sprite2D/SwordHitBox" to="Sprite2D/SwordHitBox" method="_on_area_entered"]
 [connection signal="area_entered" from="Sprite2D/HurtBox" to="Sprite2D/HurtBox" method="_on_area_entered"]
+[connection signal="area_exited" from="Sprite2D/HurtBox" to="Sprite2D/HurtBox" method="_on_area_exited"]

@@ -6,11 +6,14 @@ func take_attack(attack: Attack):
 	knockback(attack.direction, attack.knockback)
 	print("Player took " + str(attack.damage) + " damage!")
 	player.take_damage(attack.damage)
-	# TODO knockback in player function
 
 func _on_area_entered(area: Area2D) -> void:
 	if area is Collectable:
 		area.collect()
+		
+func _on_area_exited(area: Area2D) -> void:
+	pass
+
 
 func knockback(direction: Vector2, force: int) -> void:
 	player.knockback_velocity = (player.global_position - direction) * force

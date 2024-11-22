@@ -3,14 +3,17 @@ const HEART_GUI = preload("res://UI/heart_gui.tscn")
 #@onready var HeartGUIClass = preload("res://UI/heart_gui.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
 func setMaxHearts (max: int):
+	# remove all current hearts for level up
+	for c in get_children():
+		remove_child(c)
+	# add hearts equal to maximum hearts
 	for i in range(max):
 		var heart = HEART_GUI.instantiate()
 		add_child(heart)
