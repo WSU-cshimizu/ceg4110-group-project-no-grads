@@ -519,6 +519,8 @@ texture = ExtResource("12_jm52e")
 1:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_23ec3"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 37
 sources/0 = SubResource("TileSetAtlasSource_q45bk")
 sources/1 = SubResource("TileSetAtlasSource_lorl6")
 sources/2 = SubResource("TileSetAtlasSource_syyjo")
@@ -573,7 +575,8 @@ texture = ExtResource("7_8ewdg")
 3:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_l1byp"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 37
 sources/0 = SubResource("TileSetAtlasSource_s2tpv")
 
 [node name="Game" type="Node2D"]
@@ -584,6 +587,7 @@ tile_set = SubResource("TileSet_23ec3")
 [node name="TileMap" type="TileMap" parent="matthews-tiled-map"]
 tile_set = SubResource("TileSet_l1byp")
 format = 2
+layer_0/tile_data = PackedInt32Array(4653097, 65536, 2, 4718633, 65536, 3, 4784169, 65536, 4, 4653098, 131072, 2, 4718634, 131072, 3, 4784170, 131072, 4, 4653099, 131072, 2, 4718635, 131072, 3, 4784171, 131072, 4, 4653100, 131072, 2, 4718636, 131072, 3, 4784172, 131072, 4, 4653101, 131072, 2, 4718637, 131072, 3, 4784173, 131072, 4, 4653102, 131072, 2, 4718638, 131072, 3, 4784174, 131072, 4, 4653103, 131072, 2, 4718639, 131072, 3, 4784175, 131072, 4, 4653104, 131072, 2, 4718640, 131072, 3, 4784176, 131072, 4, 4653105, 131072, 2, 4718641, 131072, 3, 4784177, 131072, 4, 4653106, 131072, 2, 4718642, 131072, 3, 4784178, 131072, 4, 4653107, 131072, 2, 4718643, 131072, 3, 4784179, 131072, 4, 4653108, 131072, 2, 4718644, 131072, 3, 4784180, 131072, 4, 4653111, 131072, 2, 4718647, 131072, 3, 4784183, 131072, 4, 4653112, 131072, 2, 4718648, 131072, 3, 4784184, 131072, 4, 4653113, 131072, 2, 4718649, 131072, 3, 4784185, 131072, 4, 4653114, 131072, 2, 4718650, 131072, 3, 4784186, 131072, 4, 4653115, 131072, 2, 4718651, 131072, 3, 4784187, 131072, 4, 4653116, 196608, 2, 4718652, 196608, 3, 4784188, 196608, 4)
 
 [node name="Player" parent="." instance=ExtResource("13_i5v0w")]
 unique_name_in_owner = true
