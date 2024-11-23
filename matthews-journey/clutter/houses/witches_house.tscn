@@ -13,6 +13,7 @@ radius = 17.1172
 
 [node name="WitchesHouse" type="StaticBody2D"]
 y_sort_enabled = true
+collision_layer = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(11, -53)
