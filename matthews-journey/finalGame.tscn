@@ -1169,11 +1169,11 @@ position = Vector2(685, 1343)
 [node name="Skeleton" parent="Enemies" instance=ExtResource("28_a85mj")]
 position = Vector2(894, 1211)
 
-[node name="Skeleton" parent="." instance=ExtResource("28_a85mj")]
+[node name="Skeleton2" parent="Enemies" instance=ExtResource("28_a85mj")]
 position = Vector2(885, 1377)
 
-[node name="Skeleton2" parent="." instance=ExtResource("28_a85mj")]
+[node name="Skeleton3" parent="Enemies" instance=ExtResource("28_a85mj")]
 position = Vector2(945, 1578)
 
-[node name="Slime" parent="." instance=ExtResource("27_h7e7d")]
+[node name="Slime6" parent="Enemies" instance=ExtResource("27_h7e7d")]
 position = Vector2(908, 1540)
