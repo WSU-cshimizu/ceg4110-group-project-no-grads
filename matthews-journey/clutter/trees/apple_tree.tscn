@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bho5xaf5fcih3" path="res://assets/Crops/Apple_Tree.png" id="1_hc7d0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8u10"]
-size = Vector2(4, 4)
+size = Vector2(6, 4)
 
 [node name="AppleTree" type="StaticBody2D"]
 scale = Vector2(2, 2)

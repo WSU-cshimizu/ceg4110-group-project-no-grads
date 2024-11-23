@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://by56iy76jvnq1" path="res://assets/Crops/Cherry_Tree.png" id="1_mtnxg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuvd7"]
-size = Vector2(4, 4)
+size = Vector2(6, 4)
 
 [node name="CherryTree" type="StaticBody2D"]
 scale = Vector2(2, 2)

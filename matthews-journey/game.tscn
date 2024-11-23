@@ -534,7 +534,6 @@ position = Vector2(541, 111)
 
 [node name="WitchesHouse" parent="Clutter" instance=ExtResource("24_5v1h2")]
 position = Vector2(-178, 233)
-collision_layer = 8
 
 [node name="Cauldron" parent="Clutter" instance=ExtResource("31_mwnaf")]
 position = Vector2(-183, 246)
