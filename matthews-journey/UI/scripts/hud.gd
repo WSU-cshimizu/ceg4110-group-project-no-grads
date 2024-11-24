@@ -16,15 +16,18 @@ static var image = load('res://assets/UI/health-heart.png')
 
 func _ready(): #VR
 	player = get_tree().get_first_node_in_group("player")
-	heartsContainer.setMaxHearts(player.maxHealth)
-	heartsContainer.updateHearts(player.currentHealth)
-	player.healthChanged.connect(heartsContainer.updateHearts)
 	player.coinsChanged.connect(_on_coins_changed)
 	player.keysChanged.connect(_on_keys_changed)
 	player.xpChanged.connect(_on_xp_changed)
 	player.level_up.connect(_on_level_up)
 	menu_button.flat = true
+	_set_hearts()
 	
+func _set_hearts():
+	player.healthChanged.connect(heartsContainer.updateHearts)
+	heartsContainer.setMaxHearts(player.maxHealth)
+	heartsContainer.updateHearts(player.currentHealth)
+
 func _on_coins_changed(new_amount: int):
 	coinLabel.text = str(new_amount)
 	if new_amount >= 500:
