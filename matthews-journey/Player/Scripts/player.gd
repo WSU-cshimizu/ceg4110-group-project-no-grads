@@ -16,7 +16,7 @@ signal xpChanged
 signal level_up
 var xp: int = 0
 var level = 1
-var xp_to_lvl = {1: 5, 2: 15, 3: 30}
+var xp_to_lvl = {1: 5, 2: 15, 3: 30, 4: 60, 5: 120, 6: 240, 7: 480, 8: 960}
 
 # Knockback Variables
 @export var damage: int = 1
@@ -185,7 +185,7 @@ func collect_xp(amount: int):
 	print("xp = ", xp)
 	xpChanged.emit(xp)
 	# if xp is over the level up threshold, increase max health by 1
-	if xp >= xp_to_lvl[level]:
+	if xp >= xp_to_lvl[level]: 
 		MusicManager.sfx("level_up")
 		level += 1
 		maxHealth += 1
