@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://matthews-tiled-map.tscn" id="1_ecctx"]
 [ext_resource type="Script" path="res://game.gd" id="1_gyqy8"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://hud.tscn" id="2_j2gvx"]
+[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://oldhud.tscn" id="2_j2gvx"]
 [ext_resource type="Texture2D" uid="uid://kovuk6g62rpb" path="res://assets/Outdoor decoration/Fence_Big.png" id="2_ul8v1"]
 [ext_resource type="Texture2D" uid="uid://blte53fgdk52s" path="res://assets/Tiles/Bridge/Bridge_Stone_Vertical.png" id="3_7hdgw"]
 [ext_resource type="Texture2D" uid="uid://c00kdtquyg6hh" path="res://assets/Tiles/Waterfall/Waterfall_1.png" id="4_dw7nj"]

@@ -2,12 +2,14 @@ class_name Hud extends CanvasLayer
 
 static var image = load('res://assets/UI/health-heart.png')
 #VR
-@onready var player: Player = $"../Player"
-@onready var heartsContainer: HBoxContainer = $MarginContainer/VBoxContainer/heartsContainer
-@onready var coinLabel = $MarginContainer2/coinsContainer/Sprite2D/coinLabel
-@onready var keyLabel = $MarginContainer2/keysContainer/Sprite2D/keyLabel
-@onready var xpLabel =  $MarginContainer2/xpContainer/Sprite2D/xpLabel
-@onready var lvLabel =  $MarginContainer2/lvContainer/Sprite2D/lvLabel
+@onready var player: Player = %Player
+@onready var heartsContainer: HBoxContainer = %heartsContainer
+@onready var coinLabel: Label = %coinLabel
+@onready var coin_sprite: Sprite2D = %coinSprite
+@onready var keyLabel: Label = %keyLabel
+@onready var xpLabel: Label = %xpLabel
+@onready var lvLabel: Label = %lvLabel
+
 @onready var menu_button: Button = $MenuButton
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -26,15 +28,15 @@ func _ready(): #VR
 func _on_coins_changed(new_amount: int):
 	coinLabel.text = str(new_amount)
 	if new_amount >= 500:
-		$MarginContainer2/coinsContainer/Sprite2D.frame = 35
+		coin_sprite.frame = 35
 	elif new_amount >= 200:
-		$MarginContainer2/coinsContainer/Sprite2D.frame = 34  
+		coin_sprite.frame = 34  
 	elif new_amount >= 100:
-		$MarginContainer2/coinsContainer/Sprite2D.frame = 33 
+		coin_sprite.frame = 33 
 	elif new_amount > 30:
-		$MarginContainer2/coinsContainer/Sprite2D.frame = 32  
+		coin_sprite.frame = 32  
 	else:
-		$MarginContainer2/coinsContainer/Sprite2D.frame = 31  
+		coin_sprite.frame = 31  
 		
 func _on_keys_changed(new_amount: int):
 	keyLabel.text = str(new_amount)
