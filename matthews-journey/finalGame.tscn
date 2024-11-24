@@ -1332,3 +1332,6 @@ position = Vector2(1420, 2149)
 
 [node name="HayBale7" parent="." instance=ExtResource("36_l47i6")]
 position = Vector2(1344, 2164)
+
+[node name="Slime" parent="." instance=ExtResource("27_h7e7d")]
+position = Vector2(1190, 2008)
