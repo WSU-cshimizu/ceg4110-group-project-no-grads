@@ -4,8 +4,8 @@ class_name Skeleton extends Enemy
 @export var health: int = 3
 @export var damage: int = 2
 @export var knockback_force: int = 25
-@export var speed: int = 25
-@export var xp: int = 2
+@export var speed: int = 35
+@export var xp: int = 3
 
 var direction = Vector2.ZERO
 var cardinal_direction : Vector2 = Vector2.DOWN

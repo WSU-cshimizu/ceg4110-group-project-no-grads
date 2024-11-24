@@ -169,6 +169,7 @@ func take_damage(amount):
 	MusicManager.sfx("player_hurt")
 	currentHealth -= amount
 	if currentHealth <= 0:
+		MusicManager.town.stop()
 		get_tree().change_scene_to_file("res://UI/game_over.tscn")
 	healthChanged.emit(currentHealth)
 	
