@@ -11,10 +11,10 @@ func _ready() -> void:
 
 func take_attack(attack: Attack):
 	MusicManager.sfx("slime")
-	knockback(attack.direction, attack.knockback)
 	slime.health -= attack.damage
 	slime.progress_bar.value = slime.health
 	slime.progress_bar.visible = true
+	knockback(attack.direction, attack.knockback)
 	if slime.health <= 0:
 		destroy()
 

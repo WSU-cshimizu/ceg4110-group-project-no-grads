@@ -13,10 +13,10 @@ func _ready() -> void:
 
 func take_attack(attack: Attack):
 	MusicManager.sfx("skeleton")
-	knockback(attack.direction, attack.knockback)
 	skeleton.health -= attack.damage
 	skeleton.progress_bar.value = skeleton.health
 	skeleton.progress_bar.visible = true
+	knockback(attack.direction, attack.knockback)
 	if skeleton.health <= 0:
 		destroy()
 

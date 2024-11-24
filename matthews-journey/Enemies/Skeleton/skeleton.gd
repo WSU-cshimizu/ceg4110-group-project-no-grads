@@ -36,6 +36,7 @@ func _physics_process(delta: float) -> void:
 	update_animation()
 	
 	if knocked_back:
+		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 10)
 		velocity = knockback_velocity
 	move_and_slide()
 

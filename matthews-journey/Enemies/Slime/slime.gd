@@ -33,9 +33,11 @@ func _on_hit_box_body_entered(body: Node2D) -> void:
 		pass
 
 func _physics_process(delta: float) -> void:
-	update_state(delta)
 	if knocked_back:
+		knockback_velocity = knockback_velocity.move_toward(Vector2.ZERO, 10)
 		velocity = knockback_velocity
+	else:
+		update_state(delta)
 	move_and_slide()
 		
 func update_state(delta):
