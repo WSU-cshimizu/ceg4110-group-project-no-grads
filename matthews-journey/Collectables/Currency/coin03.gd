@@ -2,7 +2,7 @@ class_name Coin03
 extends Collectable #inheirits from collectable.gd
 
 @onready var animations = $AnimationPlayer
-@onready var heartsContainer = $MarginContainer/heartsContainer 
+@onready var heartsContainer = %heartsContainer 
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func collect():

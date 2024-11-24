@@ -1,13 +1,6 @@
 extends HBoxContainer
 const HEART_GUI = preload("res://UI/heart_gui.tscn")
 #@onready var HeartGUIClass = preload("res://UI/heart_gui.tscn")
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func setMaxHearts (max: int):
 	# remove all current hearts for level up

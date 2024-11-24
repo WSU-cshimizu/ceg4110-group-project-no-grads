@@ -44,9 +44,6 @@ func _on_keys_changed(new_amount: int):
 func _on_xp_changed(new_amount: int):
 	xpLabel.text = str(new_amount)
 	
-func _process(delta: float) -> void:
-	pass
-	
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://UI/main_menu.tscn")
 

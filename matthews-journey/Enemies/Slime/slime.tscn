@@ -18,7 +18,7 @@ radius = 5.0
 height = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqhuv"]
-radius = 34.0147
+radius = 43.0465
 
 [sub_resource type="Animation" id="Animation_6np17"]
 length = 0.001
@@ -104,7 +104,6 @@ debug_color = Color(0.339181, 0.601347, 0.450914, 0.42)
 stream = ExtResource("5_vtign")
 
 [node name="DetectionZone" type="Area2D" parent="."]
-visible = false
 
 [node name="DetectionCollision" type="CollisionShape2D" parent="DetectionZone"]
 position = Vector2(-1, -5)

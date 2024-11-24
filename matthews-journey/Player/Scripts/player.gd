@@ -63,7 +63,7 @@ func _process(delta: float) -> void:
 	# normalize the vector to magnitude 1. Prevents faster movement in diagonal.
 	).normalized() 
 	
-	update_state(delta)
+	update_state()
 	update_direction()
 	
 	#if($"../NPCs/PlayerChatIcon".is_chatting):
@@ -130,7 +130,7 @@ func _heal(area):
 			healthChanged.emit(currentHealth)
 			print_debug("Health after healing: ", currentHealth)
 
-func update_state(delta: float) -> void:
+func update_state() -> void:
 	var new_state: String = current_state
 	var prev_state: String = current_state
 	
@@ -165,9 +165,9 @@ func _physics_process(delta: float) -> void:
 func player():
 	pass
 
-func take_damage(damage):
+func take_damage(amount):
 	MusicManager.sfx("player_hurt")
-	currentHealth -= damage
+	currentHealth -= amount
 	if currentHealth <= 0:
 		get_tree().change_scene_to_file("res://UI/game_over.tscn")
 	healthChanged.emit(currentHealth)

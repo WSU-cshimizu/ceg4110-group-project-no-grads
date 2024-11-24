@@ -71,7 +71,8 @@ func wander(delta) -> void:
 func idle(delta) -> void:
 	if idle_time <= 0:
 		wander_time = randf_range(min_wander, max_wander)
-		velocity = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized() * speed
+		var random_direction: Vector2 = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
+		velocity = random_direction * speed
 		current_state = "wander"
 	else:
 		idle_time -= delta
