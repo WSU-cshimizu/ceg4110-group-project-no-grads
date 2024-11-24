@@ -1,8 +1,7 @@
-[gd_scene load_steps=38 format=4 uid="uid://b1bxjmuuvmrwn"]
+[gd_scene load_steps=37 format=4 uid="uid://b1bxjmuuvmrwn"]
 
 [ext_resource type="PackedScene" uid="uid://bluo47r4gdfuw" path="res://Player/player.tscn" id="1_43ojw"]
 [ext_resource type="Script" path="res://game.gd" id="1_u0244"]
-[ext_resource type="PackedScene" uid="uid://csc7yvvc5b2sd" path="res://oldhud.tscn" id="3_yby0a"]
 [ext_resource type="TileSet" uid="uid://dejh2bhmjscsu" path="res://resources/grass_tileset.tres" id="4_yhs0n"]
 [ext_resource type="Texture2D" uid="uid://dbu823ef36c01" path="res://addons/DialogAssets/PlayerChatIcon.png" id="8_uoqv5"]
 [ext_resource type="PackedScene" uid="uid://bpab3uskcacr" path="res://npcs/witch/witch_broom.tscn" id="10_10170"]
@@ -55,8 +54,6 @@ script = ExtResource("1_u0244")
 [node name="Player" parent="." instance=ExtResource("1_43ojw")]
 unique_name_in_owner = true
 position = Vector2(238, 135)
-
-[node name="Hud" parent="." instance=ExtResource("3_yby0a")]
 
 [node name="Borders" type="Node2D" parent="."]
 position = Vector2(0, -2)

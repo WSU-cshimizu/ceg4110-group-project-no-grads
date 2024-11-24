@@ -23,6 +23,7 @@ stream = ExtResource("2_xyijd")
 
 [node name="Town" type="AudioStreamPlayer2D" parent="Music"]
 stream = ExtResource("3_rxvax")
+max_distance = 10000.0
 
 [node name="SFX" type="Node2D" parent="."]
 
