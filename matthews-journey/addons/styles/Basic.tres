@@ -26,7 +26,7 @@ overrides = {
 script = ExtResource("1_f1rr1")
 scene = ExtResource("3_u8rrn")
 overrides = {
-"boxes_offset": "Vector2(70, 85)",
+"boxes_offset": "Vector2(0, 85)",
 "font_custom": "\"res://assets/Fonts/dpcomic.ttf\"",
 "font_use_global": "false"
 }

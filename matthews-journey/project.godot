@@ -25,12 +25,15 @@ MusicManager="*res://music_manager.tscn"
 
 directories/dch_directory={
 "Cow": "res://addons/characters/Cow.dch",
+"Dolvalir": "res://addons/characters/Dolvalir.dch",
 "Random Guy": "res://addons/characters/Random Guy.dch",
 "Talking Guy": "res://addons/characters/Talking Guy.dch",
 "Telonis": "res://addons/characters/Telonis.dch",
 "guard": "res://addons/characters/guard.dch"
 }
 directories/dtl_directory={
+"Dolvalir": "res://addons/timelines/Dolvalir.dtl",
+"MetDolbz": "res://addons/timelines/MetDolbz.dtl",
 "RandomChat1": "res://addons/timelines/RandomChat1.dtl",
 "RandomChat2": "res://addons/timelines/RandomChat2.dtl",
 "RandomChat3": "res://addons/timelines/RandomChat3.dtl",
@@ -58,8 +61,12 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
-variables={}
-layout/style_list=["res://addons/styles/Basic.tres", "res://addons/styles/Telonis.tres"]
+variables={
+"currentHealth": 0,
+"maxHealth": 0,
+"wasHealed": false
+}
+layout/style_list=["res://addons/styles/Basic.tres", "res://addons/styles/Telonis.tres", "res://addons/styles/Magic.tres"]
 layout/default_style="res://addons/styles/Basic.tres"
 glossary/default_case_sensitive=true
 
