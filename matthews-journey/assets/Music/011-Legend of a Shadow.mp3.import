@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5n2idmsi0jh8"
+path="res://.godot/imported/011-Legend of a Shadow.mp3-00f0e45131513b400940a20c79546536.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/011-Legend of a Shadow.mp3"
+dest_files=["res://.godot/imported/011-Legend of a Shadow.mp3-00f0e45131513b400940a20c79546536.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

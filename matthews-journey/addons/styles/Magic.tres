@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=11 format=3 uid="uid://cdmao7y8sg2qr"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_opqxk"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="2_dflw6"]
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="3_dc5yi"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="4_ofohv"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_0csiy"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="5_aurkk"]
+
+[sub_resource type="Resource" id="Resource_s8pe8"]
+script = ExtResource("1_opqxk")
+scene = ExtResource("5_aurkk")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_722x8"]
+script = ExtResource("1_opqxk")
+scene = ExtResource("2_dflw6")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_nmy4k"]
+script = ExtResource("1_opqxk")
+scene = ExtResource("3_dc5yi")
+overrides = {
+"box_animation_new_text": "1",
+"box_size": "Vector2(300, 75)",
+"name_label_font": "\"res://assets/Fonts/dpcomic.ttf\"",
+"name_label_use_global_font": "false",
+"next_indicator_animation": "1",
+"normal_font": "\"res://assets/Fonts/dpcomic.ttf\"",
+"text_custom_color": "Color(0.289063, 0, 1, 1)",
+"text_size": "20.0",
+"text_use_global_color": "false",
+"text_use_global_font": "false",
+"text_use_global_size": "false"
+}
+
+[sub_resource type="Resource" id="Resource_ydykb"]
+script = ExtResource("1_opqxk")
+scene = ExtResource("4_ofohv")
+overrides = {
+"boxes_offset": "Vector2(-100, 85)",
+"font_custom": "\"res://assets/Fonts/dpcomic.ttf\"",
+"font_use_global": "false"
+}
+
+[resource]
+script = ExtResource("5_0csiy")
+name = "Magic"
+base_overrides = {}
+layers = Array[ExtResource("1_opqxk")]([SubResource("Resource_s8pe8"), SubResource("Resource_722x8"), SubResource("Resource_nmy4k"), SubResource("Resource_ydykb")])
+metadata/_latest_layer = 3

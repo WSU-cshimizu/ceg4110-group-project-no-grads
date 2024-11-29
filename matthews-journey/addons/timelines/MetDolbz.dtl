@@ -1,0 +1,43 @@
+Dolvalir: Ah, hello again!
+Dolvalir: What can I do for you boy?
+[wait time="0.5" hide_text="false"]
+[style name="Basic"]
+- Just passing by!
+	Dolvalir: Ah, well it was lovely to chat!
+	[end_timeline]
+- I'm kinda hurt...
+	if {currentHealth} < {maxHealth}:
+		if {wasHealed} == true:
+			Dolvalir: I may be made of magic, my boy, but only limited reserves!
+			Dolvalir: I do apologize, but there are some lovely fruits around!
+			Dolvalir: As a matter of fact...
+			Dolvalir: Why don't your help yourself to my cherry tree?
+			[end_timeline]
+		else:
+			Dolvalir: Ah, that I do see...
+			Dolvalir: Alright lad, hold still.
+			if {currentHealth} <= {maxHealth} - 3:
+				Dolvalir: Healing Spring
+				[style name="Magic"]
+				[signal arg="get_healed_big"]
+				set {wasHealed} = true
+				[end_timeline]
+			if {currentHealth} <= {maxHealth} - 1:
+				[style name="Magic"]
+				Dolvalir: Soothing Trickle
+				[signal arg="get_healed_small"]
+				set {wasHealed} = true
+				[end_timeline]
+			if {currentHealth} <= {maxHealth} - 1:
+				Dolvalir: Ah, that I do see...
+				Dolvalir: Just a scratch though, this should do the... trick!
+				[style name="Magic"]
+				Dolvalir: Soothing Trickle
+				[signal arg="get_healed_small"]
+				[style name="Basic"]
+				Dolvalir: Yes, I find myself hilarious.
+				[end_timeline]
+	elif {currentHealth} == {maxHealth}:
+		Dolvalir: No you're not, don't play with me boy!
+		Dolvalir: Off with you now, adventure awaits!
+		[end_timeline]

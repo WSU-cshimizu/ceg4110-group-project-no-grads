@@ -1,0 +1,33 @@
+Dolvalir: Why hello there, I haven't had a visitor in a long time!
+Dolvalir: Wait a minute though, you aren't a bandit are you?
+[wait time="0.5" hide_text="false"]
+- Yeah! Give me your money!
+	Dolvalir: Oh dear, I see...
+	Dolvalir: Well I don't have any money...
+	Dolvalir: But I do have something that is positively energizing!
+	[style name="Magic"]
+	[background arg="res://assets/Enemies/Witch/DolvalirBlam.png" fade="0.0"]
+	[sound path="res://assets/Music/Vertical lightning hit-yoyosound.com.mp3" volume="0.0"]
+	[music path="res://assets/Music/0007-Action!.mp3" fade="0.0" volume="0.0" loop="false"]
+	[signal arg="get_zapped"]
+	Dolvalir: LIGHTNING BOLT.
+	[end_timeline]
+- Uh... no?
+	Dolvalir: Ah, splendid!
+	Dolvalir: Allow me to introduce myself...
+	Dolvalir: My name is Dolvalir ten Huer!
+	Dolvalir: Stay as long as you like, my boy.
+	if {currentHealth} <= {maxHealth} - 3:
+		Dolvalir: Oh, you look a tad worse for wear, I do say...
+		Dolvalir: Hold still, I'll take care of that.
+		[style name="Magic"]
+		Dolvalir: Healing Spring
+		[signal arg="get_healed_big"]
+		[end_timeline]
+	if {currentHealth} <= {maxHealth} - 1:
+		Dolvalir: Oh, you look a tad worse for wear, I do say...
+		Dolvalir: Hold still, I'll take care of that.
+		[style name="Magic"]
+		Dolvalir: Soothing Trickle
+		[signal arg="get_healed_small"]
+		[end_timeline]

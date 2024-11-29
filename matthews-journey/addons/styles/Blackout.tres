@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=3 format=3 uid="uid://kje2rfksm4kc"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_cqurf"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_q15dw"]
+
+[resource]
+script = ExtResource("2_q15dw")
+name = "Blackout"
+base_overrides = {
+"global_font_color": "Color(0, 0, 0, 1)"
+}
+layers = Array[ExtResource("1_cqurf")]([])
+metadata/_latest_layer = -1
