@@ -13,7 +13,7 @@ config_version=5
 config/name="Matthews Journey"
 run/main_scene="res://UI/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/Main Menu/shield.png"
 
 [autoload]
 
