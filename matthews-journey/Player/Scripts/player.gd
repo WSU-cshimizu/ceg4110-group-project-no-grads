@@ -32,7 +32,6 @@ var xp_to_lvl = {1: 5, 2: 15, 3: 30, 4: 60, 5: 120, 6: 240, 7: 480, 8: 960}
 @onready var swing_2: AudioStreamPlayer2D = $swing2
 @onready var swing_3: AudioStreamPlayer2D = $swing3
 var swings: Array[AudioStreamPlayer2D]
-var swung: bool = false
 
 # Direction Variables
 const SPEED = 175.0
@@ -135,7 +134,9 @@ func update_state() -> void:
 	var prev_state: String = current_state
 	
 	# Find new state
-	if Input.is_action_pressed("attack"):
+	if Input.is_action_just_pressed("attack"):
+		if current_state != "attack":
+			swings.pick_random().play()
 		new_state = "attack"
 		sword_hit_box.monitoring = true
 	elif direction == Vector2.ZERO:
@@ -147,14 +148,10 @@ func update_state() -> void:
 	if new_state != current_state:
 		if prev_state == "attack":
 			# prevent sfx from playing repeatedly
-			if not swung:
-				swings.pick_random().play()
-				swung = true
 			# prevent spamming attack
 			await animation_player.animation_finished
 			# turn off sword hit box after animation finishes
 			sword_hit_box.monitoring = false
-			swung = false
 		current_state = new_state
 
 func _physics_process(delta: float) -> void:
