@@ -17,8 +17,8 @@ Dolvalir: What can I do for you boy?
 			Dolvalir: Ah, that I do see...
 			Dolvalir: Alright lad, hold still.
 			if {currentHealth} <= {maxHealth} - 3:
-				Dolvalir: Healing Spring
 				[style name="Magic"]
+				Dolvalir: Healing Spring
 				[signal arg="get_healed_big"]
 				set {wasHealed} = true
 				[end_timeline]
