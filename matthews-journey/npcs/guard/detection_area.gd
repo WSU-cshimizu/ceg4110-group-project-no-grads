@@ -20,15 +20,9 @@ func _on_body_exited(body: Node2D) -> void:
 		done_talking = false
 		
 func _input(event: InputEvent) -> void:
-	if chatting and not done_talking and not metDolbz and event.is_action_pressed("dialogic_default_action"):
+	if chatting and not done_talking and event.is_action_pressed("dialogic_default_action"):
 		done_talking = true
-		$"..".setHealth()
-		var dialog = Dialogic.start("Dolvalir")
-		metDolbz = true
-	elif chatting and not done_talking and metDolbz and event.is_action_pressed("dialogic_default_action"):
-		done_talking = true
-		$"..".setHealth()
-		var dialog = Dialogic.start("MetDolbz")
+		var dialog = Dialogic.start("tent_guard")
 	
 
 	
