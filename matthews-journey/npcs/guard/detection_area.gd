@@ -8,7 +8,6 @@ var done_talking: bool = false
 
 
 func _on_body_entered(body: PhysicsBody2D) -> void:
-	get_node("/")
 	if body is Player:
 		chatting = true
 		chat_icon.visible = true

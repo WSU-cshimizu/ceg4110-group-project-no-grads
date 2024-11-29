@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/005-The Beginning.mp3-fd39ce9ee5e97978d964820
 
 [params]
 
-loop=false
-loop_offset=0
+loop=true
+loop_offset=11.5
 bpm=0
 beat_count=0
 bar_beats=4

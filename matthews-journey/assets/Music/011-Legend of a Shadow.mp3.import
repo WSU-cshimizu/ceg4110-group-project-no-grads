@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/011-Legend of a Shadow.mp3-00f0e45131513b4009
 
 [params]
 
-loop=false
-loop_offset=0
+loop=true
+loop_offset=-3.0
 bpm=0
 beat_count=0
 bar_beats=4
