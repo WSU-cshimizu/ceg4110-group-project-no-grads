@@ -14,31 +14,33 @@ There are different diagrams that you may use, the first two were covered in cla
 
 2. The enemies shall be killable.
 
-3. The play area shall have collision.
+    <img src="diagrams/attack_diagram.png" alt="attack diagram"> 
 
-4. The play area shall have boundaries.
+4. The play area shall have collision.
 
-5. The characters shall have a dialogue mechanic.
+5. The play area shall have boundaries.
 
-6. The characters shall have something meaningful to instruct the player on.
+6. The characters shall have a dialogue mechanic.
 
-7. The UI shall have a health system.
+7. The characters shall have something meaningful to instruct the player on.
 
-8. The health system shall accuratley show current health and update accordingly.
+8. The UI shall have a health system.
 
-9. There shall be an interaction system with certain elements in the enviornment.
+9. The health system shall accuratley show current health and update accordingly.
 
-10. The interactions shall deliver meaningful information to the player.
+10. There shall be an interaction system with certain elements in the enviornment.
 
-11. The game map shall contain enemies.
+11. The interactions shall deliver meaningful information to the player.
 
-12. There shall be enemies that are different enough to require different tactics.
+12. The game map shall contain enemies.
 
-13. There shall be a diverse group of characters.
+13. There shall be enemies that are different enough to require different tactics.
 
-14. The play area shall not be too small to be crammed but not too big to feel empty.
+14. There shall be a diverse group of characters.
 
-15. he game shall have a UI element for one function (Health).
+15. The play area shall not be too small to be crammed but not too big to feel empty.
 
-16. The game shall have a UI element for another function (Controls). 
+16. he game shall have a UI element for one function (Health).
+
+17. The game shall have a UI element for another function (Controls). 
 
