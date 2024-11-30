@@ -37,6 +37,7 @@ There are different diagrams that you may use, the first two were covered in cla
 
 11. The interactions shall deliver meaningful information to the player.
 
+   When the player approaches an npc with which they may talk too, a chat bubble will appear above the npc's head indicating the player is able to interact with this npc. Npc's have a detection zone around them that triggers the chat bubble icon's visibility. When a player character enters the zone the visibility is set to true, when the player exits the zone, the visibility is set to false. While within the zone, if the player presses enter, the dialog for that npc will be triggered.  
    <img src="diagrams/chat_bubble_diagram.png" alt="chat bubble diagram">
 
 13. The game map shall contain enemies.
