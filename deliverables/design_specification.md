@@ -10,19 +10,35 @@ There are different diagrams that you may use, the first two were covered in cla
 * UML Diagram
 * Use-case Models or Diagrams
 
-## User Stories:
-* As a player, I want to be able move my character and swing my sword to fight enemies.
-  
-* As a player, I want to navigate an enviornment that's easy to explore with collision that supports my movement and keeps me within bounds. #VR
-  
-* As a player, I want to interact with characters through dialogue boxes and understand how to play the game through those interactions.
-  
-* As a player, I want to have a UI that shows a hud so that I can keep track of important details such as my health.
- 
-* As a player developer, I want elements in the environment for the player to interact with.
- 
-* As a level designer, I want a variety of enemies to make gameplay engaging and difficult. #VR
- 
-* As a story and sound designer, I want an engaging world to house unique characters in.
-  
-* As a UI designer, I want to have different aspects and functions of the game that my UI can keep track of for the user.
+1. The character shall move.
+
+2. The enemies shall be killable.
+
+3. The play area shall have collision.
+
+4. The play area shall have boundaries.
+
+5. The characters shall have a dialogue mechanic.
+
+6. The characters shall have something meaningful to instruct the player on.
+
+7. The UI shall have a health system.
+
+8. The health system shall accuratley show current health and update accordingly.
+
+9. There shall be an interaction system with certain elements in the enviornment.
+
+10. The interactions shall deliver meaningful information to the player.
+
+11. The game map shall contain enemies.
+
+12. There shall be enemies that are different enough to require different tactics.
+
+13. There shall be a diverse group of characters.
+
+14. The play area shall not be too small to be crammed but not too big to feel empty.
+
+15. he game shall have a UI element for one function (Health).
+
+16. The game shall have a UI element for another function (Controls). 
+
