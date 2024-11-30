@@ -37,15 +37,17 @@ There are different diagrams that you may use, the first two were covered in cla
 
 11. The interactions shall deliver meaningful information to the player.
 
-12. The game map shall contain enemies.
+   <img src="diagrams/chat_bubble_diagram.png" alt="chat bubble diagram">
 
-13. There shall be enemies that are different enough to require different tactics.
+13. The game map shall contain enemies.
 
-14. There shall be a diverse group of characters.
+14. There shall be enemies that are different enough to require different tactics.
 
-15. The play area shall not be too small to be crammed but not too big to feel empty.
+15. There shall be a diverse group of characters.
 
-16. he game shall have a UI element for one function (Health).
+16. The play area shall not be too small to be crammed but not too big to feel empty.
 
-17. The game shall have a UI element for another function (Controls). 
+17. he game shall have a UI element for one function (Health).
+
+18. The game shall have a UI element for another function (Controls). 
 
