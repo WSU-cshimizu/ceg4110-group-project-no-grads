@@ -30,6 +30,7 @@ There are different diagrams that you may use, the first two were covered in cla
    <img src="diagrams/boundaries.png" alt="attack diagram"> 
 
 6. The characters shall have a dialogue mechanic. When you initiate dialogue with a character, a dialogue box will appear at the bottom of the screen. The character will talk with the player, and certain characters may present choices for the player to select from. All dialogues have a point of termination.
+   <img src="diagrams/Dialogue.png" alt="dialogue diagram">
 
 7. The characters shall have something meaningful to instruct the player on.
    When you reach the hut, Dolvalir may tell you to check around for fruits to heal yourself with.
