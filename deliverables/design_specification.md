@@ -63,10 +63,10 @@ There are different diagrams that you may use, the first two were covered in cla
     <img src="diagrams/enemy_diagram.png" alt="enemy diagram">
 
 16. There shall be a diverse group of characters.
-    Matthew: The main character that the player is in control of.
-    Guard: A minor non-player character that blocks an entryway in the forest.
-    Cow: A minor non-player character that moos when interacted with.
-    Dolvalir: A major non-player character that interacts with Matthew, either helping or harming him depending on the outcome of dialogue.
+   - Matthew: The main character that the player is in control of.
+   - Guard: A minor non-player character that blocks an entryway in the forest.
+   - Cow: A minor non-player character that moos when interacted with.
+   - Dolvalir: A major non-player character that interacts with Matthew, either helping or harming him depending on the outcome of dialogue.
 
 18. The play area shall not be too small to be crammed but not too big to feel empty.
 
