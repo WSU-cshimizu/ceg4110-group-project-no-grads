@@ -23,8 +23,10 @@ There are different diagrams that you may use, the first two were covered in cla
 
 4. The play area shall have collision.
 
+   <img src="diagrams/layers.png" alt="attack diagram"> 
 5. The play area shall have boundaries.
 
+   <img src="diagrams/boundaries.png" alt="attack diagram"> 
 6. The characters shall have a dialogue mechanic.
 
 7. The characters shall have something meaningful to instruct the player on.
@@ -33,8 +35,10 @@ There are different diagrams that you may use, the first two were covered in cla
 
 9. The health system shall accuratley show current health and update accordingly.
 
+   <img src="diagrams/healthUI.png" alt="attack diagram"> 
 10. There shall be an interaction system with certain elements in the enviornment.
 
+   <img src="diagrams/items.png" alt="attack diagram"> 
 11. The interactions shall deliver meaningful information to the player.
 
    When the player approaches an npc with which they may talk too, a chat bubble will appear above the npc's head indicating the player is able to interact with this npc. Npc's have a detection zone around them that triggers the chat bubble icon's visibility. When a player character enters the zone the visibility is set to true, when the player exits the zone, the visibility is set to false. While within the zone, if the player presses enter, the dialog for that npc will be triggered.  
