@@ -27,9 +27,10 @@ There are different diagrams that you may use, the first two were covered in cla
 
 5. The play area shall have boundaries.
    The player has a fixed camera that keeps the player body at the center of the screen at all times. In order to not break immersion, it's important that the player does not see any blank space in the levels where there is no map. To achieve this, there must be a playable area that the player can freely navigate which is enclosed. There will be another area that the player cannot access which functions as a decorative space to hide the edges of the level where the content ends. The inaccessible area must be a minimum of half the height or width of the player camera to accurately hide the blank space. Achieving this will create immersion and a cohesive game environment.
+   
    <img src="diagrams/boundaries.png" alt="attack diagram"> 
 
-6. The characters shall have a dialogue mechanic. When you initiate dialogue with a character, a dialogue box will appear at the bottom of the screen. The character will talk with the player, and certain characters may present choices for the player to select from. All dialogues have a point of termination.
+7. The characters shall have a dialogue mechanic. When you initiate dialogue with a character, a dialogue box will appear at the bottom of the screen. The character will talk with the player, and certain characters may present choices for the player to select from. All dialogues have a point of termination.
 
    <img src="diagrams/Dialogue.png" alt="dialogue diagram">
 
