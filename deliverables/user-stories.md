@@ -6,6 +6,7 @@
 - As a player, I want to navigate an enviornment that's easy to explore with collision that supports my movement and keeps me within bounds.
 - As a player, I want to interact with characters through dialogue boxes and understand how to play the game through those interactions.
 - As a player, I want to have a UI that shows a hud so that I can keep track of important details such as my health.
+- As a player, I want a variety of items that I can pickup and collect throughout playing the game. 
 
 ## Dev Stories
 

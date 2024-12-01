@@ -15,7 +15,7 @@ The gui will include the title screen, menus, and dialog boxes. It also includes
 The map component includes the tileset for all pixel art assests in the game. It will create the gamemap the character explores including implementing walls and boundries and handling screen transitions. It will also define character interation within the map such as doors, etc.
 
 3. Items  
-This component will create the inventory system and the logic of all equipment and items in the game including the cards and other potential pickups such as potions, relics, etc. 
+This component will create the inventory system and the logic of all items in the game including health itmes and other potential pickups such as coins, keys, etc. 
 
 4. Combat  
 Implements the combat system to include hit detection, player movement, and enemy behavior. 

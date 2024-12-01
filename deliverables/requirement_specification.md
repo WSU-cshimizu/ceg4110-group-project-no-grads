@@ -34,7 +34,10 @@
    - The interactions shall deliver meaningful information to the player.
         - There shall be paths in the grass in the gameworld that can serve as a guide for the player.
         - There shall be mountains to limit navigation for the player.
-        - There shall be NPCs to deliver instructions to the player. 
+        - There shall be NPCs to deliver instructions to the player.
+   - There shall be items in the environment for the player to pickup
+        - There shall be health pickups that will heal the players health
+        - There shall be coin pickups that the player can track in their HUD
 * As a level designer, I want a variety of enemies to make gameplay engaging and difficult.
    - The game map shall contain enemies.
         - The game map shall contain slime enemies.
