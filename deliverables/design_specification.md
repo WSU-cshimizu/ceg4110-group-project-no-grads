@@ -32,18 +32,19 @@ There are different diagrams that you may use, the first two were covered in cla
 6. The characters shall have a dialogue mechanic.
 
 7. The characters shall have something meaningful to instruct the player on.
+   When you reach the hut, Dolvalir may tell you to check around for fruits to heal yourself with.
 
-8. The UI shall have a health system.
+9. The UI shall have a health system.
 
-9. The health system shall accuratley show current health and update accordingly.
+10. The health system shall accuratley show current health and update accordingly.
    On begin, the player has a maximum health and a current health, it loads the UI hearts container with the proper number of hearts based on current health, then fills out the rest of the space with empty hearts until the amount of hearts is equal to max hearts. For the UI to update, the player must enter a collision with an element that will change the health, which are healing items or enemies. The enemies have hitboxes, and when the player hits one, health is subtracted. Alternatively, if the player collides with a health item, health will be added if the player is not already at maximum health. After current health is decreased or increased, the script will always call the updateHearts method to update the onscreen UI. If it’s detected that the current health is equal to or less than zero, it will trigger the game over sequence, changing the game scene. When a certain XP has been reached a levelup sequence will trigger. This adds one to maxHealth and updates the UI accordingly. 
    <img src="diagrams/healthUI.png" alt="attack diagram"> 
 
-10. There shall be an interaction system with certain elements in the enviornment.
+11. There shall be an interaction system with certain elements in the enviornment.
    There are a few different kinds of collectible items. Firstly, the health items apple and cherry are a way for the player to restore health. Both items check if the player is below maximum health before anything else so that the items are not wasted. The apple will add one to current health while the cherry will reset the health back to maximum. After adjusting currentHealth, they will call updateHearts to adjust the hud UI. Next are the coins. There are 5 different kinds of coins on the map; bronze, silver, gold, diamond, and amethyst. They are respectively worth 3, 6, 12, 30, and 90. Just like the health items, when the player walks toward them, the coins’ values will be added to currentCoins, and then updateCoins will be called to update the hud UI. Key works the same way, just adding one at a time every time. Some notable things about the coins, the coin icon on the hud will change based on the amount of coins the player has collected, with amethyst signifying that the player has gotten very rich. Also, slimes and skeletons drop coins when killed. Last on the hud is the XP counter, but this is not a collectible item, this simply serves to track the number of enemies defeated by the player and when to trigger a levelup sequence. 
    <img src="diagrams/items.png" alt="attack diagram"> 
 
-11. The interactions shall deliver meaningful information to the player.
+12. The interactions shall deliver meaningful information to the player.
 
    When the player approaches an npc with which they may talk too, a chat bubble will appear above the npc's head indicating the player is able to interact with this npc. Npc's have a detection zone around them that triggers the chat bubble icon's visibility. When a player character enters the zone the visibility is set to true, when the player exits the zone, the visibility is set to false. While within the zone, if the player presses enter, the dialog for that npc will be triggered.  
    <img src="diagrams/chat_bubble_diagram.png" alt="chat bubble diagram">
@@ -58,10 +59,11 @@ There are different diagrams that you may use, the first two were covered in cla
     <img src="diagrams/enemy_diagram.png" alt="enemy diagram">
 
 16. There shall be a diverse group of characters.
+    Matthew (main character), Guard (NPC), Cow (NPC), Dolvalir (NPC)
 
-17. The play area shall not be too small to be crammed but not too big to feel empty.
+18. The play area shall not be too small to be crammed but not too big to feel empty.
 
-18. he game shall have a UI element for one function (Health).
+19. he game shall have a UI element for one function (Health).
 
-19. The game shall have a UI element for another function (Controls). 
+20. The game shall have a UI element for another function (Controls). 
 
