@@ -10,7 +10,7 @@
 },
 "default_portrait": "TalkingGuy",
 "description": "",
-"display_name": "Talking Guy",
+"display_name": "Villager",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),

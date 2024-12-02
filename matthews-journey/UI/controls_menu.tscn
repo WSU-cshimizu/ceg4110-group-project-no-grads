@@ -25,16 +25,19 @@ expand_mode = 1
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
 top_level = true
 layout_mode = 0
-offset_left = 192.0
-offset_top = 106.0
-offset_right = 281.0
-offset_bottom = 173.0
+offset_left = 190.0
+offset_top = 68.0
+offset_right = 279.0
+offset_bottom = 196.0
 theme_override_fonts/normal_font = ExtResource("2_m28vb")
 theme_override_font_sizes/normal_font_size = 16
 text = "W: Move Up
 A: Move Left
 S: Move Down
-D: Move Right"
+D: Move Right
+
+Mouse 1: Interact
+Space: Attack"
 fit_content = true
 
 [node name="BackButton" type="Button" parent="."]

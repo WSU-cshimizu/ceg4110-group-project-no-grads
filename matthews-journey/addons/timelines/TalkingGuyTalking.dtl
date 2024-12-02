@@ -1,19 +1,10 @@
-join "Talking Guy" center [animation="Slide In Left" length="1.0" wait="true"]
 [style name="Basic"]
-"Talking Guy": Wassup!
-- Hey
-	update "Talking Guy" (HappyGuy) [animation="Bounce" z_index="0"]
-	"Talking Guy": You're nice!
-	update "Talking Guy" (TalkingGuy) [length="1.0"]
-	"Talking Guy": Since you were so nice to me, I'll play some victory music for you!
-	[music path="res://assets/Music/0008-Victory!.mp3" fade="0.0" volume="-5.0" loop="false"]
-	[wait time="3.8"]
-	"Talking Guy": Kay nice talking bye!
-	leave "Talking Guy" [animation="Slide Out Left" length="1.0" wait="true"]
-	[wait time="1.0"]
-	...That guy was weird.
-	[wait time="1.0"]
-	[signal arg="end_chat"]
-- Do I know you?
-	"Talking Guy": Absolutely not! But who cares?
-	[signal arg="end_chat"]
+"Talking Guy": Hey there Matthew!
+- Hey!
+	"Talking Guy": Nice to see you!
+	"Talking Guy": Going out on an adventure, are you?
+	"Talking Guy": Be sure to watch out for monsters, or you'll be in trouble!
+	[end_timeline]
+- I need to go.
+	"Talking Guy": Oh, in a hurry? See you then!
+	[end_timeline]
