@@ -57,12 +57,15 @@ There are different diagrams that you may use, the first two were covered in cla
 
 11. The game map shall contain enemies.
 
+    <img src="diagrams/enemy_diagram.png" alt="enemy diagram">
+
 12. There shall be enemies that are different enough to require different tactics.
 
    Slimes: small detection zone, slow speed, low damage, low knockback, low xp, low health. They wander around until player gets in range then chase them. Meant to be an easy, common enemy.  
 
    Skeleton: Large detection zone, fast speed, high damage, high knockback, high xp, high health. They stand still until player gets in range then chase them. Meant to be an ambush enemy that hides behind trees to suprise player.  
-    <img src="diagrams/enemy_diagram.png" alt="enemy diagram">
+
+    <img src="diagrams/Enemy Logic.png" alt="enemy diagram">
 
 13. There shall be a diverse group of characters.
    - Matthew: The main character that the player is in control of.
