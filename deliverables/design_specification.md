@@ -1,15 +1,5 @@
 # Minimum Design Specification
 
-## Requirements
-* For each _top-level_ requirement, there should be minimally two diagrams that demonstrate implementation details for that requirement.
-
-There are different diagrams that you may use, the first two were covered in class:
-* Data Flow Diagram (formal or informal)
-* Swimlane or Sequence Diagram
-* (Control) Flow Chart
-* UML Diagram
-* Use-case Models or Diagrams
-
 1. The character shall move.
 
    Every frame, the direction input from arrow/wasd keys is taken in as a Vector2. If nothing is being pressed it is the zero vector (0, 0). This vector is normalized so that diagonal movement is not faster than horizontal/vertical movement. Next an update_direction functions converts the vector2 into a cardinal direction (up, down, left, right). If the direction was the zero vector, this function returns without changing the current cardinal direction so as to keep the player facing the same direction they where moving when now idle. Next, an update_state function is called that determines if the player has hit the attack button, is pressing the arrow keys, or is idle. Attacking takes precedence over movement if the attack button is pressed. Next, the current state and cardinal direction are used by the update_animation fuction to determine what animation should be playing (attack, walk, idle) and in what direction (up, down, left, right). Lastly, the direction is multiplied by a constant SPEED to get the players velocity. Godot's built in move_and_slide function uses this velocity to move the sprite on the screen. 
