@@ -2,14 +2,11 @@
 Please provide responses for the following items. In all cases, you should be polite and professional. This is a public document which should appear in your GitHub Repository.
 
 * What went well in the group...
+  - Josiah Yount: I think that team coordination was pretty strong in our group. Once we got our vision down, it was mostly smooth sailing from there.
 * What could have been better in the group...
+  - Josiah Yount: Tasks could have been distributed a little better, I felt the workload was a little heavy on certain team members.
 * What went well in the class...
+  - Josiah Yount: The class went well in general, I can't really pick out anything specific. I liked the guest lectures quite a bit.
 * What could have been better in the class...
+  - Josiah Yount: Perhaps the timing of in-class meetings. I can't really think of anything else.
 
-## Rubric
-| Points | Metric                                            |
-| ------ | ------------------------------------------------- |
-| 1      | Does it look nice?                                |
-| 3      | Appropriate and professional language.            |
-| 3      | All categories have a response.                   |
-| **5**  | **Total**                                         |
