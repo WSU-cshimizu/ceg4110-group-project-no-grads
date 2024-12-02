@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://dy1e8tlvepluh"]
+[gd_scene load_steps=59 format=4 uid="uid://dy1e8tlvepluh"]
 
 [ext_resource type="PackedScene" uid="uid://ckv5t7n7r4brw" path="res://matthews-tiled-map.tscn" id="1_ecctx"]
 [ext_resource type="Script" path="res://game.gd" id="1_gyqy8"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://dbpx5nu5alctw" path="res://npcs/sheep/sheep.tscn" id="22_dvpbl"]
 [ext_resource type="PackedScene" uid="uid://ccy3v2v6l20ca" path="res://npcs/witch/bat.tscn" id="23_8731y"]
 [ext_resource type="PackedScene" uid="uid://nd2qjqmlw7pm" path="res://npcs/witch/cauldron.tscn" id="24_cwnf5"]
+[ext_resource type="PackedScene" uid="uid://coq5sbgrkn4sx" path="res://npcs/villagers/villager1.tscn" id="24_knbwj"]
 [ext_resource type="PackedScene" uid="uid://bpab3uskcacr" path="res://npcs/witch/witch_broom.tscn" id="25_54tx8"]
 [ext_resource type="PackedScene" uid="uid://bvs1b5q0worqx" path="res://Collectables/apple.tscn" id="26_f4ush"]
 [ext_resource type="PackedScene" uid="uid://d21bqnlwov14r" path="res://clutter/fountain.tscn" id="27_cnptm"]
@@ -1079,6 +1080,9 @@ position = Vector2(1233, 2177)
 [node name="Kapybara" parent="NPCs" instance=ExtResource("35_by7ot")]
 position = Vector2(1861, 891)
 
+[node name="Villager1" parent="NPCs" instance=ExtResource("24_knbwj")]
+position = Vector2(1032, 2047)
+
 [node name="Misc" type="Node2D" parent="."]
 y_sort_enabled = true
 
@@ -1152,7 +1156,7 @@ position = Vector2(894, 1211)
 position = Vector2(885, 1377)
 
 [node name="Skeleton3" parent="Enemies" instance=ExtResource("28_a85mj")]
-position = Vector2(945, 1578)
+position = Vector2(937, 1579)
 
 [node name="Slime6" parent="Enemies" instance=ExtResource("27_h7e7d")]
 position = Vector2(908, 1540)
