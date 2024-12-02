@@ -37,7 +37,9 @@ There are different diagrams that you may use, the first two were covered in cla
 6. The characters shall have something meaningful to instruct the player on.
    When the player reaches the hut, The NPC Dolvalir may tell the plyaer to check around for fruits to heal yourself with.
 
-7. The UI shall have a health system.
+7. The UI shall have a health system.  
+   The health system consists of heart containers. At the start of the game, the UI defaults to full health, being 5 filled heart containers. The health system is functional and explained in number 8 below. The UI will asjust accordingly to whatever changes need to be made, such as taking damage or regaining health. 
+   <img src="diagrams/healthsystemUI.png" alt="health diagram"> 
 
 9. The health system shall accuratley show current health and update accordingly.
    On begin, the player has a maximum health and a current health, it loads the UI hearts container with the proper number of hearts based on current health, then fills out the rest of the space with empty hearts until the amount of hearts is equal to max hearts. For the UI to update, the player must enter a collision with an element that will change the health, which are healing items or enemies. The enemies have hitboxes, and when the player hits one, health is subtracted. Alternatively, if the player collides with a health item, health will be added if the player is not already at maximum health. After current health is decreased or increased, the script will always call the updateHearts method to update the onscreen UI. If it’s detected that the current health is equal to or less than zero, it will trigger the game over sequence, changing the game scene. When a certain XP has been reached a levelup sequence will trigger. This adds one to maxHealth and updates the UI accordingly.
@@ -71,7 +73,9 @@ There are different diagrams that you may use, the first two were covered in cla
    - Cow: A minor non-player character that moos when interacted with.
    - Dolvalir: A major non-player character that interacts with Matthew, either helping or harming him depending on the outcome of dialogue.
 
-14. The play area shall not be too small to be crammed but not too big to feel empty.
+14. The play area shall not be too small to be crammed but not too big to feel empty.  
+    The first level design contains 6 major areas: Starting town, Witch's hut area, easy forest area, farm area, hard forest area, and cave entrance area. The biggest ones are the forests. This gives the player room to explore and fight enemies without being in a primary safe area like the town, witch's hut, or farm. This makes it feel big enough to not be crammed. Even though they are the biggest areas, the forests include many trees, item drops, and enemies, making it not feel empty.   
+    <img src="diagrams/playarea.png" alt="map diagram">
 
 15. The game shall have a UI element for one function (Coins).  
     The UI contains a coin count. Coins are dropped every time an enemy is killed. Different enemies drop different amounts of coins. Slimes drop 2 coins that are worth 3 each, whereas skeletons drop 4 coinds that are also 3 each. The coin counter increments by 3 for each coin picked up. There is no buy function implemented, so coins are purely for collecting, not spending.
