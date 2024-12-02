@@ -37,7 +37,7 @@ There are different diagrams that you may use, the first two were covered in cla
 6. The characters shall have something meaningful to instruct the player on.
    When the player reaches the hut, The NPC Dolvalir may tell the plyaer to check around for fruits to heal yourself with.
 
-   <img src="diagrams/Dolvalir.png" alt="dialogue diagram">
+   <img src="diagrams/Dialogue.png" alt="dialogue diagram">
 
 8. The UI shall have a health system.
 
