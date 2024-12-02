@@ -78,8 +78,10 @@ There are different diagrams that you may use, the first two were covered in cla
     <img src="diagrams/playarea.png" alt="map diagram">
 
 15. The game shall have a UI element for one function (Coins).  
-    The UI contains a coin count. Coins are dropped every time an enemy is killed. Different enemies drop different amounts of coins. Slimes drop 2 coins that are worth 3 each, whereas skeletons drop 4 coinds that are also 3 each. The coin counter increments by 3 for each coin picked up. There is no buy function implemented, so coins are purely for collecting, not spending.
+    The UI contains a coin count. Coins are dropped every time an enemy is killed. Different enemies drop different amounts of coins. Slimes drop 2 coins that are worth 3 each, whereas skeletons drop 4 coins that are also 3 each. The coin counter increments by 3 for each coin picked up. There is no buy function implemented, so coins are purely for collecting, not spending.
+    <img src="diagrams/coinsUI.png" alt="coins diagram">
 
 16. The game shall have a UI element for another function (Controls).  
-    The main menu has 3 different options: start game, controls, and exit game. The controls GUI shows, well, the controls for the game. W to move up, A to move left, S to move down, D to move right, and spacebar for attacking(swing sword). There is a button on the screen to return to the main menu. 
+    The main menu has 3 different options: start game, controls, and exit game. The controls GUI shows, well, the controls for the game. W to move up, A to move left, S to move down, D to move right, right click for interact, and spacebar for attacking (swing sword). There is a button on the screen to return to the main menu. 
+    <img src="diagrams/controlsUI.png" alt="coins diagram">
 
