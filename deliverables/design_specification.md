@@ -63,9 +63,9 @@ There are different diagrams that you may use, the first two were covered in cla
 
    Slimes: small detection zone, slow speed, low damage, low knockback, low xp, low health. They wander around until player gets in range then chase them. Meant to be an easy, common enemy.  
 
-   Skeleton: Large detection zone, fast speed, high damage, high knockback, high xp, high health. They stand still until player gets in range then chase them. Meant to be an ambush enemy that hides behind trees to suprise player.  
+   Skeleton: Large detection zone, fast speed, high damage, high knockback, high xp, high health. They stand still until player gets in range then chase them. Meant to be an ambush enemy that hides behind trees to suprise player.
 
-    <img src="diagrams/Enemy Logic.png" alt="enemy diagram">
+   <img src="diagrams/Enemy Logic.png" alt="enemy diagram">
 
 13. There shall be a diverse group of characters.
    - Matthew: The main character that the player is in control of.
