@@ -1020,7 +1020,7 @@ script = ExtResource("1_gyqy8")
 
 [node name="Player" parent="." instance=ExtResource("13_i5v0w")]
 unique_name_in_owner = true
-position = Vector2(831, 801)
+position = Vector2(1233, 1927)
 
 [node name="matthews-tiled-map" parent="." instance=ExtResource("1_ecctx")]
 z_index = -1

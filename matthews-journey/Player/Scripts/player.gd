@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 # Health Variables
 signal healthChanged #VR
 @export var maxHealth = 5 #VR
-@onready var currentHealth: int = 1 #maxHealth #VR
+@onready var currentHealth: int = 3 #maxHealth #VR
 
 # Collectables Variables
 signal coinsChanged
