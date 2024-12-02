@@ -82,6 +82,6 @@ There are different diagrams that you may use, the first two were covered in cla
     <img src="diagrams/coinsUI.png" alt="coins diagram">
 
 16. The game shall have a UI element for another function (Controls).  
-    The main menu has 3 different options: start game, controls, and exit game. The controls GUI shows, well, the controls for the game. W to move up, A to move left, S to move down, D to move right, right click for interact, and spacebar for attacking (swing sword). There is a button on the screen to return to the main menu. 
+    The main menu has 3 different options: start game, controls, and exit game. The controls GUI shows, well, the controls for the game. W to move up, A to move left, S to move down, D to move right, right click for interact, and spacebar for attacking (swing sword). There is a button on the screen to return to the main menu.   
     <img src="diagrams/controlsUI.png" alt="coins diagram">
 
