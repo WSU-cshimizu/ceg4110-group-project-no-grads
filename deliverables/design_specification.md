@@ -41,6 +41,8 @@ There are different diagrams that you may use, the first two were covered in cla
    
    When the player reaches the hut, The NPC Dolvalir may tell the plyaer to check around for fruits to heal yourself with.
 
+   <img src="diagrams/Dolvalir.png" alt="dialogue diagram">
+
 8. The UI shall have a health system.
    
    The health system consists of heart containers. At the start of the game, the UI defaults to full health, being 5 filled heart containers. The health system is functional and explained in number 8 below. The UI will asjust accordingly to whatever changes need to be made, such as taking damage or regaining health.
