@@ -86,6 +86,8 @@ There are different diagrams that you may use, the first two were covered in cla
    - Cow: A minor non-player character that moos when interacted with.
    - Dolvalir: A major non-player character that interacts with Matthew, either helping or harming him depending on the outcome of dialogue.
 
+   <img src="Characters.png" alt="character diagram">
+
 14. The play area shall not be too small to be crammed but not too big to feel empty.
     
     The first level design contains 6 major areas: Starting town, Witch's hut area, easy forest area, farm area, hard forest area, and cave entrance area. The biggest ones are the forests. This gives the player room to explore and fight enemies without being in a primary safe area like the town, witch's hut, or farm. This makes it feel big enough to not be crammed. Even though they are the biggest areas, the forests include many trees, item drops, and enemies, making it not feel empty.
